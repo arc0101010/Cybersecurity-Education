@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Security - CyberFace</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/image-handlers.css">
+    <link rel="stylesheet" href="../css/enhanced-image-handlers.css">
+    <link rel="stylesheet" href="../css/advanced-image-handlers.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/enhanced-animations.css">
+    <link rel="stylesheet" href="../css/cyber-theme.css">
+    <link rel="stylesheet" href="../css/cyber-blog.css">
+    <link rel="stylesheet" href="../css/blog-organization.css">
+    <link rel="stylesheet" href="../css/featured-grid.css">
+    <link rel="stylesheet" href="../css/cyber-forms.css">
+    <link rel="stylesheet" href="../css/cyber-sections.css">
+    <link rel="stylesheet" href="../css/cyber-interactive.css">
+    <link rel="stylesheet" href="../css/cyber-contact.css">
+    <link rel="stylesheet" href="../css/cyber-consistency.css">
+    <link rel="stylesheet" href="../css/custom-overrides.css">
+    <link rel="stylesheet" href="../css/game-button.css">
+    <link rel="stylesheet" href="../css/contact-enhancements.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&family=JetBrains+Mono:wght@100;300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <!-- Grid Background -->
+    <div class="grid-background"></div>
+    <div class="scan-line"></div>
+    <div class="cyber-noise"></div>
+    
+    <header>
+        <div class="logo-container">
+            <img src="../images/logo.jpg" alt="CyberFace Logo" id="logo">
+            <h1>CyberFace <span class="subtitle">Learn Defense</span></h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="../index.html"><i class="fas fa-home nav-icon"></i>HOME</a></li>
+                <li><a href="../about.html"><i class="fas fa-info-circle nav-icon"></i>ABOUT</a></li>
+                <li><a href="../lesson.html"><i class="fas fa-graduation-cap nav-icon"></i>LESSON</a></li>
+                <li><a href="../blog.html" class="active"><i class="fas fa-newspaper nav-icon"></i>BLOG</a></li>
+                <li><a href="../contact.html"><i class="fas fa-envelope nav-icon"></i>CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="nav-right">
+            <a href="../game.html" class="game-btn"><i class="fas fa-gamepad"></i> GAME<div class="circuit-overlay"></div></a>
+            <div class="menu-dropdown">
+                <button class="menu-btn"><i class="fas fa-bars"></i></button>
+                <div class="dropdown-content">
+                        <a href="../profile.html">Profile</a>
+                        <a href="../videos.html">Videos</a>
+            
+                        <a href="#" id="logoutLink">Logout</a>
+                        <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            const logoutLink = document.getElementById('logoutLink');
+                            logoutLink.addEventListener('click', function(e) {
+                                e.preventDefault();
+                                // Create modal
+                                const modal = document.createElement('div');
+                                modal.style.position = 'fixed';
+                                modal.style.top = 0;
+                                modal.style.left = 0;
+                                modal.style.width = '100vw';
+                                modal.style.height = '100vh';
+                                modal.style.background = 'rgba(0,0,0,0.5)';
+                                modal.style.display = 'flex';
+                                modal.style.alignItems = 'center';
+                                modal.style.justifyContent = 'center';
+                                modal.style.zIndex = 9999;
+
+                                const box = document.createElement('div');
+                                box.style.background = '#fff';
+                                box.style.padding = '30px 40px';
+                                box.style.borderRadius = '10px';
+                                box.style.boxShadow = '0 2px 16px rgba(0,0,0,0.2)';
+                                box.style.textAlign = 'center';
+
+                                const msg = document.createElement('div');
+                                msg.textContent = 'Are you sure you want to logout?';
+                                msg.style.fontWeight = 'bold';
+                                msg.style.color = 'black';
+                                msg.style.marginBottom = '20px';
+
+                                const yesBtn = document.createElement('button');
+                                yesBtn.textContent = 'Yes';
+                                yesBtn.style.margin = '0 10px';
+                                yesBtn.style.padding = '8px 20px';
+                                yesBtn.style.background = 'cyan';
+                                yesBtn.style.color = '#fff';
+                                yesBtn.style.border = 'none';
+                                yesBtn.style.borderRadius = '5px';
+                                yesBtn.style.cursor = 'pointer';
+
+                                const cancelBtn = document.createElement('button');
+                                cancelBtn.textContent = 'Cancel';
+                                cancelBtn.style.margin = '0 10px';
+                                cancelBtn.style.padding = '8px 20px';
+                                cancelBtn.style.background = 'red';
+                                cancelBtn.style.color = 'white';
+                                cancelBtn.style.border = 'none';
+                                cancelBtn.style.borderRadius = '5px';
+                                cancelBtn.style.cursor = 'pointer';
+
+                                box.appendChild(msg);
+                                box.appendChild(yesBtn);
+                                box.appendChild(cancelBtn);
+                                modal.appendChild(box);
+                                document.body.appendChild(modal);
+
+                                yesBtn.onclick = function() {
+                                    // Clear session/local storage (simulate logout)
+                                    sessionStorage.clear();
+                                    localStorage.clear();
+                                    // Redirect to dashboard.html
+                                    window.location.href = '../dashboard.html';
+                                };
+                                cancelBtn.onclick = function() {
+                                    document.body.removeChild(modal);
+                                };
+                            });
+                        });
+                        </script>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="cyber-main">
+        <section class="article-hero-section">
+            <div class="cyber-grid-overlay"></div>
+            <div class="hero-content" style="text-align: center; max-width: 800px; margin: 0 auto; position: relative; z-index: 1;">
+                <div class="article-category-badge">Cloud</div>
+                <h1 class="article-title" style="font-family: 'Orbitron', sans-serif; color: var(--cyber-accent); margin-bottom: 20px;">Cloud Security</h1>
+                <div class="cyber-divider" style="margin: 20px auto;"><span></span></div>
+                <div class="article-meta">
+                    <span><i class="far fa-calendar-alt"></i> May 5, 2023</span>
+                    <span><i class="far fa-user"></i> Robert Zhang</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="article-content cyber-section">
+            <div class="cyber-container">
+                <div class="article-image-full">
+                    <img src="../images/cloud-security.jpg" style="height: 1000px; width: 2000px;" alt="Cloud Security" onerror="this.src='https://via.placeholder.com/1200x600/0a192f/64ffda?text=Cloud+Security'">
+                </div>
+                
+                <div class="article-text">
+                    <h2 class="cyber-heading">Securing the Cloud Frontier</h2>
+                    <p class="cyber-text">Cloud computing has revolutionized how organizations deploy, scale, and manage their IT infrastructure. However, this shift to cloud environments introduces unique security challenges that require specialized approaches and solutions.</p>
+                    
+                    <p class="cyber-text">The cloud security landscape is complex and constantly evolving, with threats including:</p>
+                    
+                    <ul class="cyber-list">
+                        <li>Misconfigured cloud resources exposing sensitive data</li>
+                        <li>Identity and access management vulnerabilities</li>
+                        <li>Insecure APIs and interfaces</li>
+                        <li>Data breaches across multi-tenant environments</li>
+                        <li>Compliance challenges across different jurisdictions</li>
+                    </ul>
+                    
+                    <h2 class="cyber-heading">Cloud Security Fundamentals</h2>
+                    <p class="cyber-text">Effective cloud security requires understanding the shared responsibility model and implementing appropriate controls:</p>
+                    
+                    <h3 class="cyber-subheading">Shared Responsibility Model</h3>
+                    <p class="cyber-text">Cloud security operates on a shared responsibility model where the provider secures the underlying infrastructure while customers are responsible for securing their data, applications, and access controls. Understanding this division is crucial for comprehensive security.</p>
+                    
+                    <h3 class="cyber-subheading">Identity and Access Management</h3>
+                    <p class="cyber-text">Implement robust IAM policies with least privilege principles. Use multi-factor authentication for all cloud accounts, especially those with administrative privileges. Regularly audit access permissions and remove unnecessary privileges.</p>
+                    
+                    <h3 class="cyber-subheading">Data Protection</h3>
+                    <p class="cyber-text">Encrypt data both in transit and at rest. Implement proper key management practices and consider using customer-managed encryption keys for sensitive data. Classify data according to sensitivity and apply appropriate protection measures.</p>
+                    
+                    <h3 class="cyber-subheading">Network Security</h3>
+                    <p class="cyber-text">Secure cloud networks using virtual private clouds (VPCs), security groups, and network ACLs. Implement proper segmentation to isolate workloads and limit lateral movement in case of a breach. Use cloud-native firewalls and web application firewalls for additional protection.</p>
+                    
+                    <h3 class="cyber-subheading">Configuration Management</h3>
+                    <p class="cyber-text">Regularly scan for misconfigurations using cloud security posture management (CSPM) tools. Implement infrastructure as code (IaC) with security checks to prevent configuration drift and ensure consistent security controls.</p>
+                    
+                    <h2 class="cyber-heading">Advanced Cloud Security Strategies</h2>
+                    <p class="cyber-text">Beyond the basics, organizations should consider these advanced security measures:</p>
+                    
+                    <h3 class="cyber-subheading">Cloud Security Posture Management</h3>
+                    <p class="cyber-text">CSPM tools continuously monitor cloud environments for misconfigurations, compliance violations, and security risks. They provide automated remediation capabilities and help maintain a strong security posture across complex multi-cloud environments.</p>
+                    
+                    <h3 class="cyber-subheading">Cloud Workload Protection</h3>
+                    <p class="cyber-text">Cloud workload protection platforms (CWPPs) provide runtime protection for cloud workloads, including virtual machines, containers, and serverless functions. They offer capabilities such as:</p>
+                    <ul class="cyber-list">
+                        <li>Vulnerability management</li>
+                        <li>Host-based firewalls</li>
+                        <li>Application control</li>
+                        <li>Memory protection</li>
+                        <li>Behavioral monitoring</li>
+                    </ul>
+                    
+                    <h3 class="cyber-subheading">DevSecOps Integration</h3>
+                    <p class="cyber-text">Integrate security throughout the development lifecycle by implementing DevSecOps practices. Automate security testing in CI/CD pipelines, conduct regular vulnerability assessments, and use infrastructure as code (IaC) security scanning tools.</p>
+                    
+                    <h2 class="cyber-heading">The Future of Cloud Security</h2>
+                    <p class="cyber-text">As cloud adoption continues to accelerate, we're seeing the emergence of new security paradigms and technologies:</p>
+                    
+                    <h3 class="cyber-subheading">Zero Trust Architecture</h3>
+                    <p class="cyber-text">The zero trust model is particularly well-suited for cloud environments, with its principle of "never trust, always verify." Cloud-native zero trust implementations leverage microsegmentation, continuous verification, and context-aware access controls.</p>
+                    
+                    <h3 class="cyber-subheading">AI-Powered Security</h3>
+                    <p class="cyber-text">Machine learning and artificial intelligence are increasingly being applied to cloud security, enabling more effective threat detection, anomaly identification, and automated response capabilities.</p>
+                    
+                    <p class="cyber-text">Cloud security is not a one-time implementation but an ongoing process that requires continuous monitoring, assessment, and improvement. By understanding the unique challenges of cloud environments and implementing appropriate security controls, organizations can safely harness the power and flexibility of cloud computing while protecting their critical assets.</p>
+                    
+                    <div class="article-cta">
+                        <h3 class="cyber-subheading">Secure Your Cloud Journey</h3>
+                        <p class="cyber-text">Cloud security requires a strategic approach that balances security requirements with business objectives. Stay informed about emerging threats and best practices to maintain a strong security posture in your cloud environments.</p>
+                        <a href="../blog.php" class="cyber-btn">Back to Blog</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+   <!-- Footer -->
+    <footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo cyber-logo">
+                <img src="../images/logo.jpg" style="max-width: 50px;" alt="CyberFace Logo" class="footer-logo-img cyber-image">
+                <p class="cyber-text">CyberFace is your trusted source for cybersecurity knowledge and defense strategies.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../about.html">About Us</a></li>
+                    <li><a href="../lesson.html">Lessons</a></li>
+                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>Contact Info</h4>
+                <p><i class="fas fa-phone nav-icon"></i> +1 234 567 890</p>
+                <p><i class="fas fa-envelope nav-icon"></i> info@cyberface.com</p>
+                <p><i class="fas fa-map-marker-alt nav-icon"></i> 123 Cyber Street, Security City</p>
+            </div>
+            
+            <div class="footer-newsletter">
+                <h4>Follow Us</h4>
+                <p>Stay connected with us on social media for daily tips and updates.</p>
+                <div class="cyber-social">
+                    <a href="#" class="cyber-social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="cyber-social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="cyber-social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="cyber-social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-developers">
+            <h4>CyberFace's Developers</h4>
+            <div class="developers-grid">
+                <div class="developer-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="developer-img-container">
+                        <img src="../images/1.jpg" alt="Developer 1" class="developer-img">
+                    </div>
+                    <p class="developer-name">Team Coordinator</p>
+                </div>
+                <div class="developer-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="developer-img-container">
+                        <img src="../images/2.jpg" alt="Developer 2" class="developer-img">
+                    </div>
+                    <p class="developer-name">Team Leader</p>
+                </div>
+                <div class="developer-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="developer-img-container">
+                        <img src="../images/3.jpg" alt="Developer 3" class="developer-img">
+                    </div>
+                    <p class="developer-name">Team Editor</p>
+                </div>
+            </div>
+            <p class="more-info">For more information, <a href="../team.html" class="click-here">click here</a>.</p>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 CyberFace. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="../js/script.js"></script>
+<script src="../js/image-handlers.js"></script>
+<script src="../js/enhanced-image-handlers.js"></script>
+<script src="../js/advanced-image-handlers.js"></script>
+</body>
+</html>

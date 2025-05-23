@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Engineering - CyberFace</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/image-handlers.css">
+    <link rel="stylesheet" href="../css/enhanced-image-handlers.css">
+    <link rel="stylesheet" href="../css/advanced-image-handlers.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/enhanced-animations.css">
+    <link rel="stylesheet" href="../css/cyber-theme.css">
+    <link rel="stylesheet" href="../css/cyber-blog.css">
+    <link rel="stylesheet" href="../css/blog-organization.css">
+    <link rel="stylesheet" href="../css/featured-grid.css">
+    <link rel="stylesheet" href="../css/cyber-forms.css">
+    <link rel="stylesheet" href="../css/cyber-sections.css">
+    <link rel="stylesheet" href="../css/cyber-interactive.css">
+    <link rel="stylesheet" href="../css/cyber-contact.css">
+    <link rel="stylesheet" href="../css/cyber-consistency.css">
+    <link rel="stylesheet" href="../css/custom-overrides.css">
+    <link rel="stylesheet" href="../css/game-button.css">
+    <link rel="stylesheet" href="../css/contact-enhancements.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&family=JetBrains+Mono:wght@100;300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Grid Background -->
+    <div class="grid-background"></div>
+    <div class="scan-line"></div>
+    <div class="cyber-noise"></div>
+    
+    <header>
+        <div class="logo-container">
+            <img src="../images/logo.jpg" alt="CyberFace Logo" id="logo">
+            <h1>CyberFace <span class="subtitle">Learn Defense</span></h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="../index.html"><i class="fas fa-home nav-icon"></i>HOME</a></li>
+                <li><a href="../about.html"><i class="fas fa-info-circle nav-icon"></i>ABOUT</a></li>
+                <li><a href="../lesson.html"><i class="fas fa-graduation-cap nav-icon"></i>LESSON</a></li>
+                <li><a href="../blog.html" class="active"><i class="fas fa-newspaper nav-icon"></i>BLOG</a></li>
+                <li><a href="../contact.html"><i class="fas fa-envelope nav-icon"></i>CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="nav-right">
+            <a href="../game.html" class="game-btn"><i class="fas fa-gamepad"></i> GAME<div class="circuit-overlay"></div></a>
+            <div class="menu-dropdown">
+                <button class="menu-btn"><i class="fas fa-bars"></i></button>
+                <div class="dropdown-content">
+                        <a href="../profile.html">Profile</a>
+                        <a href="../videos.html">Videos</a>
+                     
+                         <a href="#" id="logoutLink">Logout</a>
+                        <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            const logoutLink = document.getElementById('logoutLink');
+                            logoutLink.addEventListener('click', function(e) {
+                                e.preventDefault();
+                                // Create modal
+                                const modal = document.createElement('div');
+                                modal.style.position = 'fixed';
+                                modal.style.top = 0;
+                                modal.style.left = 0;
+                                modal.style.width = '100vw';
+                                modal.style.height = '100vh';
+                                modal.style.background = 'rgba(0,0,0,0.5)';
+                                modal.style.display = 'flex';
+                                modal.style.alignItems = 'center';
+                                modal.style.justifyContent = 'center';
+                                modal.style.zIndex = 9999;
+
+                                const box = document.createElement('div');
+                                box.style.background = '#fff';
+                                box.style.padding = '30px 40px';
+                                box.style.borderRadius = '10px';
+                                box.style.boxShadow = '0 2px 16px rgba(0,0,0,0.2)';
+                                box.style.textAlign = 'center';
+
+                                const msg = document.createElement('div');
+                                msg.textContent = 'Are you sure you want to logout?';
+                                msg.style.fontWeight = 'bold';
+                                msg.style.color = 'black';
+                                msg.style.marginBottom = '20px';
+
+                                const yesBtn = document.createElement('button');
+                                yesBtn.textContent = 'Yes';
+                                yesBtn.style.margin = '0 10px';
+                                yesBtn.style.padding = '8px 20px';
+                                yesBtn.style.background = 'cyan';
+                                yesBtn.style.color = '#fff';
+                                yesBtn.style.border = 'none';
+                                yesBtn.style.borderRadius = '5px';
+                                yesBtn.style.cursor = 'pointer';
+
+                                const cancelBtn = document.createElement('button');
+                                cancelBtn.textContent = 'Cancel';
+                                cancelBtn.style.margin = '0 10px';
+                                cancelBtn.style.padding = '8px 20px';
+                                cancelBtn.style.background = 'red';
+                                cancelBtn.style.color = 'white';
+                                cancelBtn.style.border = 'none';
+                                cancelBtn.style.borderRadius = '5px';
+                                cancelBtn.style.cursor = 'pointer';
+
+                                box.appendChild(msg);
+                                box.appendChild(yesBtn);
+                                box.appendChild(cancelBtn);
+                                modal.appendChild(box);
+                                document.body.appendChild(modal);
+
+                                yesBtn.onclick = function() {
+                                    // Clear session/local storage (simulate logout)
+                                    sessionStorage.clear();
+                                    localStorage.clear();
+                                    // Redirect to dashboard.html
+                                    window.location.href = '../dashboard.html';
+                                };
+                                cancelBtn.onclick = function() {
+                                    document.body.removeChild(modal);
+                                };
+                            });
+                        });
+                        </script>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="cyber-main">
+        <section class="article-hero-section">
+            <div class="cyber-grid-overlay"></div>
+            <div class="hero-content" style="text-align: center; max-width: 800px; margin: 0 auto; position: relative; z-index: 1;">
+                <div class="article-category-badge">Human Factor</div>
+                <h1 class="article-title" style="font-family: 'Orbitron', sans-serif; color: var(--cyber-accent); margin-bottom: 20px;">Social Engineering</h1>
+                <div class="cyber-divider" style="margin: 20px auto;"><span></span></div>
+                <div class="article-meta">
+                    <span><i class="far fa-calendar-alt"></i> April 15, 2023</span>
+                    <span><i class="far fa-user"></i> Nathan Black</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="article-content cyber-section">
+            <div class="cyber-container">
+                <div class="article-image-full">
+                    <img src="../images/social-engineering.jpg" style="height: 1000px; width: 2000px;" alt="Social Engineering" onerror="this.src='https://via.placeholder.com/1200x600/0a192f/64ffda?text=Social+Engineering'">
+                </div>
+                
+                <div class="article-text">
+                    <h2 class="cyber-heading">The Human Vulnerability in Cybersecurity</h2>
+                    <p class="cyber-text">While organizations invest heavily in technical security measures, cybercriminals often find it easier to exploit the most vulnerable component of any security system: human psychology. Social engineering attacks bypass sophisticated security controls by manipulating people into breaking normal security procedures.</p>
+                    
+                    <p class="cyber-text">These attacks succeed because they exploit fundamental human tendencies:</p>
+                    
+                    <ul class="cyber-list">
+                        <li>Trust in authority figures and colleagues</li>
+                        <li>Desire to be helpful and cooperative</li>
+                        <li>Fear of negative consequences</li>
+                        <li>Curiosity about unusual events</li>
+                        <li>Greed and the appeal of something for nothing</li>
+                    </ul>
+                    
+                    <h2 class="cyber-heading">Common Social Engineering Techniques</h2>
+                    <p class="cyber-text">Social engineers employ various tactics to manipulate their targets:</p>
+                    
+                    <h3 class="cyber-subheading">Phishing</h3>
+                    <p class="cyber-text">The most common form of social engineering, phishing involves sending fraudulent communications that appear to come from a reputable source. These messages typically create a sense of urgency or curiosity to prompt recipients to reveal sensitive information, click malicious links, or open infected attachments.</p>
+                    
+                    <p class="cyber-text">Phishing has evolved into more targeted forms:</p>
+                    <ul class="cyber-list">
+                        <li><strong>Spear phishing:</strong> Attacks tailored to specific individuals using personal information</li>
+                        <li><strong>Whaling:</strong> Targeted attacks against high-value individuals like executives</li>
+                        <li><strong>Smishing:</strong> Phishing conducted via SMS text messages</li>
+                        <li><strong>Vishing:</strong> Voice phishing using phone calls to deceive victims</li>
+                    </ul>
+                    
+                    <h3 class="cyber-subheading">Pretexting</h3>
+                    <p class="cyber-text">In pretexting attacks, the attacker creates a fabricated scenario (a pretext) to engage the victim and gain their trust. The attacker often impersonates co-workers, police, bank officials, or other trusted individuals to extract information. These attacks frequently involve research to make the scenario believable.</p>
+                    
+                    <h3 class="cyber-subheading">Baiting</h3>
+                    <p class="cyber-text">Baiting exploits human curiosity or greed by offering something enticing to the victim. This could be a free download, a discounted item, or even physical media like infected USB drives left in public locations. When the victim takes the bait, malware is installed or credentials are compromised.</p>
+                    
+                    <h3 class="cyber-subheading">Quid Pro Quo</h3>
+                    <p class="cyber-text">Similar to baiting, quid pro quo attacks offer a service or benefit in exchange for information or access. A common example is an attacker impersonating IT support and offering to help with a technical problem in exchange for login credentials.</p>
+                    
+                    <h3 class="cyber-subheading">Tailgating</h3>
+                    <p class="cyber-text">Also known as piggybacking, tailgating involves an unauthorized person following an authorized person into a secured area. This physical form of social engineering exploits people's reluctance to challenge strangers or their desire to be polite by holding doors open.</p>
+                    
+                    <h2 class="cyber-heading">Psychological Triggers in Social Engineering</h2>
+                    <p class="cyber-text">Social engineers are skilled at exploiting psychological triggers:</p>
+                    
+                    <h3 class="cyber-subheading">Authority</h3>
+                    <p class="cyber-text">People tend to comply with requests from authority figures. Attackers impersonate executives, law enforcement, or technical support to leverage this tendency. They may use official-looking email domains, logos, or language to reinforce the perception of authority.</p>
+                    
+                    <h3 class="cyber-subheading">Urgency</h3>
+                    <p class="cyber-text">Creating a sense of urgency pressures victims into making quick decisions without proper verification. Messages claiming "Your account will be locked in 24 hours" or "Immediate action required" bypass rational thinking in favor of emotional responses.</p>
+                    
+                    <h3 class="cyber-subheading">Scarcity</h3>
+                    <p class="cyber-text">The fear of missing out on limited opportunities can drive people to act hastily. Attackers use phrases like "Limited time offer" or "Only 3 spots remaining" to create artificial scarcity and prompt immediate action.</p>
+                    
+                    <h3 class="cyber-subheading">Familiarity</h3>
+                    <p class="cyber-text">People are more likely to trust communications that appear to come from someone they know. By compromising email accounts or spoofing sender addresses, attackers can exploit existing relationships to increase their success rate.</p>
+                    
+                    <h2 class="cyber-heading">Defending Against Social Engineering</h2>
+                    <p class="cyber-text">While technical controls have limited effectiveness against social engineering, organizations and individuals can implement several defensive measures:</p>
+                    
+                    <h3 class="cyber-subheading">Security Awareness Training</h3>
+                    <p class="cyber-text">Regular, engaging security awareness training is the foundation of social engineering defense. Effective training programs:</p>
+                    <ul class="cyber-list">
+                        <li>Use real-world examples and simulations</li>
+                        <li>Teach employees to recognize common attack patterns</li>
+                        <li>Provide clear reporting procedures for suspicious activities</li>
+                        <li>Reinforce learning through regular updates and refreshers</li>
+                    </ul>
+                    
+                    <h3 class="cyber-subheading">Verification Procedures</h3>
+                    <p class="cyber-text">Implement and enforce verification procedures for sensitive requests, especially those involving financial transactions or credential sharing. These might include:</p>
+                    <ul class="cyber-list">
+                        <li>Out-of-band verification using a different communication channel</li>
+                        <li>Multi-person authorization for significant actions</li>
+                        <li>Callback procedures to confirm requestor identity</li>
+                    </ul>
+                    
+                    <h3 class="cyber-subheading">Technical Controls</h3>
+                    <p class="cyber-text">While not foolproof, technical controls can reduce the likelihood of successful social engineering attacks:</p>
+                    <ul class="cyber-list">
+                        <li>Email filtering and anti-phishing tools</li>
+                        <li>Multi-factor authentication to mitigate credential theft</li>
+                        <li>Endpoint protection to detect malicious attachments</li>
+                        <li>Data loss prevention systems to identify unusual data transfers</li>
+                    </ul>
+                    
+                    <h3 class="cyber-subheading">Creating a Security Culture</h3>
+                    <p class="cyber-text">Beyond formal training, organizations should foster a culture where security is everyone's responsibility. This includes:</p>
+                    <ul class="cyber-list">
+                        <li>Encouraging employees to question unusual requests without fear of reprisal</li>
+                        <li>Celebrating security-conscious behaviors</li>
+                        <li>Ensuring leadership models good security practices</li>
+                        <li>Making it easy to report suspicious activities</li>
+                    </ul>
+                    
+                    <h2 class="cyber-heading">The Future of Social Engineering</h2>
+                    <p class="cyber-text">Social engineering continues to evolve, with several concerning trends on the horizon:</p>
+                    
+                    <h3 class="cyber-subheading">AI-Enhanced Attacks</h3>
+                    <p class="cyber-text">Artificial intelligence and machine learning are enabling more sophisticated social engineering attacks. AI can generate convincing phishing messages tailored to individual targets, create deepfake audio and video for impersonation attacks, and automate the research phase of targeted campaigns.</p>
+                    
+                    <h3 class="cyber-subheading">Cross-Platform Attacks</h3>
+                    <p class="cyber-text">As people use multiple communication platforms, attackers are coordinating across channels. A phishing email might be followed by a vishing call that references the email, increasing the attack's credibility.</p>
+                    
+                    <p class="cyber-text">Social engineering remains one of the most effective vectors for cyberattacks because it targets the human element of security systems. By understanding the psychological principles behind these attacks and implementing comprehensive defenses, organizations and individuals can significantly reduce their vulnerability to manipulation.</p>
+                    
+                    <div class="article-cta">
+                        <h3 class="cyber-subheading">Stay Vigilant</h3>
+                        <p class="cyber-text">The best defense against social engineering is a healthy skepticism combined with verification procedures. When in doubt, verify through official channels before taking action on unexpected or urgent requests.</p>
+                        <a href="../blog.php" class="cyber-btn">Back to Blog</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo cyber-logo">
+                <img src="../images/logo.jpg" style="max-width: 50px;" alt="CyberFace Logo" class="footer-logo-img cyber-image">
+                <p class="cyber-text">CyberFace is your trusted source for cybersecurity knowledge and defense strategies.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../about.html">About Us</a></li>
+                    <li><a href="../lesson.html">Lessons</a></li>
+                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>Contact Info</h4>
+                <p><i class="fas fa-phone nav-icon"></i> +1 234 567 890</p>
+                <p><i class="fas fa-envelope nav-icon"></i> info@cyberface.com</p>
+                <p><i class="fas fa-map-marker-alt nav-icon"></i> 123 Cyber Street, Security City</p>
+            </div>
+            
+            <div class="footer-newsletter">
+                <h4>Follow Us</h4>
+                <p>Stay connected with us on social media for daily tips and updates.</p>
+                <div class="cyber-social">
+                    <a href="#" class="cyber-social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="cyber-social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="cyber-social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="cyber-social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-developers">
+            <h4>CyberFace's Developers</h4>
+            <div class="developers-grid">
+                <div class="developer-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="developer-img-container">
+                        <img src="../images/1.jpg" alt="Developer 1" class="developer-img">
+                    </div>
+                    <p class="developer-name">Team Coordinator</p>
+                </div>
+                <div class="developer-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="developer-img-container">
+                        <img src="../images/2.jpg" alt="Developer 2" class="developer-img">
+                    </div>
+                    <p class="developer-name">Team Leader</p>
+                </div>
+                <div class="developer-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="developer-img-container">
+                        <img src="../images/3.jpg" alt="Developer 3" class="developer-img">
+                    </div>
+                    <p class="developer-name">Team Editor</p>
+                </div>
+            </div>
+            <p class="more-info">For more information, <a href="../team.html" class="click-here">click here</a>.</p>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 CyberFace. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="../js/script.js"></script>
+<script src="../js/image-handlers.js"></script>
+<script src="../js/enhanced-image-handlers.js"></script>
+<script src="../js/advanced-image-handlers.js"></script>
+</body>
+</html>

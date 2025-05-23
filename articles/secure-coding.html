@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Coding - CyberFace</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/image-handlers.css">
+    <link rel="stylesheet" href="../css/enhanced-image-handlers.css">
+    <link rel="stylesheet" href="../css/advanced-image-handlers.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/enhanced-animations.css">
+    <link rel="stylesheet" href="../css/cyber-theme.css">
+    <link rel="stylesheet" href="../css/cyber-blog.css">
+    <link rel="stylesheet" href="../css/blog-organization.css">
+    <link rel="stylesheet" href="../css/featured-grid.css">
+    <link rel="stylesheet" href="../css/cyber-forms.css">
+    <link rel="stylesheet" href="../css/cyber-sections.css">
+    <link rel="stylesheet" href="../css/cyber-interactive.css">
+    <link rel="stylesheet" href="../css/cyber-contact.css">
+    <link rel="stylesheet" href="../css/cyber-consistency.css">
+    <link rel="stylesheet" href="../css/custom-overrides.css">
+    <link rel="stylesheet" href="../css/game-button.css">
+    <link rel="stylesheet" href="../css/contact-enhancements.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&family=JetBrains+Mono:wght@100;300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Grid Background -->
+    <div class="grid-background"></div>
+    <div class="scan-line"></div>
+    <div class="cyber-noise"></div>
+    
+    <header>
+        <div class="logo-container">
+            <img src="../images/logo.jpg" alt="CyberFace Logo" id="logo">
+            <h1>CyberFace <span class="subtitle">Learn Defense</span></h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="../index.html"><i class="fas fa-home nav-icon"></i>HOME</a></li>
+                <li><a href="../about.html"><i class="fas fa-info-circle nav-icon"></i>ABOUT</a></li>
+                <li><a href="../lesson.html"><i class="fas fa-graduation-cap nav-icon"></i>LESSON</a></li>
+                <li><a href="../blog.html" class="active"><i class="fas fa-newspaper nav-icon"></i>BLOG</a></li>
+                <li><a href="../contact.html"><i class="fas fa-envelope nav-icon"></i>CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="nav-right">
+            <a href="../game.html" class="game-btn"><i class="fas fa-gamepad"></i> GAME<div class="circuit-overlay"></div></a>
+            <div class="menu-dropdown">
+                <button class="menu-btn"><i class="fas fa-bars"></i></button>
+                <div class="dropdown-content">
+                        <a href="../profile.html">Profile</a>
+                        <a href="../videos.html">Videos</a>
+                    
+                         <a href="#" id="logoutLink">Logout</a>
+                        <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            const logoutLink = document.getElementById('logoutLink');
+                            logoutLink.addEventListener('click', function(e) {
+                                e.preventDefault();
+                                // Create modal
+                                const modal = document.createElement('div');
+                                modal.style.position = 'fixed';
+                                modal.style.top = 0;
+                                modal.style.left = 0;
+                                modal.style.width = '100vw';
+                                modal.style.height = '100vh';
+                                modal.style.background = 'rgba(0,0,0,0.5)';
+                                modal.style.display = 'flex';
+                                modal.style.alignItems = 'center';
+                                modal.style.justifyContent = 'center';
+                                modal.style.zIndex = 9999;
+
+                                const box = document.createElement('div');
+                                box.style.background = '#fff';
+                                box.style.padding = '30px 40px';
+                                box.style.borderRadius = '10px';
+                                box.style.boxShadow = '0 2px 16px rgba(0,0,0,0.2)';
+                                box.style.textAlign = 'center';
+
+                                const msg = document.createElement('div');
+                                msg.textContent = 'Are you sure you want to logout?';
+                                msg.style.fontWeight = 'bold';
+                                msg.style.color = 'black';
+                                msg.style.marginBottom = '20px';
+
+                                const yesBtn = document.createElement('button');
+                                yesBtn.textContent = 'Yes';
+                                yesBtn.style.margin = '0 10px';
+                                yesBtn.style.padding = '8px 20px';
+                                yesBtn.style.background = 'cyan';
+                                yesBtn.style.color = '#fff';
+                                yesBtn.style.border = 'none';
+                                yesBtn.style.borderRadius = '5px';
+                                yesBtn.style.cursor = 'pointer';
+
+                                const cancelBtn = document.createElement('button');
+                                cancelBtn.textContent = 'Cancel';
+                                cancelBtn.style.margin = '0 10px';
+                                cancelBtn.style.padding = '8px 20px';
+                                cancelBtn.style.background = 'red';
+                                cancelBtn.style.color = 'white';
+                                cancelBtn.style.border = 'none';
+                                cancelBtn.style.borderRadius = '5px';
+                                cancelBtn.style.cursor = 'pointer';
+
+                                box.appendChild(msg);
+                                box.appendChild(yesBtn);
+                                box.appendChild(cancelBtn);
+                                modal.appendChild(box);
+                                document.body.appendChild(modal);
+
+                                yesBtn.onclick = function() {
+                                    // Clear session/local storage (simulate logout)
+                                    sessionStorage.clear();
+                                    localStorage.clear();
+                                    // Redirect to dashboard.html
+                                    window.location.href = '../dashboard.html';
+                                };
+                                cancelBtn.onclick = function() {
+                                    document.body.removeChild(modal);
+                                };
+                            });
+                        });
+                        </script>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="cyber-main">
+        <section class="article-hero-section">
+            <div class="cyber-grid-overlay"></div>
+            <div class="hero-content" style="text-align: center; max-width: 800px; margin: 0 auto; position: relative; z-index: 1;">
+                <div class="article-category-badge">Development</div>
+                <h1 class="article-title" style="font-family: 'Orbitron', sans-serif; color: var(--cyber-accent); margin-bottom: 20px;">Secure Coding</h1>
+                <div class="cyber-divider" style="margin: 20px auto;"><span></span></div>
+                <div class="article-meta">
+                    <span><i class="far fa-calendar-alt"></i> April 28, 2023</span>
+                    <span><i class="far fa-user"></i> Thomas Reed</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="article-content cyber-section">
+            <div class="cyber-container">
+                <div class="article-image-full">
+                    <img src="../images/secure-coding.jpg" style="height: 1000px; width: 2000px;" alt="Secure Coding" onerror="this.src='https://via.placeholder.com/1200x600/0a192f/64ffda?text=Secure+Coding'">
+                </div>
+                
+                <div class="article-text">
+                    <h2 class="cyber-heading">Building Security from the Ground Up</h2>
+                    <p class="cyber-text">In today's interconnected digital landscape, security can no longer be an afterthought in software development. Secure coding practices are essential for creating applications that can withstand the sophisticated cyber threats targeting modern software.</p>
+                    
+                    <p class="cyber-text">The consequences of insecure code can be devastating, leading to:</p>
+                    
+                    <ul class="cyber-list">
+                        <li>Data breaches exposing sensitive customer information</li>
+                        <li>Financial losses from fraud and theft</li>
+                        <li>Damage to brand reputation and customer trust</li>
+                        <li>Legal and regulatory penalties</li>
+                        <li>Service disruptions affecting business operations</li>
+                    </ul>
+                    
+                    <h2 class="cyber-heading">Common Security Vulnerabilities</h2>
+                    <p class="cyber-text">Understanding common vulnerabilities is the first step toward secure coding:</p>
+                    
+                    <h3 class="cyber-subheading">Injection Flaws</h3>
+                    <p class="cyber-text">Injection vulnerabilities, such as SQL injection, occur when untrusted data is sent to an interpreter as part of a command or query. Attackers can inject malicious code to manipulate databases, execute commands, or access unauthorized data. Always validate and sanitize user inputs, and use parameterized queries or prepared statements when interacting with databases.</p>
+                    
+                    <h3 class="cyber-subheading">Authentication Weaknesses</h3>
+                    <p class="cyber-text">Weak authentication mechanisms can allow attackers to assume identities of legitimate users. Implement strong password policies, multi-factor authentication, and secure session management. Never store passwords in plaintext; use modern hashing algorithms with appropriate salting.</p>
+                    
+                    <h3 class="cyber-subheading">Cross-Site Scripting (XSS)</h3>
+                    <p class="cyber-text">XSS flaws occur when applications include untrusted data in web pages without proper validation or escaping. Attackers can inject client-side scripts that execute in users' browsers, stealing cookies, session tokens, or redirecting to malicious sites. Implement context-sensitive output encoding and content security policies.</p>
+                    
+                    <h3 class="cyber-subheading">Insecure Direct Object References</h3>
+                    <p class="cyber-text">These vulnerabilities occur when developers expose references to internal implementation objects, such as files, directories, or database keys. Implement proper access controls and use indirect reference maps to prevent unauthorized access to resources.</p>
+                    
+                    <h2 class="cyber-heading">Secure Coding Principles</h2>
+                    <p class="cyber-text">Adopt these fundamental principles to build more secure applications:</p>
+                    
+                    <h3 class="cyber-subheading">Defense in Depth</h3>
+                    <p class="cyber-text">Implement multiple layers of security controls throughout your application. If one layer fails, others will still provide protection. Combine input validation, output encoding, authentication, authorization, and logging to create a comprehensive security strategy.</p>
+                    
+                    <h3 class="cyber-subheading">Least Privilege</h3>
+                    <p class="cyber-text">Applications and users should operate with the minimum privileges necessary to perform their functions. This limits the potential damage if a component is compromised. Regularly review and audit permission levels to prevent privilege creep.</p>
+                    
+                    <h3 class="cyber-subheading">Fail Securely</h3>
+                    <p class="cyber-text">When errors occur, applications should fail in a way that doesn't create security vulnerabilities. Avoid revealing sensitive information in error messages, and ensure that failures default to a secure state rather than leaving systems exposed.</p>
+                    
+                    <h3 class="cyber-subheading">Input Validation</h3>
+                    <p class="cyber-text">Never trust user input. Validate all data for type, length, format, and range before processing it. Implement both client-side and server-side validation, recognizing that client-side validation can be bypassed and should never be the only line of defense.</p>
+                    
+                    <h2 class="cyber-heading">Secure Development Lifecycle</h2>
+                    <p class="cyber-text">Integrate security throughout the development process:</p>
+                    
+                    <h3 class="cyber-subheading">Security Requirements</h3>
+                    <p class="cyber-text">Define security requirements alongside functional requirements at the beginning of projects. Consider threat modeling to identify potential vulnerabilities and attack vectors specific to your application.</p>
+                    
+                    <h3 class="cyber-subheading">Secure Design</h3>
+                    <p class="cyber-text">Apply security principles during the design phase. Choose secure frameworks and libraries, design proper authentication and authorization mechanisms, and plan for secure data handling and storage.</p>
+                    
+                    <h3 class="cyber-subheading">Secure Coding Standards</h3>
+                    <p class="cyber-text">Establish and enforce coding standards that address security concerns. Use automated tools to check code against these standards during development.</p>
+                    
+                    <h3 class="cyber-subheading">Security Testing</h3>
+                    <p class="cyber-text">Implement comprehensive security testing, including:</p>
+                    <ul class="cyber-list">
+                        <li>Static Application Security Testing (SAST) to analyze source code for security vulnerabilities</li>
+                        <li>Dynamic Application Security Testing (DAST) to identify vulnerabilities in running applications</li>
+                        <li>Interactive Application Security Testing (IAST) that combines static and dynamic approaches</li>
+                        <li>Penetration testing to simulate real-world attacks</li>
+                    </ul>
+                    
+                    <h3 class="cyber-subheading">Security in DevOps</h3>
+                    <p class="cyber-text">Integrate security into DevOps practices (DevSecOps) to ensure that security is addressed continuously throughout rapid development cycles. Automate security testing in CI/CD pipelines and implement security gates that prevent vulnerable code from being deployed.</p>
+                    
+                    <h2 class="cyber-heading">Tools and Resources</h2>
+                    <p class="cyber-text">Leverage these resources to improve code security:</p>
+                    
+                    <h3 class="cyber-subheading">Security Libraries and Frameworks</h3>
+                    <p class="cyber-text">Use established security libraries and frameworks rather than implementing security controls from scratch. These have been thoroughly tested and are regularly updated to address new vulnerabilities.</p>
+                    
+                    <h3 class="cyber-subheading">Static Analysis Tools</h3>
+                    <p class="cyber-text">Integrate static code analysis tools into your development environment to identify potential security issues early in the development process.</p>
+                    
+                    <h3 class="cyber-subheading">Security Training</h3>
+                    <p class="cyber-text">Invest in ongoing security training for developers. Security is a rapidly evolving field, and developers need to stay current with the latest threats and defenses.</p>
+                    
+                    <p class="cyber-text">Secure coding is not just a technical practice but a mindset that prioritizes security throughout the development process. By understanding common vulnerabilities, applying secure coding principles, and integrating security into the development lifecycle, developers can create more resilient applications that protect both users and organizations from cyber threats.</p>
+                    
+                    <div class="article-cta">
+                        <h3 class="cyber-subheading">Build Secure Applications</h3>
+                        <p class="cyber-text">Security is a shared responsibility that begins with code. By implementing secure coding practices, you contribute to a safer digital ecosystem for everyone.</p>
+                        <a href="../blog.php" class="cyber-btn">Back to Blog</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo cyber-logo">
+                <img src="../images/logo.jpg" style="max-width: 50px;" alt="CyberFace Logo" class="footer-logo-img cyber-image">
+                <p class="cyber-text">CyberFace is your trusted source for cybersecurity knowledge and defense strategies.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../about.html">About Us</a></li>
+                    <li><a href="../lesson.html">Lessons</a></li>
+                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>Contact Info</h4>
+                 <p><i class="fas fa-phone nav-icon"></i> +1 234 567 890</p>
+                <p><i class="fas fa-envelope nav-icon"></i> info@cyberface.com</p>
+                <p><i class="fas fa-map-marker-alt nav-icon"></i> 123 Cyber Street, Security City</p>
+            </div>
+            
+            <div class="footer-newsletter">
+                <h4>Follow Us</h4>
+                <p>Stay connected with us on social media for daily tips and updates.</p>
+                <div class="cyber-social">
+                    <a href="#" class="cyber-social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="cyber-social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="cyber-social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="cyber-social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-developers">
+            <h4>CyberFace's Developers</h4>
+            <div class="developers-grid">
+                <div class="developer-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="developer-img-container">
+                        <img src="../images/1.jpg" alt="Developer 1" class="developer-img">
+                    </div>
+                    <p class="developer-name">Team Coordinator</p>
+                </div>
+                <div class="developer-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="developer-img-container">
+                        <img src="../images/2.jpg" alt="Developer 2" class="developer-img">
+                    </div>
+                    <p class="developer-name">Team Leader</p>
+                </div>
+                <div class="developer-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="developer-img-container">
+                        <img src="../images/3.jpg" alt="Developer 3" class="developer-img">
+                    </div>
+                    <p class="developer-name">Team Editor</p>
+                </div>
+            </div>
+            <p class="more-info">For more information, <a href="../team.html" class="click-here">click here</a>.</p>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 CyberFace. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="../js/script.js"></script>
+<script src="../js/image-handlers.js"></script>
+<script src="../js/enhanced-image-handlers.js"></script>
+<script src="../js/advanced-image-handlers.js"></script>
+</body>
+</html>

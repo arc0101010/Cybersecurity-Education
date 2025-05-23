@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Encryption - CyberFace</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/image-handlers.css">
+    <link rel="stylesheet" href="../css/enhanced-image-handlers.css">
+    <link rel="stylesheet" href="../css/advanced-image-handlers.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/enhanced-animations.css">
+    <link rel="stylesheet" href="../css/cyber-theme.css">
+    <link rel="stylesheet" href="../css/cyber-blog.css">
+    <link rel="stylesheet" href="../css/blog-organization.css">
+    <link rel="stylesheet" href="../css/featured-grid.css">
+    <link rel="stylesheet" href="../css/cyber-forms.css">
+    <link rel="stylesheet" href="../css/cyber-sections.css">
+    <link rel="stylesheet" href="../css/cyber-interactive.css">
+    <link rel="stylesheet" href="../css/cyber-contact.css">
+    <link rel="stylesheet" href="../css/cyber-consistency.css">
+    <link rel="stylesheet" href="../css/custom-overrides.css">
+    <link rel="stylesheet" href="../css/game-button.css">
+    <link rel="stylesheet" href="../css/contact-enhancements.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&family=JetBrains+Mono:wght@100;300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Grid Background -->
+    <div class="grid-background"></div>
+    <div class="scan-line"></div>
+    <div class="cyber-noise"></div>
+    
+     <!-- Grid Background -->
+    <div class="grid-background"></div>
+    <div class="scan-line"></div>
+    <div class="cyber-noise"></div>
+    
+    <header>
+        <div class="logo-container">
+            <img src="../images/logo.jpg" alt="CyberFace Logo" id="logo">
+            <h1>CyberFace <span class="subtitle">Learn Defense</span></h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="../index.html"><i class="fas fa-home nav-icon"></i>HOME</a></li>
+                <li><a href="../about.html"><i class="fas fa-info-circle nav-icon"></i>ABOUT</a></li>
+                <li><a href="../lesson.html"><i class="fas fa-graduation-cap nav-icon"></i>LESSON</a></li>
+                <li><a href="../blog.html" class="active"><i class="fas fa-newspaper nav-icon"></i>BLOG</a></li>
+                <li><a href="../contact.html"><i class="fas fa-envelope nav-icon"></i>CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="nav-right">
+            <a href="../game.html" class="game-btn"><i class="fas fa-gamepad"></i> GAME<div class="circuit-overlay"></div></a>
+            <div class="menu-dropdown">
+                <button class="menu-btn"><i class="fas fa-bars"></i></button>
+                <div class="dropdown-content">
+                        <a href="../profile.html">Profile</a>
+                        <a href="../videos.html">Videos</a>
+                    
+                        <a href="#" id="logoutLink">Logout</a>
+                        <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            const logoutLink = document.getElementById('logoutLink');
+                            logoutLink.addEventListener('click', function(e) {
+                                e.preventDefault();
+                                // Create modal
+                                const modal = document.createElement('div');
+                                modal.style.position = 'fixed';
+                                modal.style.top = 0;
+                                modal.style.left = 0;
+                                modal.style.width = '100vw';
+                                modal.style.height = '100vh';
+                                modal.style.background = 'rgba(0,0,0,0.5)';
+                                modal.style.display = 'flex';
+                                modal.style.alignItems = 'center';
+                                modal.style.justifyContent = 'center';
+                                modal.style.zIndex = 9999;
+
+                                const box = document.createElement('div');
+                                box.style.background = '#fff';
+                                box.style.padding = '30px 40px';
+                                box.style.borderRadius = '10px';
+                                box.style.boxShadow = '0 2px 16px rgba(0,0,0,0.2)';
+                                box.style.textAlign = 'center';
+
+                                const msg = document.createElement('div');
+                                msg.textContent = 'Are you sure you want to logout?';
+                                msg.style.fontWeight = 'bold';
+                                msg.style.color = 'black';
+                                msg.style.marginBottom = '20px';
+
+                                const yesBtn = document.createElement('button');
+                                yesBtn.textContent = 'Yes';
+                                yesBtn.style.margin = '0 10px';
+                                yesBtn.style.padding = '8px 20px';
+                                yesBtn.style.background = 'cyan';
+                                yesBtn.style.color = '#fff';
+                                yesBtn.style.border = 'none';
+                                yesBtn.style.borderRadius = '5px';
+                                yesBtn.style.cursor = 'pointer';
+
+                                const cancelBtn = document.createElement('button');
+                                cancelBtn.textContent = 'Cancel';
+                                cancelBtn.style.margin = '0 10px';
+                                cancelBtn.style.padding = '8px 20px';
+                                cancelBtn.style.background = 'red';
+                                cancelBtn.style.color = 'white';
+                                cancelBtn.style.border = 'none';
+                                cancelBtn.style.borderRadius = '5px';
+                                cancelBtn.style.cursor = 'pointer';
+
+                                box.appendChild(msg);
+                                box.appendChild(yesBtn);
+                                box.appendChild(cancelBtn);
+                                modal.appendChild(box);
+                                document.body.appendChild(modal);
+
+                                yesBtn.onclick = function() {
+                                    // Clear session/local storage (simulate logout)
+                                    sessionStorage.clear();
+                                    localStorage.clear();
+                                    // Redirect to dashboard.html
+                                    window.location.href = '../dashboard.html';
+                                };
+                                cancelBtn.onclick = function() {
+                                    document.body.removeChild(modal);
+                                };
+                            });
+                        });
+                        </script>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="cyber-main">
+        <section class="article-hero-section">
+            <div class="cyber-grid-overlay"></div>
+            <div class="hero-content" style="text-align: center; max-width: 800px; margin: 0 auto; position: relative; z-index: 1;">
+                <div class="article-category-badge">Encryption</div>
+                <h1 class="article-title" style="font-family: 'Orbitron', sans-serif; color: var(--cyber-accent); margin-bottom: 20px;">Modern Encryption</h1>
+                <div class="cyber-divider" style="margin: 20px auto;"><span></span></div>
+                <div class="article-meta">
+                    <span><i class="far fa-calendar-alt"></i> April 22, 2023</span>
+                    <span><i class="far fa-user"></i> Olivia Martinez</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="article-content cyber-section">
+            <div class="cyber-container">
+                <div class="article-image-full">
+                    <img src="../images/encryption.jpg" style="height: 1000px; width: 2000px;" alt="Modern Encryption" onerror="this.src='https://via.placeholder.com/1200x600/0a192f/64ffda?text=Modern+Encryption'">
+                </div>
+                
+                <div class="article-text">
+                    <h2 class="cyber-heading">The Foundation of Digital Security</h2>
+                    <p class="cyber-text">Encryption serves as the backbone of digital security in our interconnected world. From securing online banking transactions to protecting private communications, modern encryption technologies safeguard our most sensitive information from unauthorized access.</p>
+                    
+                    <p class="cyber-text">As cyber threats evolve in sophistication, encryption technologies must continuously advance to maintain their effectiveness. This article explores the current state of encryption and emerging trends in this critical field.</p>
+                    
+                    <h2 class="cyber-heading">Encryption Fundamentals</h2>
+                    <p class="cyber-text">At its core, encryption is the process of converting plaintext information into ciphertext—an unreadable format that can only be deciphered with the correct decryption key. Modern encryption relies on complex mathematical algorithms that would require impractical amounts of computing power and time to break through brute force methods.</p>
+                    
+                    <h3 class="cyber-subheading">Symmetric vs. Asymmetric Encryption</h3>
+                    <p class="cyber-text">Symmetric encryption uses a single key for both encryption and decryption. While efficient for processing large amounts of data, it presents key distribution challenges—how do you securely share the key with intended recipients?</p>
+                    
+                    <p class="cyber-text">Asymmetric encryption (also called public-key cryptography) addresses this challenge by using key pairs: a public key for encryption and a private key for decryption. This allows anyone to encrypt messages using the recipient's public key, while only the recipient with the corresponding private key can decrypt them.</p>
+                    
+                    <h3 class="cyber-subheading">Common Encryption Standards</h3>
+                    <p class="cyber-text">Several encryption standards form the foundation of modern digital security:</p>
+                    <ul class="cyber-list">
+                        <li><strong>AES (Advanced Encryption Standard):</strong> The current symmetric encryption standard used worldwide for securing sensitive data</li>
+                        <li><strong>RSA:</strong> A widely-used asymmetric encryption algorithm for secure data transmission</li>
+                        <li><strong>ECC (Elliptic Curve Cryptography):</strong> Provides equivalent security to RSA with smaller key sizes, making it ideal for resource-constrained environments</li>
+                        <li><strong>TLS/SSL:</strong> Protocols that secure communications over computer networks, most visibly in HTTPS websites</li>
+                    </ul>
+                    
+                    <h2 class="cyber-heading">Encryption in Practice</h2>
+                    <p class="cyber-text">Encryption technologies protect data in different states:</p>
+                    
+                    <h3 class="cyber-subheading">Data at Rest</h3>
+                    <p class="cyber-text">Encryption of stored data—whether on hard drives, cloud storage, or mobile devices—protects information even if physical devices are lost or stolen. Full-disk encryption, file-level encryption, and database encryption are common implementations that secure data at rest.</p>
+                    
+                    <h3 class="cyber-subheading">Data in Transit</h3>
+                    <p class="cyber-text">When data travels across networks, it's vulnerable to interception. Transport Layer Security (TLS) and its predecessor, Secure Sockets Layer (SSL), encrypt data as it moves between clients and servers, preventing eavesdropping and tampering.</p>
+                    
+                    <h3 class="cyber-subheading">Data in Use</h3>
+                    <p class="cyber-text">The most challenging state to protect is data while it's being processed. Homomorphic encryption—though still evolving—allows computations to be performed on encrypted data without decrypting it first, opening new possibilities for secure data processing.</p>
+                    
+                    <h2 class="cyber-heading">Emerging Encryption Technologies</h2>
+                    <p class="cyber-text">As computing power increases and new threats emerge, encryption continues to evolve:</p>
+                    
+                    <h3 class="cyber-subheading">Quantum-Resistant Cryptography</h3>
+                    <p class="cyber-text">Quantum computers threaten to break many current encryption algorithms by solving the mathematical problems they're based on much faster than classical computers. Post-quantum cryptography (also called quantum-resistant cryptography) aims to develop encryption methods that remain secure against quantum computing attacks.</p>
+                    
+                    <h3 class="cyber-subheading">Homomorphic Encryption</h3>
+                    <p class="cyber-text">This revolutionary approach allows computations to be performed on encrypted data without decrypting it first. While still computationally intensive, advances in homomorphic encryption could transform cloud computing security by allowing sensitive data to remain encrypted even during processing.</p>
+                    
+                    <h3 class="cyber-subheading">Blockchain-Based Encryption</h3>
+                    <p class="cyber-text">Blockchain technology incorporates cryptographic principles to create tamper-evident, distributed systems. Beyond cryptocurrencies, these approaches are being applied to secure supply chains, identity management, and other domains requiring transparent yet secure record-keeping.</p>
+                    
+                    <h2 class="cyber-heading">Encryption Challenges and Considerations</h2>
+                    
+                    <h3 class="cyber-subheading">Key Management</h3>
+                    <p class="cyber-text">Even the strongest encryption is only as secure as its key management. Organizations must implement robust processes for key generation, storage, rotation, and revocation to maintain security throughout the encryption lifecycle.</p>
+                    
+                    <h3 class="cyber-subheading">Performance Impacts</h3>
+                    <p class="cyber-text">Encryption inevitably adds computational overhead. System architects must balance security requirements with performance needs, especially in resource-constrained environments like IoT devices or high-throughput applications.</p>
+                    
+                    <h3 class="cyber-subheading">Regulatory Compliance</h3>
+                    <p class="cyber-text">Various regulations mandate encryption for certain types of data. Organizations must navigate these requirements while also addressing potential conflicts with laws in some jurisdictions that restrict encryption use or require backdoor access.</p>
+                    
+                    <h3 class="cyber-subheading">The Encryption Debate</h3>
+                    <p class="cyber-text">Strong encryption creates tension between privacy/security advocates and law enforcement agencies. The ongoing debate about encryption backdoors highlights the challenge of balancing individual privacy with legitimate security concerns.</p>
+                    
+                    <h2 class="cyber-heading">The Future of Encryption</h2>
+                    <p class="cyber-text">As digital transformation accelerates across all sectors, encryption will continue to evolve in several directions:</p>
+                    
+                    <ul class="cyber-list">
+                        <li>Integration of AI and machine learning to adapt encryption approaches based on threat intelligence</li>
+                        <li>Lightweight encryption methods optimized for IoT and edge computing environments</li>
+                        <li>Continued development of quantum-resistant algorithms as quantum computing advances</li>
+                        <li>More user-friendly encryption tools that make strong security accessible to non-technical users</li>
+                    </ul>
+                    
+                    <p class="cyber-text">Encryption remains our most powerful tool for protecting digital information. By understanding current encryption technologies and staying informed about emerging trends, organizations and individuals can make better decisions about securing their sensitive data in an increasingly complex threat landscape.</p>
+                    
+                    <div class="article-cta">
+                        <h3 class="cyber-subheading">Secure Your Digital Assets</h3>
+                        <p class="cyber-text">Implementing strong encryption is a fundamental step in protecting your digital information. Stay informed about encryption best practices and emerging technologies to maintain robust security in a changing landscape.</p>
+                        <a href="../blog.php" class="cyber-btn">Back to Blog</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+   <!-- Footer -->
+    <footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo cyber-logo">
+                <img src="../images/logo.jpg" style="max-width: 50px;" alt="CyberFace Logo" class="footer-logo-img cyber-image">
+                <p class="cyber-text">CyberFace is your trusted source for cybersecurity knowledge and defense strategies.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../about.html">About Us</a></li>
+                    <li><a href="../lesson.html">Lessons</a></li>
+                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>Contact Info</h4>
+                <p><i class="fas fa-phone nav-icon"></i> +1 234 567 890</p>
+                <p><i class="fas fa-envelope nav-icon"></i> info@cyberface.com</p>
+                <p><i class="fas fa-map-marker-alt nav-icon"></i> 123 Cyber Street, Security City</p>
+            </div>
+            
+            <div class="footer-newsletter">
+                <h4>Follow Us</h4>
+                <p>Stay connected with us on social media for daily tips and updates.</p>
+                <div class="cyber-social">
+                    <a href="#" class="cyber-social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="cyber-social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="cyber-social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="cyber-social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-developers">
+            <h4>CyberFace's Developers</h4>
+            <div class="developers-grid">
+                <div class="developer-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="developer-img-container">
+                        <img src="../images/1.jpg" alt="Developer 1" class="developer-img">
+                    </div>
+                    <p class="developer-name">Team Coordinator</p>
+                </div>
+                <div class="developer-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="developer-img-container">
+                        <img src="../images/2.jpg" alt="Developer 2" class="developer-img">
+                    </div>
+                    <p class="developer-name">Team Leader</p>
+                </div>
+                <div class="developer-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="developer-img-container">
+                        <img src="../images/3.jpg" alt="Developer 3" class="developer-img">
+                    </div>
+                    <p class="developer-name">Team Editor</p>
+                </div>
+            </div>
+            <p class="more-info">For more information, <a href="../team.html" class="click-here">click here</a>.</p>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 CyberFace. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="../js/script.js"></script>
+<script src="../js/image-handlers.js"></script>
+<script src="../js/enhanced-image-handlers.js"></script>
+<script src="../js/advanced-image-handlers.js"></script>
+</body>
+</html>

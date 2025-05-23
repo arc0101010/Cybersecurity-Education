@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Security - CyberFace</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/image-handlers.css">
+    <link rel="stylesheet" href="../css/enhanced-image-handlers.css">
+    <link rel="stylesheet" href="../css/advanced-image-handlers.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/enhanced-animations.css">
+    <link rel="stylesheet" href="../css/cyber-theme.css">
+    <link rel="stylesheet" href="../css/cyber-blog.css">
+    <link rel="stylesheet" href="../css/blog-organization.css">
+    <link rel="stylesheet" href="../css/featured-grid.css">
+    <link rel="stylesheet" href="../css/cyber-forms.css">
+    <link rel="stylesheet" href="../css/cyber-sections.css">
+    <link rel="stylesheet" href="../css/cyber-interactive.css">
+    <link rel="stylesheet" href="../css/cyber-contact.css">
+    <link rel="stylesheet" href="../css/cyber-consistency.css">
+    <link rel="stylesheet" href="../css/custom-overrides.css">
+    <link rel="stylesheet" href="../css/game-button.css">
+    <link rel="stylesheet" href="../css/contact-enhancements.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&family=JetBrains+Mono:wght@100;300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Grid Background -->
+    <div class="grid-background"></div>
+    <div class="scan-line"></div>
+    <div class="cyber-noise"></div>
+    
+     <!-- Grid Background -->
+    <div class="grid-background"></div>
+    <div class="scan-line"></div>
+    <div class="cyber-noise"></div>
+    
+    <header>
+        <div class="logo-container">
+            <img src="../images/logo.jpg" alt="CyberFace Logo" id="logo">
+            <h1>CyberFace <span class="subtitle">Learn Defense</span></h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="../index.html"><i class="fas fa-home nav-icon"></i>HOME</a></li>
+                <li><a href="../about.html"><i class="fas fa-info-circle nav-icon"></i>ABOUT</a></li>
+                <li><a href="../lesson.html"><i class="fas fa-graduation-cap nav-icon"></i>LESSON</a></li>
+                <li><a href="../blog.html" class="active"><i class="fas fa-newspaper nav-icon"></i>BLOG</a></li>
+                <li><a href="../contact.html"><i class="fas fa-envelope nav-icon"></i>CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="nav-right">
+            <a href="../game.html" class="game-btn"><i class="fas fa-gamepad"></i> GAME<div class="circuit-overlay"></div></a>
+            <div class="menu-dropdown">
+                <button class="menu-btn"><i class="fas fa-bars"></i></button>
+                <div class="dropdown-content">
+                        <a href="../profile.html">Profile</a>
+                        <a href="../videos.html">Videos</a>
+                  
+                         <a href="#" id="logoutLink">Logout</a>
+                        <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            const logoutLink = document.getElementById('logoutLink');
+                            logoutLink.addEventListener('click', function(e) {
+                                e.preventDefault();
+                                // Create modal
+                                const modal = document.createElement('div');
+                                modal.style.position = 'fixed';
+                                modal.style.top = 0;
+                                modal.style.left = 0;
+                                modal.style.width = '100vw';
+                                modal.style.height = '100vh';
+                                modal.style.background = 'rgba(0,0,0,0.5)';
+                                modal.style.display = 'flex';
+                                modal.style.alignItems = 'center';
+                                modal.style.justifyContent = 'center';
+                                modal.style.zIndex = 9999;
+
+                                const box = document.createElement('div');
+                                box.style.background = '#fff';
+                                box.style.padding = '30px 40px';
+                                box.style.borderRadius = '10px';
+                                box.style.boxShadow = '0 2px 16px rgba(0,0,0,0.2)';
+                                box.style.textAlign = 'center';
+
+                                const msg = document.createElement('div');
+                                msg.textContent = 'Are you sure you want to logout?';
+                                msg.style.fontWeight = 'bold';
+                                msg.style.color = 'black';
+                                msg.style.marginBottom = '20px';
+
+                                const yesBtn = document.createElement('button');
+                                yesBtn.textContent = 'Yes';
+                                yesBtn.style.margin = '0 10px';
+                                yesBtn.style.padding = '8px 20px';
+                                yesBtn.style.background = 'cyan';
+                                yesBtn.style.color = '#fff';
+                                yesBtn.style.border = 'none';
+                                yesBtn.style.borderRadius = '5px';
+                                yesBtn.style.cursor = 'pointer';
+
+                                const cancelBtn = document.createElement('button');
+                                cancelBtn.textContent = 'Cancel';
+                                cancelBtn.style.margin = '0 10px';
+                                cancelBtn.style.padding = '8px 20px';
+                                cancelBtn.style.background = 'red';
+                                cancelBtn.style.color = 'white';
+                                cancelBtn.style.border = 'none';
+                                cancelBtn.style.borderRadius = '5px';
+                                cancelBtn.style.cursor = 'pointer';
+
+                                box.appendChild(msg);
+                                box.appendChild(yesBtn);
+                                box.appendChild(cancelBtn);
+                                modal.appendChild(box);
+                                document.body.appendChild(modal);
+
+                                yesBtn.onclick = function() {
+                                    // Clear session/local storage (simulate logout)
+                                    sessionStorage.clear();
+                                    localStorage.clear();
+                                    // Redirect to dashboard.html
+                                    window.location.href = '../dashboard.html';
+                                };
+                                cancelBtn.onclick = function() {
+                                    document.body.removeChild(modal);
+                                };
+                            });
+                        });
+                        </script>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="cyber-main">
+        <section class="article-hero-section">
+            <div class="cyber-grid-overlay"></div>
+            <div class="hero-content" style="text-align: center; max-width: 800px; margin: 0 auto; position: relative; z-index: 1;">
+                <div class="article-category-badge">Mobile</div>
+                <h1 class="article-title" style="font-family: 'Orbitron', sans-serif; color: var(--cyber-accent); margin-bottom: 20px;">Mobile Security</h1>
+                <div class="cyber-divider" style="margin: 20px auto;"><span></span></div>
+                <div class="article-meta">
+                    <span><i class="far fa-calendar-alt"></i> May 10, 2023</span>
+                    <span><i class="far fa-user"></i> Jessica Lee</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="article-content cyber-section">
+            <div class="cyber-container">
+                <div class="article-image-full">
+                    <img src="../images/mobile-security.jpg" style="height: 1000px; width: 2000px;" alt="Mobile Security" onerror="this.src='https://via.placeholder.com/1200x600/0a192f/64ffda?text=Mobile+Security'">
+                </div>
+                
+                <div class="article-text">
+                    <h2 class="cyber-heading">The Growing Importance of Mobile Security</h2>
+                    <p class="cyber-text">As smartphones become increasingly central to our daily lives, they've also become prime targets for cybercriminals. Mobile devices now store everything from personal photos to banking information, making them valuable targets for data theft and exploitation.</p>
+                    
+                    <p class="cyber-text">The mobile threat landscape has evolved significantly in recent years. No longer limited to simple malware, attackers now employ sophisticated techniques including:</p>
+                    
+                    <ul class="cyber-list">
+                        <li>Advanced phishing attacks specifically designed for mobile interfaces</li>
+                        <li>Malicious applications that bypass app store security measures</li>
+                        <li>Man-in-the-middle attacks on public Wi-Fi networks</li>
+                        <li>Exploitation of operating system vulnerabilities</li>
+                        <li>SMS-based phishing (smishing) attacks</li>
+                    </ul>
+                    
+                    <h2 class="cyber-heading">Essential Mobile Security Practices</h2>
+                    <p class="cyber-text">Protecting your mobile device requires a multi-layered approach to security:</p>
+                    
+                    <h3 class="cyber-subheading">Keep Your Device Updated</h3>
+                    <p class="cyber-text">Operating system updates often contain critical security patches. Delaying these updates leaves your device vulnerable to known exploits. Enable automatic updates whenever possible, and regularly check for pending updates manually.</p>
+                    
+                    <h3 class="cyber-subheading">App Security</h3>
+                    <p class="cyber-text">Only download applications from official app stores like Google Play and Apple's App Store. Even then, review permissions carefully before installation. Does that simple flashlight app really need access to your contacts and location? Be skeptical of apps requesting excessive permissions.</p>
+                    
+                    <h3 class="cyber-subheading">Use Strong Authentication</h3>
+                    <p class="cyber-text">Biometric authentication methods like fingerprint and facial recognition provide a good balance of security and convenience. When biometrics aren't available, use a strong PIN or password rather than pattern locks, which can be easily observed over your shoulder.</p>
+                    
+                    <h3 class="cyber-subheading">Secure Your Network Connections</h3>
+                    <p class="cyber-text">Public Wi-Fi networks are convenient but dangerous. Use a VPN when connecting to public networks to encrypt your traffic. Consider using your mobile data connection for sensitive transactions when a trusted Wi-Fi network isn't available.</p>
+                    
+                    <h3 class="cyber-subheading">Enable Remote Tracking and Wiping</h3>
+                    <p class="cyber-text">Both Android and iOS offer built-in features to locate, lock, or erase your device remotely if it's lost or stolen. Ensure these features are enabled before you need them.</p>
+                    
+                    <h2 class="cyber-heading">Advanced Mobile Security Solutions</h2>
+                    <p class="cyber-text">Beyond basic practices, consider implementing these advanced security measures:</p>
+                    
+                    <h3 class="cyber-subheading">Mobile Security Apps</h3>
+                    <p class="cyber-text">Dedicated security applications can provide additional protection through features like:</p>
+                    <ul class="cyber-list">
+                        <li>Real-time scanning for malware</li>
+                        <li>Privacy advisors that monitor app permissions</li>
+                        <li>Network security monitoring</li>
+                        <li>Anti-theft features</li>
+                    </ul>
+                    
+                    <h3 class="cyber-subheading">Encrypted Communications</h3>
+                    <p class="cyber-text">Use encrypted messaging apps for sensitive communications. While many popular messaging platforms now offer encryption by default, some provide more robust security features than others.</p>
+                    
+                    <h3 class="cyber-subheading">Secure Containers</h3>
+                    <p class="cyber-text">For those who use their devices for both personal and work purposes, secure container solutions can create isolated environments for sensitive business applications and data.</p>
+                    
+                    <h2 class="cyber-heading">The Future of Mobile Security</h2>
+                    <p class="cyber-text">As mobile threats continue to evolve, so too will security technologies. We're already seeing the emergence of AI-powered threat detection, behavioral biometrics, and zero-trust security models specifically designed for mobile environments.</p>
+                    
+                    <p class="cyber-text">The most important factor in mobile security, however, remains user awareness. By understanding the threats and implementing proper security measures, you can significantly reduce your risk of becoming a victim of mobile-based cyberattacks.</p>
+                    
+                    <div class="article-cta">
+                        <h3 class="cyber-subheading">Stay Protected on Mobile</h3>
+                        <p class="cyber-text">Mobile security is an ongoing process, not a one-time setup. Regularly review your security practices and stay informed about emerging threats to keep your mobile devices and data secure.</p>
+                        <a href="../blog.php" class="cyber-btn">Back to Blog</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo cyber-logo">
+                <img src="../images/logo.jpg" style="max-width: 50px;" alt="CyberFace Logo" class="footer-logo-img cyber-image">
+                <p class="cyber-text">CyberFace is your trusted source for cybersecurity knowledge and defense strategies.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../about.html">About Us</a></li>
+                    <li><a href="../lesson.html">Lessons</a></li>
+                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>Contact Info</h4>
+                <p><i class="fas fa-phone nav-icon"></i> +1 234 567 890</p>
+                <p><i class="fas fa-envelope nav-icon"></i> info@cyberface.com</p>
+                <p><i class="fas fa-map-marker-alt nav-icon"></i> 123 Cyber Street, Security City</p>
+            </div>
+            
+            <div class="footer-newsletter">
+                <h4>Follow Us</h4>
+                <p>Stay connected with us on social media for daily tips and updates.</p>
+                <div class="cyber-social">
+                    <a href="#" class="cyber-social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="cyber-social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="cyber-social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="cyber-social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-developers">
+            <h4>CyberFace's Developers</h4>
+            <div class="developers-grid">
+                <div class="developer-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="developer-img-container">
+                        <img src="../images/1.jpg" alt="Developer 1" class="developer-img">
+                    </div>
+                    <p class="developer-name">Team Coordinator</p>
+                </div>
+                <div class="developer-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="developer-img-container">
+                        <img src="../images/2.jpg" alt="Developer 2" class="developer-img">
+                    </div>
+                    <p class="developer-name">Team Leader</p>
+                </div>
+                <div class="developer-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="developer-img-container">
+                        <img src="../images/3.jpg" alt="Developer 3" class="developer-img">
+                    </div>
+                    <p class="developer-name">Team Editor</p>
+                </div>
+            </div>
+            <p class="more-info">For more information, <a href="../team.html" class="click-here">click here</a>.</p>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 CyberFace. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="../js/script.js"></script>
+<script src="../js/image-handlers.js"></script>
+<script src="../js/enhanced-image-handlers.js"></script>
+<script src="../js/advanced-image-handlers.js"></script>
+</body>
+</html>

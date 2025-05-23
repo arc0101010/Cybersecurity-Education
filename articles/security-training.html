@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Training - CyberFace</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/image-handlers.css">
+    <link rel="stylesheet" href="../css/enhanced-image-handlers.css">
+    <link rel="stylesheet" href="../css/advanced-image-handlers.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/enhanced-animations.css">
+    <link rel="stylesheet" href="../css/cyber-theme.css">
+    <link rel="stylesheet" href="../css/cyber-blog.css">
+    <link rel="stylesheet" href="../css/blog-organization.css">
+    <link rel="stylesheet" href="../css/featured-grid.css">
+    <link rel="stylesheet" href="../css/cyber-forms.css">
+    <link rel="stylesheet" href="../css/cyber-sections.css">
+    <link rel="stylesheet" href="../css/cyber-interactive.css">
+    <link rel="stylesheet" href="../css/cyber-contact.css">
+    <link rel="stylesheet" href="../css/cyber-consistency.css">
+    <link rel="stylesheet" href="../css/custom-overrides.css">
+    <link rel="stylesheet" href="../css/game-button.css">
+    <link rel="stylesheet" href="../css/contact-enhancements.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&family=JetBrains+Mono:wght@100;300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <!-- Grid Background -->
+    <div class="grid-background"></div>
+    <div class="scan-line"></div>
+    <div class="cyber-noise"></div>
+    
+    <header>
+        <div class="logo-container">
+            <img src="../images/logo.jpg" alt="CyberFace Logo" id="logo">
+            <h1>CyberFace <span class="subtitle">Learn Defense</span></h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="../index.html"><i class="fas fa-home nav-icon"></i>HOME</a></li>
+                <li><a href="../about.html"><i class="fas fa-info-circle nav-icon"></i>ABOUT</a></li>
+                <li><a href="../lesson.html"><i class="fas fa-graduation-cap nav-icon"></i>LESSON</a></li>
+                <li><a href="../blog.html" class="active"><i class="fas fa-newspaper nav-icon"></i>BLOG</a></li>
+                <li><a href="../contact.html"><i class="fas fa-envelope nav-icon"></i>CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="nav-right">
+            <a href="../game.html" class="game-btn"><i class="fas fa-gamepad"></i> GAME<div class="circuit-overlay"></div></a>
+            <div class="menu-dropdown">
+                <button class="menu-btn"><i class="fas fa-bars"></i></button>
+                <div class="dropdown-content">
+                        <a href="../profile.html">Profile</a>
+                        <a href="../videos.html">Videos</a>
+           
+                         <a href="#" id="logoutLink">Logout</a>
+                        <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            const logoutLink = document.getElementById('logoutLink');
+                            logoutLink.addEventListener('click', function(e) {
+                                e.preventDefault();
+                                // Create modal
+                                const modal = document.createElement('div');
+                                modal.style.position = 'fixed';
+                                modal.style.top = 0;
+                                modal.style.left = 0;
+                                modal.style.width = '100vw';
+                                modal.style.height = '100vh';
+                                modal.style.background = 'rgba(0,0,0,0.5)';
+                                modal.style.display = 'flex';
+                                modal.style.alignItems = 'center';
+                                modal.style.justifyContent = 'center';
+                                modal.style.zIndex = 9999;
+
+                                const box = document.createElement('div');
+                                box.style.background = '#fff';
+                                box.style.padding = '30px 40px';
+                                box.style.borderRadius = '10px';
+                                box.style.boxShadow = '0 2px 16px rgba(0,0,0,0.2)';
+                                box.style.textAlign = 'center';
+
+                                const msg = document.createElement('div');
+                                msg.textContent = 'Are you sure you want to logout?';
+                                msg.style.fontWeight = 'bold';
+                                msg.style.color = 'black';
+                                msg.style.marginBottom = '20px';
+
+                                const yesBtn = document.createElement('button');
+                                yesBtn.textContent = 'Yes';
+                                yesBtn.style.margin = '0 10px';
+                                yesBtn.style.padding = '8px 20px';
+                                yesBtn.style.background = 'cyan';
+                                yesBtn.style.color = '#fff';
+                                yesBtn.style.border = 'none';
+                                yesBtn.style.borderRadius = '5px';
+                                yesBtn.style.cursor = 'pointer';
+
+                                const cancelBtn = document.createElement('button');
+                                cancelBtn.textContent = 'Cancel';
+                                cancelBtn.style.margin = '0 10px';
+                                cancelBtn.style.padding = '8px 20px';
+                                cancelBtn.style.background = 'red';
+                                cancelBtn.style.color = 'white';
+                                cancelBtn.style.border = 'none';
+                                cancelBtn.style.borderRadius = '5px';
+                                cancelBtn.style.cursor = 'pointer';
+
+                                box.appendChild(msg);
+                                box.appendChild(yesBtn);
+                                box.appendChild(cancelBtn);
+                                modal.appendChild(box);
+                                document.body.appendChild(modal);
+
+                                yesBtn.onclick = function() {
+                                    // Clear session/local storage (simulate logout)
+                                    sessionStorage.clear();
+                                    localStorage.clear();
+                                    // Redirect to dashboard.html
+                                    window.location.href = '../dashboard.html';
+                                };
+                                cancelBtn.onclick = function() {
+                                    document.body.removeChild(modal);
+                                };
+                            });
+                        });
+                        </script>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="cyber-main">
+        <section class="article-hero-section">
+            <div class="cyber-grid-overlay"></div>
+            <div class="hero-content" style="text-align: center; max-width: 800px; margin: 0 auto; position: relative; z-index: 1;">
+                <div class="article-category-badge">Training</div>
+                <h1 class="article-title" style="font-family: 'Orbitron', sans-serif; color: var(--cyber-accent); margin-bottom: 20px;">Security Training</h1>
+                <div class="cyber-divider" style="margin: 20px auto;"><span></span></div>
+                <div class="article-meta">
+                    <span><i class="far fa-calendar-alt"></i> May 15, 2023</span>
+                    <span><i class="far fa-user"></i> Sarah Johnson</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="article-content cyber-section">
+            <div class="cyber-container">
+                <div class="article-image-full">
+                    <img src="../images/security-training.jpg" style="height: 1000px; width: 2000px;" alt="Security Training" onerror="this.src='https://via.placeholder.com/1200x600/0a192f/64ffda?text=Security+Training'">
+                </div>
+                
+                <div class="article-text">
+                    <h2 class="cyber-heading">Building Your Human Firewall</h2>
+                    <p class="cyber-text">In the complex landscape of cybersecurity, organizations often invest heavily in technological solutions while overlooking their most critical vulnerability and greatest asset: their people. Even the most sophisticated security systems can be compromised by a single employee clicking on a malicious link or falling victim to a social engineering attack.</p>
+                    
+                    <p class="cyber-text">Security awareness training transforms employees from potential security liabilities into a powerful human firewall that serves as your first line of defense. This article explores how to develop and implement effective security training programs that create lasting behavioral change and strengthen your organization's overall security posture.</p>
+                    
+                    <h2 class="cyber-heading">The State of Security Training</h2>
+                    <p class="cyber-text">Traditional security training has often been characterized by:</p>
+                    
+                    <ul class="cyber-list">
+                        <li>Annual compliance-focused sessions</li>
+                        <li>Dry, technical presentations</li>
+                        <li>Generic content not tailored to specific roles</li>
+                        <li>Lack of engagement and interactivity</li>
+                        <li>Minimal measurement of effectiveness</li>
+                    </ul>
+                    
+                    <p class="cyber-text">This approach typically results in low retention, minimal behavior change, and a perception of security training as a tedious checkbox exercise rather than a vital skill set. Modern security training programs are evolving to address these shortcomings and create meaningful security awareness.</p>
+                    
+                    <h2 class="cyber-heading">Elements of Effective Security Training</h2>
+                    <p class="cyber-text">Successful security awareness programs share several key characteristics:</p>
+                    
+                    <h3 class="cyber-subheading">Continuous Learning</h3>
+                    <p class="cyber-text">Rather than relying on annual training sessions, effective programs implement year-round education through:</p>
+                    <ul class="cyber-list">
+                        <li>Short, frequent microlearning modules (5-15 minutes)</li>
+                        <li>Regular security updates and newsletters</li>
+                        <li>Just-in-time training tied to current threats</li>
+                        <li>Reinforcement through multiple channels and formats</li>
+                    </ul>
+                    
+                    <h3 class="cyber-subheading">Engaging Content</h3>
+                    <p class="cyber-text">Modern security training leverages engaging formats that capture attention and improve retention:</p>
+                    <ul class="cyber-list">
+                        <li>Interactive scenarios and decision-making exercises</li>
+                        <li>Gamification elements (points, badges, leaderboards)</li>
+                        <li>High-quality videos and animations</li>
+                        <li>Storytelling and real-world examples</li>
+                        <li>Humor and creative approaches that make security memorable</li>
+                    </ul>
+                    
+                    <h3 class="cyber-subheading">Role-Based Training</h3>
+                    <p class="cyber-text">Different roles face different security risks and responsibilities. Effective training is tailored to specific job functions:</p>
+                    <ul class="cyber-list">
+                        <li>Executive-level training focused on business risk and governance</li>
+                        <li>IT staff training with deeper technical content</li>
+                        <li>Developer-specific secure coding practices</li>
+                        <li>Role-specific scenarios for finance, HR, and other departments</li>
+                        <li>Special training for high-risk or privileged users</li>
+                    </ul>
+                    
+                    <h3 class="cyber-subheading">Practical Application</h3>
+                    <p class="cyber-text">Effective training bridges the gap between knowledge and action through:</p>
+                    <ul class="cyber-list">
+                        <li>Hands-on exercises that simulate real threats</li>
+                        <li>Clear, actionable guidance on security practices</li>
+                        <li>Tools and resources that make secure behavior easier</li>
+                        <li>Regular practice opportunities to build security habits</li>
+                    </ul>
+                    
+                    <h3 class="cyber-subheading">Measurement and Improvement</h3>
+                    <p class="cyber-text">Leading programs continuously measure effectiveness and adapt:</p>
+                    <ul class="cyber-list">
+                        <li>Baseline assessments to identify initial knowledge gaps</li>
+                        <li>Simulated phishing and social engineering tests</li>
+                        <li>Knowledge assessments and behavior change metrics</li>
+                        <li>Security incident tracking related to human factors</li>
+                        <li>Regular program adjustments based on results</li>
+                    </ul>
+                    
+                    <h2 class="cyber-heading">Building a Comprehensive Security Training Program</h2>
+                    <p class="cyber-text">Developing an effective security awareness program involves several key phases:</p>
+                    
+                    <h3 class="cyber-subheading">Assessment and Planning</h3>
+                    <p class="cyber-text">Begin by understanding your organization's specific needs:</p>
+                    <ul class="cyber-list">
+                        <li>Assess current security awareness levels through surveys and tests</li>
+                        <li>Identify high-risk areas and common security incidents</li>
+                        <li>Review regulatory requirements and compliance needs</li>
+                        <li>Define clear, measurable objectives for the program</li>
+                        <li>Secure executive sponsorship and necessary resources</li>
+                    </ul>
+                    
+                    <h3 class="cyber-subheading">Content Development</h3>
+                    <p class="cyber-text">Create or select training content that addresses your specific needs:</p>
+                    <ul class="cyber-list">
+                        <li>Core security awareness topics (phishing, passwords, social engineering, etc.)</li>
+                        <li>Industry-specific threats and compliance requirements</li>
+                        <li>Organization-specific policies and procedures</li>
+                        <li>Role-based modules for different departments and responsibilities</li>
+                        <li>Multiple formats to accommodate different learning styles</li>
+                    </ul>
+                    
+                    <h3 class="cyber-subheading">Implementation Strategy</h3>
+                    <p class="cyber-text">Deploy your program with a strategic approach:</p>
+                    <ul class="cyber-list">
+                        <li>Launch with executive communication emphasizing importance</li>
+                        <li>Schedule training to avoid business-critical periods</li>
+                        <li>Use a learning management system to track completion</li>
+                        <li>Implement a phased rollout starting with high-risk groups</li>
+                        <li>Integrate training with onboarding for new employees</li>
+                    </ul>
+                    
+                    <h3 class="cyber-subheading">Reinforcement and Culture Building</h3>
+                    <p class="cyber-text">Sustain awareness through ongoing activities:</p>
+                    <ul class="cyber-list">
+                        <li>Regular communication through multiple channels</li>
+                        <li>Security champions program to promote peer learning</li>
+                        <li>Recognition for secure behaviors and reporting</li>
+                        <li>Security awareness events and activities</li>
+                        <li>Visual reminders in the workplace (physical and virtual)</li>
+                    </ul>
+                    
+                    <h3 class="cyber-subheading">Measurement and Improvement</h3>
+                    <p class="cyber-text">Continuously evaluate and enhance your program:</p>
+                    <ul class="cyber-list">
+                        <li>Regular simulated phishing campaigns with trending attack types</li>
+                        <li>Knowledge assessments before and after training</li>
+                        <li>Tracking of security incidents related to human error</li>
+                        <li>Feedback collection from participants</li>
+                        <li>Program adjustments based on metrics and emerging threats</li>
+                    </ul>
+                    
+                    <h2 class="cyber-heading">Addressing Common Challenges</h2>
+                    <p class="cyber-text">Security awareness programs often face several challenges:</p>
+                    
+                    <h3 class="cyber-subheading">Overcoming Resistance</h3>
+                    <p class="cyber-text">Address resistance to security training by:</p>
+                    <ul class="cyber-list">
+                        <li>Explaining the "why" behind security requirements</li>
+                        <li>Relating security to personal benefits and protection</li>
+                        <li>Making training relevant to specific job roles</li>
+                        <li>Ensuring training is engaging and respectful of time constraints</li>
+                        <li>Celebrating successes and improvements</li>
+                    </ul>
+                    
+                    <h3 class="cyber-subheading">Avoiding Security Fatigue</h3>
+                    <p class="cyber-text">Prevent burnout and fatigue through:</p>
+                    <ul class="cyber-list">
+                        <li>Varied and fresh content that evolves over time</li>
+                        <li>Appropriate training frequency that doesn't overwhelm</li>
+                        <li>Positive reinforcement rather than fear-based messaging</li>
+                        <li>Making secure behavior as easy as possible</li>
+                        <li>Balancing security with usability</li>
+                    </ul>
+                    
+                    <h3 class="cyber-subheading">Measuring Effectiveness</h3>
+                    <p class="cyber-text">Demonstrate program value through:</p>
+                    <ul class="cyber-list">
+                        <li>Clear metrics tied to business outcomes</li>
+                        <li>Tracking trends in security incidents over time</li>
+                        <li>Benchmarking against industry standards</li>
+                        <li>Calculating return on investment where possible</li>
+                        <li>Regular reporting to leadership on program impact</li>
+                    </ul>
+                    
+                    <h2 class="cyber-heading">Emerging Trends in Security Training</h2>
+                    <p class="cyber-text">The field of security awareness continues to evolve with several promising trends:</p>
+                    
+                    <h3 class="cyber-subheading">Personalized Learning Paths</h3>
+                    <p class="cyber-text">Adaptive training that adjusts content based on individual knowledge levels, job roles, and past performance is becoming more common. This approach delivers more relevant content and optimizes training time.</p>
+                    
+                    <h3 class="cyber-subheading">Immersive Technologies</h3>
+                    <p class="cyber-text">Virtual reality (VR) and augmented reality (AR) are creating highly engaging training experiences that simulate security scenarios in realistic environments, improving retention and application of security concepts.</p>
+                    
+                    <h3 class="cyber-subheading">Behavioral Science Integration</h3>
+                    <p class="cyber-text">Advanced programs are incorporating principles from behavioral psychology to design interventions that effectively change security behaviors, moving beyond simple awareness to create lasting habits.</p>
+                    
+                    <h3 class="cyber-subheading">Just-in-Time Microlearning</h3>
+                    <p class="cyber-text">Brief, focused learning modules delivered at the moment of need—such as security tips when connecting to public Wi-Fi or handling sensitive data—are proving highly effective for practical application.</p>
+                    
+                    <p class="cyber-text">As cyber threats continue to evolve and target human vulnerabilities, security awareness training has become an essential component of organizational defense. By implementing comprehensive, engaging, and continuous security education, organizations can transform their workforce from a potential vulnerability into a powerful security asset.</p>
+                    
+                    <div class="article-cta">
+                        <h3 class="cyber-subheading">Empower Your Team</h3>
+                        <p class="cyber-text">Investing in effective security awareness training is one of the most cost-effective security measures an organization can implement. When your team understands both the what and why of security practices, they become active participants in your defense strategy rather than potential weak links.</p>
+                        <a href="../blog.php" class="cyber-btn">Back to Blog</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+   <!-- Footer -->
+    <footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo cyber-logo">
+                <img src="../images/logo.jpg" style="max-width: 50px;" alt="CyberFace Logo" class="footer-logo-img cyber-image">
+                <p class="cyber-text">CyberFace is your trusted source for cybersecurity knowledge and defense strategies.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../about.html">About Us</a></li>
+                    <li><a href="../lesson.html">Lessons</a></li>
+                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>Contact Info</h4>
+                 <p><i class="fas fa-phone nav-icon"></i> +1 234 567 890</p>
+                <p><i class="fas fa-envelope nav-icon"></i> info@cyberface.com</p>
+                <p><i class="fas fa-map-marker-alt nav-icon"></i> 123 Cyber Street, Security City</p>
+            </div>
+            
+            <div class="footer-newsletter">
+                <h4>Follow Us</h4>
+                <p>Stay connected with us on social media for daily tips and updates.</p>
+                <div class="cyber-social">
+                    <a href="#" class="cyber-social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="cyber-social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="cyber-social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="cyber-social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-developers">
+            <h4>CyberFace's Developers</h4>
+            <div class="developers-grid">
+                <div class="developer-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="developer-img-container">
+                        <img src="../images/1.jpg" alt="Developer 1" class="developer-img">
+                    </div>
+                    <p class="developer-name">Team Coordinator</p>
+                </div>
+                <div class="developer-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="developer-img-container">
+                        <img src="../images/2.jpg" alt="Developer 2" class="developer-img">
+                    </div>
+                    <p class="developer-name">Team Leader</p>
+                </div>
+                <div class="developer-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="developer-img-container">
+                        <img src="../images/3.jpg" alt="Developer 3" class="developer-img">
+                    </div>
+                    <p class="developer-name">Team Editor</p>
+                </div>
+            </div>
+            <p class="more-info">For more information, <a href="../team.html" class="click-here">click here</a>.</p>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 CyberFace. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="../js/script.js"></script>
+<script src="../js/image-handlers.js"></script>
+<script src="../js/enhanced-image-handlers.js"></script>
+<script src="../js/advanced-image-handlers.js"></script>
+</body>
+</html>

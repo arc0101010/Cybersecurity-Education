@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compliance & Regulations - CyberFace</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/image-handlers.css">
+    <link rel="stylesheet" href="../css/enhanced-image-handlers.css">
+    <link rel="stylesheet" href="../css/advanced-image-handlers.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/enhanced-animations.css">
+    <link rel="stylesheet" href="../css/cyber-theme.css">
+    <link rel="stylesheet" href="../css/cyber-blog.css">
+    <link rel="stylesheet" href="../css/blog-organization.css">
+    <link rel="stylesheet" href="../css/featured-grid.css">
+    <link rel="stylesheet" href="../css/cyber-forms.css">
+    <link rel="stylesheet" href="../css/cyber-sections.css">
+    <link rel="stylesheet" href="../css/cyber-interactive.css">
+    <link rel="stylesheet" href="../css/cyber-contact.css">
+    <link rel="stylesheet" href="../css/cyber-consistency.css">
+    <link rel="stylesheet" href="../css/custom-overrides.css">
+    <link rel="stylesheet" href="../css/game-button.css">
+    <link rel="stylesheet" href="../css/contact-enhancements.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&family=JetBrains+Mono:wght@100;300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Grid Background -->
+    <div class="grid-background"></div>
+    <div class="scan-line"></div>
+    <div class="cyber-noise"></div>
+    
+     <!-- Grid Background -->
+    <div class="grid-background"></div>
+    <div class="scan-line"></div>
+    <div class="cyber-noise"></div>
+    
+    <header>
+        <div class="logo-container">
+            <img src="../images/logo.jpg" alt="CyberFace Logo" id="logo">
+            <h1>CyberFace <span class="subtitle">Learn Defense</span></h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="../index.html"><i class="fas fa-home nav-icon"></i>HOME</a></li>
+                <li><a href="../about.html"><i class="fas fa-info-circle nav-icon"></i>ABOUT</a></li>
+                <li><a href="../lesson.html"><i class="fas fa-graduation-cap nav-icon"></i>LESSON</a></li>
+                <li><a href="../blog.html" class="active"><i class="fas fa-newspaper nav-icon"></i>BLOG</a></li>
+                <li><a href="../contact.html"><i class="fas fa-envelope nav-icon"></i>CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="nav-right">
+            <a href="../game.html" class="game-btn"><i class="fas fa-gamepad"></i> GAME<div class="circuit-overlay"></div></a>
+            <div class="menu-dropdown">
+                <button class="menu-btn"><i class="fas fa-bars"></i></button>
+                <div class="dropdown-content">
+                        <a href="../profile.html">Profile</a>
+                        <a href="../videos.html">Videos</a>
+                       
+                         <a href="#" id="logoutLink">Logout</a>
+                        <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            const logoutLink = document.getElementById('logoutLink');
+                            logoutLink.addEventListener('click', function(e) {
+                                e.preventDefault();
+                                // Create modal
+                                const modal = document.createElement('div');
+                                modal.style.position = 'fixed';
+                                modal.style.top = 0;
+                                modal.style.left = 0;
+                                modal.style.width = '100vw';
+                                modal.style.height = '100vh';
+                                modal.style.background = 'rgba(0,0,0,0.5)';
+                                modal.style.display = 'flex';
+                                modal.style.alignItems = 'center';
+                                modal.style.justifyContent = 'center';
+                                modal.style.zIndex = 9999;
+
+                                const box = document.createElement('div');
+                                box.style.background = '#fff';
+                                box.style.padding = '30px 40px';
+                                box.style.borderRadius = '10px';
+                                box.style.boxShadow = '0 2px 16px rgba(0,0,0,0.2)';
+                                box.style.textAlign = 'center';
+
+                                const msg = document.createElement('div');
+                                msg.textContent = 'Are you sure you want to logout?';
+                                msg.style.fontWeight = 'bold';
+                                msg.style.color = 'black';
+                                msg.style.marginBottom = '20px';
+
+                                const yesBtn = document.createElement('button');
+                                yesBtn.textContent = 'Yes';
+                                yesBtn.style.margin = '0 10px';
+                                yesBtn.style.padding = '8px 20px';
+                                yesBtn.style.background = 'cyan';
+                                yesBtn.style.color = '#fff';
+                                yesBtn.style.border = 'none';
+                                yesBtn.style.borderRadius = '5px';
+                                yesBtn.style.cursor = 'pointer';
+
+                                const cancelBtn = document.createElement('button');
+                                cancelBtn.textContent = 'Cancel';
+                                cancelBtn.style.margin = '0 10px';
+                                cancelBtn.style.padding = '8px 20px';
+                                cancelBtn.style.background = 'red';
+                                cancelBtn.style.color = 'white';
+                                cancelBtn.style.border = 'none';
+                                cancelBtn.style.borderRadius = '5px';
+                                cancelBtn.style.cursor = 'pointer';
+
+                                box.appendChild(msg);
+                                box.appendChild(yesBtn);
+                                box.appendChild(cancelBtn);
+                                modal.appendChild(box);
+                                document.body.appendChild(modal);
+
+                                yesBtn.onclick = function() {
+                                    // Clear session/local storage (simulate logout)
+                                    sessionStorage.clear();
+                                    localStorage.clear();
+                                    // Redirect to dashboard.html
+                                    window.location.href = '../dashboard.html';
+                                };
+                                cancelBtn.onclick = function() {
+                                    document.body.removeChild(modal);
+                                };
+                            });
+                        });
+                        </script>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="cyber-main">
+        <section class="article-hero-section">
+            <div class="cyber-grid-overlay"></div>
+            <div class="hero-content" style="text-align: center; max-width: 800px; margin: 0 auto; position: relative; z-index: 1;">
+                <div class="article-category-badge">Regulations</div>
+                <h1 class="article-title" style="font-family: 'Orbitron', sans-serif; color: var(--cyber-accent); margin-bottom: 20px;">Compliance & Regulations</h1>
+                <div class="cyber-divider" style="margin: 20px auto;"><span></span></div>
+                <div class="article-meta">
+                    <span><i class="far fa-calendar-alt"></i> April 1, 2023</span>
+                    <span><i class="far fa-user"></i> Lisa Morgan</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="article-content cyber-section">
+            <div class="cyber-container">
+                <div class="article-image-full">
+                    <img src="../images/compliance.jpg" style="height: 1000px; width: 2000px;" alt="Compliance & Regulations" onerror="this.src='https://via.placeholder.com/1200x600/0a192f/64ffda?text=Compliance+Regulations'">
+                </div>
+                
+                <div class="article-text">
+                    <h2 class="cyber-heading">Navigating the Complex Regulatory Landscape</h2>
+                    <p class="cyber-text">As digital transformation accelerates across industries, cybersecurity regulations have proliferated to protect sensitive data and critical infrastructure. Organizations now face a complex web of compliance requirements that vary by industry, geography, and data types.</p>
+                    
+                    <p class="cyber-text">Understanding and implementing these regulations is not merely about avoiding penalties—it's about establishing a foundation for robust security practices that protect both the organization and its stakeholders.</p>
+                    
+                    <h2 class="cyber-heading">Key Cybersecurity Regulations</h2>
+                    <p class="cyber-text">Several major regulatory frameworks shape the global cybersecurity landscape:</p>
+                    
+                    <h3 class="cyber-subheading">General Data Protection Regulation (GDPR)</h3>
+                    <p class="cyber-text">The European Union's GDPR has become a global benchmark for privacy regulations since its implementation in 2018. It establishes strict requirements for organizations that process EU residents' personal data, regardless of where the organization is based. Key provisions include:</p>
+                    <ul class="cyber-list">
+                        <li>Mandatory breach notification within 72 hours</li>
+                        <li>Privacy by design and by default</li>
+                        <li>Data protection impact assessments</li>
+                        <li>Appointment of Data Protection Officers for certain organizations</li>
+                        <li>Significant penalties for non-compliance (up to 4% of global annual revenue)</li>
+                    </ul>
+                    
+                    <h3 class="cyber-subheading">California Consumer Privacy Act (CCPA) and CPRA</h3>
+                    <p class="cyber-text">Often described as "GDPR-lite," the CCPA grants California residents specific rights regarding their personal information. The California Privacy Rights Act (CPRA) further strengthens these protections. These regulations affect businesses worldwide that serve California customers and meet certain thresholds.</p>
+                    
+                    <h3 class="cyber-subheading">Health Insurance Portability and Accountability Act (HIPAA)</h3>
+                    <p class="cyber-text">HIPAA establishes standards for protecting sensitive patient health information in the United States. Covered entities and their business associates must implement physical, network, and process security measures to safeguard electronic protected health information (ePHI).</p>
+                    
+                    <h3 class="cyber-subheading">Payment Card Industry Data Security Standard (PCI DSS)</h3>
+                    <p class="cyber-text">While not a government regulation, PCI DSS is a mandatory industry standard for organizations that handle credit card information. It includes requirements for secure networks, vulnerability management, access controls, and regular testing.</p>
+                    
+                    <h3 class="cyber-subheading">Sector-Specific Regulations</h3>
+                    <p class="cyber-text">Many industries face additional regulatory requirements:</p>
+                    <ul class="cyber-list">
+                        <li><strong>Financial services:</strong> Regulations like the Gramm-Leach-Bliley Act (GLBA) in the US and various financial authority requirements worldwide</li>
+                        <li><strong>Critical infrastructure:</strong> Frameworks like the EU's Network and Information Security (NIS) Directive and various national regulations</li>
+                        <li><strong>Telecommunications:</strong> Industry-specific requirements for securing communications networks and customer data</li>
+                    </ul>
+                    
+                    <h2 class="cyber-heading">Building a Compliance Program</h2>
+                    <p class="cyber-text">Effective compliance requires a structured approach:</p>
+                    
+                    <h3 class="cyber-subheading">Regulatory Mapping</h3>
+                    <p class="cyber-text">The first step is identifying which regulations apply to your organization based on factors like:</p>
+                    <ul class="cyber-list">
+                        <li>Geographic presence and customer locations</li>
+                        <li>Industry sector and business activities</li>
+                        <li>Types of data processed and stored</li>
+                        <li>Size of the organization and revenue thresholds</li>
+                    </ul>
+                    
+                    <h3 class="cyber-subheading">Gap Analysis</h3>
+                    <p class="cyber-text">Once applicable regulations are identified, assess your current security posture against their requirements. This analysis should identify compliance gaps and prioritize remediation efforts based on risk levels and implementation complexity.</p>
+                    
+                    <h3 class="cyber-subheading">Policy Development</h3>
+                    <p class="cyber-text">Develop comprehensive policies and procedures that address regulatory requirements while aligning with your organization's specific needs. These should cover areas like:</p>
+                    <ul class="cyber-list">
+                        <li>Data classification and handling</li>
+                        <li>Access control and identity management</li>
+                        <li>Incident response and breach notification</li>
+                        <li>Vendor management and third-party risk</li>
+                        <li>Employee training and awareness</li>
+                    </ul>
+                    
+                    <h3 class="cyber-subheading">Implementation and Monitoring</h3>
+                    <p class="cyber-text">Deploy technical controls and organizational processes to enforce compliance policies. Establish continuous monitoring mechanisms to detect potential compliance issues before they become violations.</p>
+                    
+                    <h3 class="cyber-subheading">Documentation and Evidence</h3>
+                    <p class="cyber-text">Maintain comprehensive documentation of compliance efforts, including risk assessments, policy implementations, training records, and audit results. This documentation is crucial for demonstrating due diligence during regulatory examinations.</p>
+                    
+                    <h2 class="cyber-heading">Compliance Challenges</h2>
+                    <p class="cyber-text">Organizations face several common challenges in maintaining regulatory compliance:</p>
+                    
+                    <h3 class="cyber-subheading">Regulatory Overlap and Conflicts</h3>
+                    <p class="cyber-text">Different regulations may have overlapping but not identical requirements, creating complexity in implementation. In some cases, complying with one regulation might potentially conflict with another, requiring careful navigation.</p>
+                    
+                    <h3 class="cyber-subheading">Evolving Requirements</h3>
+                    <p class="cyber-text">Cybersecurity regulations continue to evolve as technology advances and new threats emerge. Organizations must stay informed about regulatory changes and adapt their compliance programs accordingly.</p>
+                    
+                    <h3 class="cyber-subheading">Resource Constraints</h3>
+                    <p class="cyber-text">Compliance requires significant resources, including specialized expertise, technology investments, and ongoing operational costs. Small and medium-sized organizations often struggle to allocate sufficient resources while maintaining business operations.</p>
+                    
+                    <h3 class="cyber-subheading">Global Operations</h3>
+                    <p class="cyber-text">Organizations operating across multiple jurisdictions must navigate a patchwork of regulations with varying requirements. This complexity increases compliance costs and risks.</p>
+                    
+                    <h2 class="cyber-heading">Beyond Compliance: Security as a Business Enabler</h2>
+                    <p class="cyber-text">While compliance is often viewed as a cost center, a strategic approach can transform it into a business enabler:</p>
+                    
+                    <h3 class="cyber-subheading">Competitive Advantage</h3>
+                    <p class="cyber-text">Strong compliance postures can differentiate organizations in the marketplace, particularly in industries where security is a key concern for customers. Compliance certifications can open doors to new business opportunities and partnerships.</p>
+                    
+                    <h3 class="cyber-subheading">Risk Reduction</h3>
+                    <p class="cyber-text">Beyond avoiding regulatory penalties, compliance programs reduce the overall risk of security incidents and data breaches, which can have significant financial and reputational impacts.</p>
+                    
+                    <h3 class="cyber-subheading">Operational Efficiency</h3>
+                    <p class="cyber-text">Well-designed compliance programs can improve operational efficiency by standardizing processes, clarifying responsibilities, and eliminating redundant controls.</p>
+                    
+                    <p class="cyber-text">Navigating the complex landscape of cybersecurity regulations requires a strategic, risk-based approach that balances compliance requirements with business objectives. By viewing compliance not merely as a checkbox exercise but as an integral part of business strategy, organizations can build resilient security programs that protect assets while enabling growth.</p>
+                    
+                    <div class="article-cta">
+                        <h3 class="cyber-subheading">Build a Strategic Compliance Program</h3>
+                        <p class="cyber-text">Effective compliance requires more than technical controls—it demands a comprehensive approach that integrates regulatory requirements into your organization's security strategy and business operations.</p>
+                        <a href="../blog.php" class="cyber-btn">Back to Blog</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+   <!-- Footer -->
+    <footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo cyber-logo">
+                <img src="../images/logo.jpg" style="max-width: 50px;" alt="CyberFace Logo" class="footer-logo-img cyber-image">
+                <p class="cyber-text">CyberFace is your trusted source for cybersecurity knowledge and defense strategies.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../about.html">About Us</a></li>
+                    <li><a href="../lesson.html">Lessons</a></li>
+                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>Contact Info</h4>
+                <p><i class="fas fa-phone nav-icon"></i> +1 234 567 890</p>
+                <p><i class="fas fa-envelope nav-icon"></i> info@cyberface.com</p>
+                <p><i class="fas fa-map-marker-alt nav-icon"></i> 123 Cyber Street, Security City</p>
+            </div>
+            
+            <div class="footer-newsletter">
+                <h4>Follow Us</h4>
+                <p>Stay connected with us on social media for daily tips and updates.</p>
+                <div class="cyber-social">
+                    <a href="#" class="cyber-social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="cyber-social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="cyber-social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="cyber-social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-developers">
+            <h4>CyberFace's Developers</h4>
+            <div class="developers-grid">
+                <div class="developer-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="developer-img-container">
+                        <img src="../images/1.jpg" alt="Developer 1" class="developer-img">
+                    </div>
+                    <p class="developer-name">Team Coordinator</p>
+                </div>
+                <div class="developer-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="developer-img-container">
+                        <img src="../images/2.jpg" alt="Developer 2" class="developer-img">
+                    </div>
+                    <p class="developer-name">Team Leader</p>
+                </div>
+                <div class="developer-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="developer-img-container">
+                        <img src="../images/3.jpg" alt="Developer 3" class="developer-img">
+                    </div>
+                    <p class="developer-name">Team Editor</p>
+                </div>
+            </div>
+            <p class="more-info">For more information, <a href="../team.html" class="click-here">click here</a>.</p>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 CyberFace. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="../js/script.js"></script>
+<script src="../js/image-handlers.js"></script>
+<script src="../js/enhanced-image-handlers.js"></script>
+<script src="../js/advanced-image-handlers.js"></script>
+</body>
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identity Management - CyberFace</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/image-handlers.css">
+    <link rel="stylesheet" href="../css/enhanced-image-handlers.css">
+    <link rel="stylesheet" href="../css/advanced-image-handlers.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/enhanced-animations.css">
+    <link rel="stylesheet" href="../css/cyber-theme.css">
+    <link rel="stylesheet" href="../css/cyber-blog.css">
+    <link rel="stylesheet" href="../css/blog-organization.css">
+    <link rel="stylesheet" href="../css/featured-grid.css">
+    <link rel="stylesheet" href="../css/cyber-forms.css">
+    <link rel="stylesheet" href="../css/cyber-sections.css">
+    <link rel="stylesheet" href="../css/cyber-interactive.css">
+    <link rel="stylesheet" href="../css/cyber-contact.css">
+    <link rel="stylesheet" href="../css/cyber-consistency.css">
+    <link rel="stylesheet" href="../css/custom-overrides.css">
+    <link rel="stylesheet" href="../css/game-button.css">
+    <link rel="stylesheet" href="../css/contact-enhancements.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&family=JetBrains+Mono:wght@100;300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Grid Background -->
+    <div class="grid-background"></div>
+    <div class="scan-line"></div>
+    <div class="cyber-noise"></div>
+    
+     <!-- Grid Background -->
+    <div class="grid-background"></div>
+    <div class="scan-line"></div>
+    <div class="cyber-noise"></div>
+    
+    <header>
+        <div class="logo-container">
+            <img src="../images/logo.jpg" alt="CyberFace Logo" id="logo">
+            <h1>CyberFace <span class="subtitle">Learn Defense</span></h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="../index.html"><i class="fas fa-home nav-icon"></i>HOME</a></li>
+                <li><a href="../about.html"><i class="fas fa-info-circle nav-icon"></i>ABOUT</a></li>
+                <li><a href="../lesson.html"><i class="fas fa-graduation-cap nav-icon"></i>LESSON</a></li>
+                <li><a href="../blog.html" class="active"><i class="fas fa-newspaper nav-icon"></i>BLOG</a></li>
+                <li><a href="../contact.html"><i class="fas fa-envelope nav-icon"></i>CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="nav-right">
+            <a href="../game.html" class="game-btn"><i class="fas fa-gamepad"></i> GAME<div class="circuit-overlay"></div></a>
+            <div class="menu-dropdown">
+                <button class="menu-btn"><i class="fas fa-bars"></i></button>
+                <div class="dropdown-content">
+                        <a href="../profile.html">Profile</a>
+                        <a href="../videos.html">Videos</a>
+      
+                        <a href="#" id="logoutLink">Logout</a>
+                        <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            const logoutLink = document.getElementById('logoutLink');
+                            logoutLink.addEventListener('click', function(e) {
+                                e.preventDefault();
+                                // Create modal
+                                const modal = document.createElement('div');
+                                modal.style.position = 'fixed';
+                                modal.style.top = 0;
+                                modal.style.left = 0;
+                                modal.style.width = '100vw';
+                                modal.style.height = '100vh';
+                                modal.style.background = 'rgba(0,0,0,0.5)';
+                                modal.style.display = 'flex';
+                                modal.style.alignItems = 'center';
+                                modal.style.justifyContent = 'center';
+                                modal.style.zIndex = 9999;
+
+                                const box = document.createElement('div');
+                                box.style.background = '#fff';
+                                box.style.padding = '30px 40px';
+                                box.style.borderRadius = '10px';
+                                box.style.boxShadow = '0 2px 16px rgba(0,0,0,0.2)';
+                                box.style.textAlign = 'center';
+
+                                const msg = document.createElement('div');
+                                msg.textContent = 'Are you sure you want to logout?';
+                                msg.style.fontWeight = 'bold';
+                                msg.style.color = 'black';
+                                msg.style.marginBottom = '20px';
+
+                                const yesBtn = document.createElement('button');
+                                yesBtn.textContent = 'Yes';
+                                yesBtn.style.margin = '0 10px';
+                                yesBtn.style.padding = '8px 20px';
+                                yesBtn.style.background = 'cyan';
+                                yesBtn.style.color = '#fff';
+                                yesBtn.style.border = 'none';
+                                yesBtn.style.borderRadius = '5px';
+                                yesBtn.style.cursor = 'pointer';
+
+                                const cancelBtn = document.createElement('button');
+                                cancelBtn.textContent = 'Cancel';
+                                cancelBtn.style.margin = '0 10px';
+                                cancelBtn.style.padding = '8px 20px';
+                                cancelBtn.style.background = 'red';
+                                cancelBtn.style.color = 'white';
+                                cancelBtn.style.border = 'none';
+                                cancelBtn.style.borderRadius = '5px';
+                                cancelBtn.style.cursor = 'pointer';
+
+                                box.appendChild(msg);
+                                box.appendChild(yesBtn);
+                                box.appendChild(cancelBtn);
+                                modal.appendChild(box);
+                                document.body.appendChild(modal);
+
+                                yesBtn.onclick = function() {
+                                    // Clear session/local storage (simulate logout)
+                                    sessionStorage.clear();
+                                    localStorage.clear();
+                                    // Redirect to dashboard.html
+                                    window.location.href = '../dashboard.html';
+                                };
+                                cancelBtn.onclick = function() {
+                                    document.body.removeChild(modal);
+                                };
+                            });
+                        });
+                        </script>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="cyber-main">
+        <section class="article-hero-section">
+            <div class="cyber-grid-overlay"></div>
+            <div class="hero-content" style="text-align: center; max-width: 800px; margin: 0 auto; position: relative; z-index: 1;">
+                <div class="article-category-badge">Identity</div>
+                <h1 class="article-title" style="font-family: 'Orbitron', sans-serif; color: var(--cyber-accent); margin-bottom: 20px;">Identity Management</h1>
+                <div class="cyber-divider" style="margin: 20px auto;"><span></span></div>
+                <div class="article-meta">
+                    <span><i class="far fa-calendar-alt"></i> March 25, 2023</span>
+                    <span><i class="far fa-user"></i> James Wilson</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="article-content cyber-section">
+            <div class="cyber-container">
+                <div class="article-image-full">
+                    <img src="../images/identity-management.jpg" style="height: 1000px; width: 2000px;" alt="Identity Management" onerror="this.src='https://via.placeholder.com/1200x600/0a192f/64ffda?text=Identity+Management'">
+                </div>
+                
+                <div class="article-text">
+                    <h2 class="cyber-heading">The Foundation of Digital Security</h2>
+                    <p class="cyber-text">In today's interconnected digital landscape, identity management has become the cornerstone of effective cybersecurity. As organizations embrace cloud services, remote work, and digital transformation, the traditional network perimeter has dissolved, making identity the new security boundary.</p>
+                    
+                    <p class="cyber-text">Effective identity management addresses several critical challenges:</p>
+                    
+                    <ul class="cyber-list">
+                        <li>Securing access to resources across diverse environments</li>
+                        <li>Providing seamless user experiences while maintaining strong security</li>
+                        <li>Managing the identity lifecycle from creation to deprovisioning</li>
+                        <li>Ensuring compliance with regulatory requirements</li>
+                        <li>Protecting against increasingly sophisticated identity-based attacks</li>
+                    </ul>
+                    
+                    <h2 class="cyber-heading">Core Components of Identity Management</h2>
+                    <p class="cyber-text">A comprehensive identity management strategy encompasses several interconnected elements:</p>
+                    
+                    <h3 class="cyber-subheading">Identity Governance and Administration (IGA)</h3>
+                    <p class="cyber-text">IGA focuses on managing identity lifecycles, access requests, and compliance. It ensures that users have appropriate access rights based on their roles and responsibilities, and that these rights evolve as users move through the organization. Key capabilities include:</p>
+                    <ul class="cyber-list">
+                        <li>Automated provisioning and deprovisioning of user accounts</li>
+                        <li>Role-based access control (RBAC) implementation</li>
+                        <li>Access certification and periodic reviews</li>
+                        <li>Policy enforcement and compliance reporting</li>
+                    </ul>
+                    
+                    <h3 class="cyber-subheading">Authentication</h3>
+                    <p class="cyber-text">Authentication verifies that users are who they claim to be. Modern authentication has evolved far beyond simple passwords to include multiple factors and contextual signals:</p>
+                    <ul class="cyber-list">
+                        <li><strong>Multi-factor authentication (MFA):</strong> Combining something you know (password), something you have (security key), and something you are (biometrics)</li>
+                        <li><strong>Passwordless authentication:</strong> Eliminating passwords in favor of more secure methods like biometrics or security keys</li>
+                        <li><strong>Adaptive authentication:</strong> Adjusting authentication requirements based on risk factors such as location, device, and behavior patterns</li>
+                    </ul>
+                    
+                    <h3 class="cyber-subheading">Access Management</h3>
+                    <p class="cyber-text">Once authenticated, access management controls what resources users can access and what actions they can perform. Modern approaches include:</p>
+                    <ul class="cyber-list">
+                        <li><strong>Single Sign-On (SSO):</strong> Allowing users to access multiple applications with one set of credentials</li>
+                        <li><strong>Attribute-Based Access Control (ABAC):</strong> Making access decisions based on user attributes, resource properties, and environmental conditions</li>
+                        <li><strong>Just-in-Time Access:</strong> Granting temporary, elevated privileges only when needed for specific tasks</li>
+                    </ul>
+                    
+                    <h3 class="cyber-subheading">Privileged Access Management (PAM)</h3>
+                    <p class="cyber-text">Privileged accounts represent the "keys to the kingdom" and require special protection. PAM solutions provide:</p>
+                    <ul class="cyber-list">
+                        <li>Secure storage and automatic rotation of privileged credentials</li>
+                        <li>Session monitoring and recording for privileged activities</li>
+                        <li>Just-in-time privileged access with approval workflows</li>
+                        <li>Least privilege enforcement to minimize standing privileges</li>
+                    </ul>
+                    
+                    <h2 class="cyber-heading">Identity Management Challenges</h2>
+                    <p class="cyber-text">Organizations face several challenges in implementing effective identity management:</p>
+                    
+                    <h3 class="cyber-subheading">Hybrid and Multi-Cloud Environments</h3>
+                    <p class="cyber-text">Most enterprises operate in hybrid environments spanning on-premises systems, private clouds, and multiple public cloud providers. This complexity creates identity silos and inconsistent security policies. Modern identity solutions must provide unified management across these diverse environments.</p>
+                    
+                    <h3 class="cyber-subheading">Identity Sprawl</h3>
+                    <p class="cyber-text">The proliferation of digital identities—including human users, service accounts, devices, and applications—creates management challenges. Organizations must implement centralized governance to prevent unauthorized access and maintain visibility across all identity types.</p>
+                    
+                    <h3 class="cyber-subheading">Balancing Security and User Experience</h3>
+                    <p class="cyber-text">Overly restrictive security measures can frustrate users and impact productivity, while weak controls create security vulnerabilities. Finding the right balance requires thoughtful design and technologies that enhance security without adding friction.</p>
+                    
+                    <h3 class="cyber-subheading">Evolving Threat Landscape</h3>
+                    <p class="cyber-text">Identity-based attacks have become increasingly sophisticated, including credential stuffing, phishing, and social engineering. Organizations must continuously adapt their defenses to address emerging threats.</p>
+                    
+                    <h2 class="cyber-heading">Modern Identity Management Approaches</h2>
+                    <p class="cyber-text">Several approaches are reshaping identity management:</p>
+                    
+                    <h3 class="cyber-subheading">Zero Trust Architecture</h3>
+                    <p class="cyber-text">Zero Trust assumes that threats exist both outside and inside the network, requiring continuous verification of every access request. This approach centers on the principle of "never trust, always verify" and includes:</p>
+                    <ul class="cyber-list">
+                        <li>Verifying identity with strong authentication for every access request</li>
+                        <li>Applying least privilege access controls</li>
+                        <li>Inspecting and logging all traffic</li>
+                        <li>Using device health and compliance as access conditions</li>
+                    </ul>
+                    
+                    <h3 class="cyber-subheading">Identity-as-a-Service (IDaaS)</h3>
+                    <p class="cyber-text">Cloud-based identity services provide scalable, flexible identity management without the overhead of on-premises infrastructure. IDaaS solutions typically offer pre-built integrations with popular applications and continuous security updates.</p>
+                    
+                    <h3 class="cyber-subheading">Decentralized Identity</h3>
+                    <p class="cyber-text">Emerging decentralized identity models give users more control over their digital identities. Based on blockchain or similar technologies, these approaches allow users to present verified credentials without revealing unnecessary personal information.</p>
+                    
+                    <h2 class="cyber-heading">Best Practices for Identity Management</h2>
+                    <p class="cyber-text">Organizations can strengthen their identity management by following these practices:</p>
+                    
+                    <h3 class="cyber-subheading">Implement Least Privilege</h3>
+                    <p class="cyber-text">Grant users only the minimum access rights needed to perform their job functions. Regularly review and adjust permissions as roles change, and implement time-limited access for temporary needs.</p>
+                    
+                    <h3 class="cyber-subheading">Enforce Strong Authentication</h3>
+                    <p class="cyber-text">Require multi-factor authentication for all users, with stronger requirements for privileged accounts and sensitive data access. Consider passwordless options where appropriate to improve both security and user experience.</p>
+                    
+                    <h3 class="cyber-subheading">Automate Identity Lifecycle Management</h3>
+                    <p class="cyber-text">Implement automated processes for onboarding, role changes, and offboarding to ensure consistent access management and reduce security risks from orphaned accounts or excessive privileges.</p>
+                    
+                    <h3 class="cyber-subheading">Monitor and Analyze Identity Activity</h3>
+                    <p class="cyber-text">Implement continuous monitoring of authentication and access activities to detect suspicious patterns. Use analytics and machine learning to identify anomalous behaviors that might indicate compromised credentials or insider threats.</p>
+                    
+                    <p class="cyber-text">As digital transformation accelerates, identity management will continue to evolve as a critical security discipline. Organizations that implement comprehensive identity strategies will be better positioned to protect their assets while enabling the flexibility and collaboration needed in today's business environment.</p>
+                    
+                    <div class="article-cta">
+                        <h3 class="cyber-subheading">Secure Your Digital Identities</h3>
+                        <p class="cyber-text">Effective identity management is no longer optional—it's essential for securing modern digital environments. Invest in robust identity solutions and practices to protect your organization's most valuable assets.</p>
+                        <a href="../blog.php" class="cyber-btn">Back to Blog</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo cyber-logo">
+                <img src="../images/logo.jpg" style="max-width: 50px;" alt="CyberFace Logo" class="footer-logo-img cyber-image">
+                <p class="cyber-text">CyberFace is your trusted source for cybersecurity knowledge and defense strategies.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../about.html">About Us</a></li>
+                    <li><a href="../lesson.html">Lessons</a></li>
+                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>Contact Info</h4>
+                 <p><i class="fas fa-phone nav-icon"></i> +1 234 567 890</p>
+                <p><i class="fas fa-envelope nav-icon"></i> info@cyberface.com</p>
+                <p><i class="fas fa-map-marker-alt nav-icon"></i> 123 Cyber Street, Security City</p>
+            </div>
+            
+            <div class="footer-newsletter">
+                <h4>Follow Us</h4>
+                <p>Stay connected with us on social media for daily tips and updates.</p>
+                <div class="cyber-social">
+                    <a href="#" class="cyber-social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="cyber-social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="cyber-social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="cyber-social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-developers">
+            <h4>CyberFace's Developers</h4>
+            <div class="developers-grid">
+                <div class="developer-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="developer-img-container">
+                        <img src="../images/1.jpg" alt="Developer 1" class="developer-img">
+                    </div>
+                    <p class="developer-name">Team Coordinator</p>
+                </div>
+                <div class="developer-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="developer-img-container">
+                        <img src="../images/2.jpg" alt="Developer 2" class="developer-img">
+                    </div>
+                    <p class="developer-name">Team Leader</p>
+                </div>
+                <div class="developer-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="developer-img-container">
+                        <img src="../images/3.jpg" alt="Developer 3" class="developer-img">
+                    </div>
+                    <p class="developer-name">Team Editor</p>
+                </div>
+            </div>
+            <p class="more-info">For more information, <a href="../team.html" class="click-here">click here</a>.</p>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 CyberFace. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="../js/script.js"></script>
+<script src="../js/image-handlers.js"></script>
+<script src="../js/enhanced-image-handlers.js"></script>
+<script src="../js/advanced-image-handlers.js"></script>
+</body>
+</html>
