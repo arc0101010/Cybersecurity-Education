@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberFace - Learn Defense</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/image-handlers.css">
+    <link rel="stylesheet" href="css/enhanced-image-handlers.css">
+    <link rel="stylesheet" href="css/advanced-image-handlers.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/enhanced-animations.css">
+    <link rel="stylesheet" href="css/cyber-theme.css">
+    <link rel="stylesheet" href="css/cyber-blog.css">
+    <link rel="stylesheet" href="css/blog-organization.css">
+    <link rel="stylesheet" href="css/featured-grid.css">
+    <link rel="stylesheet" href="css/cyber-forms.css">
+    <link rel="stylesheet" href="css/cyber-sections.css">
+    <link rel="stylesheet" href="css/cyber-interactive.css">
+    <link rel="stylesheet" href="css/cyber-contact.css">
+    <link rel="stylesheet" href="css/cyber-consistency.css">
+    <link rel="stylesheet" href="css/custom-overrides.css">
+    <link rel="stylesheet" href="css/game-button.css">
+    <link rel="stylesheet" href="css/contact-enhancements.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&family=JetBrains+Mono:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <!-- Cybersecurity Network Animation -->
+    <script src="js/cyber-network.js"></script>
+    <script src="js/constellation-animation.js"></script>
+</head>
+<body>
+    <!-- Grid Background -->
+    <div class="grid-background"></div>
+    <div class="scan-line"></div>
+    <div class="cyber-noise"></div>
+    
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.jpg" alt="CyberFace Logo" id="logo">
+            <h1>CyberFace <span class="subtitle">Learn Defense</span></h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home nav-icon"></i>HOME</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle nav-icon"></i>ABOUT</a></li>
+                <li><a href="lesson.html"><i class="fas fa-book nav-icon"></i>LESSON</a></li>
+                <li><a href="blog.html"><i class="fas fa-newspaper nav-icon"></i>BLOG</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope nav-icon"></i>CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="nav-right">
+            <a href="game.html" class="game-btn"><i class="fas fa-gamepad"></i> GAME<div class="circuit-overlay"></div></a>
+            <div class="menu-dropdown">
+                <button class="menu-btn"><i class="fas fa-bars"></i></button>
+                <div class="dropdown-content">
+                        <a href="profile.html">Profile</a>
+                        <a href="videos.html">Videos</a>
+            
+                        <a href="#" id="logoutLink">Logout</a>
+                        <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            const logoutLink = document.getElementById('logoutLink');
+                            logoutLink.addEventListener('click', function(e) {
+                                e.preventDefault();
+                                // Create modal
+                                const modal = document.createElement('div');
+                                modal.style.position = 'fixed';
+                                modal.style.top = 0;
+                                modal.style.left = 0;
+                                modal.style.width = '100vw';
+                                modal.style.height = '100vh';
+                                modal.style.background = 'rgba(0,0,0,0.5)';
+                                modal.style.display = 'flex';
+                                modal.style.alignItems = 'center';
+                                modal.style.justifyContent = 'center';
+                                modal.style.zIndex = 9999;
+
+                                const box = document.createElement('div');
+                                box.style.background = '#fff';
+                                box.style.padding = '30px 40px';
+                                box.style.borderRadius = '10px';
+                                box.style.boxShadow = '0 2px 16px rgba(0,0,0,0.2)';
+                                box.style.textAlign = 'center';
+
+                                const msg = document.createElement('div');
+                                msg.textContent = 'Are you sure you want to logout?';
+                                msg.style.fontWeight = 'bold';
+                                msg.style.color = 'black';
+                                msg.style.marginBottom = '20px';
+
+                                const yesBtn = document.createElement('button');
+                                yesBtn.textContent = 'Yes';
+                                yesBtn.style.margin = '0 10px';
+                                yesBtn.style.padding = '8px 20px';
+                                yesBtn.style.background = 'cyan';
+                                yesBtn.style.color = '#fff';
+                                yesBtn.style.border = 'none';
+                                yesBtn.style.borderRadius = '5px';
+                                yesBtn.style.cursor = 'pointer';
+
+                                const cancelBtn = document.createElement('button');
+                                cancelBtn.textContent = 'Cancel';
+                                cancelBtn.style.margin = '0 10px';
+                                cancelBtn.style.padding = '8px 20px';
+                                cancelBtn.style.background = 'red';
+                                cancelBtn.style.color = 'white';
+                                cancelBtn.style.border = 'none';
+                                cancelBtn.style.borderRadius = '5px';
+                                cancelBtn.style.cursor = 'pointer';
+
+                                box.appendChild(msg);
+                                box.appendChild(yesBtn);
+                                box.appendChild(cancelBtn);
+                                modal.appendChild(box);
+                                document.body.appendChild(modal);
+
+                                yesBtn.onclick = function() {
+                                    // Clear session/local storage (simulate logout)
+                                    sessionStorage.clear();
+                                    localStorage.clear();
+                                    // Redirect to dashboard.html
+                                    window.location.href = 'dashboard.html';
+                                };
+                                cancelBtn.onclick = function() {
+                                    document.body.removeChild(modal);
+                                };
+                            });
+                        });
+                        </script>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="cyber-main">
+        <section class="hero-section team-hero">
+            <div class="cyber-grid-overlay"></div>
+            <div class="hero-content team-hero-content fade-in" style="text-align: center; max-width: 800px; margin: 0 auto; position: relative; z-index: 1;">
+                <h2 style="font-family: 'Orbitron', sans-serif; color: var(--cyber-accent); margin-bottom: 20px;">MEET OUR TEAM</h2>
+                <div class="cyber-divider" style="margin: 20px auto;"><span></span></div>
+                <p class="tagalog cyber-text" style="margin-bottom: 25px;">Meet the developers of Cyberface!</p>
+            </div>
+        </section>
+
+        <!-- Team Overview Section -->
+        <section class="cyber-section">
+            <div class="cyber-grid-overlay"></div>
+            <div class="cyber-container">
+                <div class="about-content" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;">
+                    <div class="team-content" style="flex: 1; padding: 20px; min-width: 300px;">
+                        <h2 class="cyber-heading animate-on-scroll">Our Team</h2>
+                        <div class="cyber-divider"><span></span></div>
+                        <p class="cyber-text">Welcome to Cyberface! We’re second-year students from Camarines Sur Polytechnic Colleges. Here you’ll find clear guides on data protection, network security tips, and more. Dive in, share your feedback, and let’s secure the digital world together!</p>
+                        <p class="cyber-text">We pride ourselves on our collaborative approach, aim to provide comprehensive, well-rounded educational articles through our blog site.</p>
+                    </div>
+                    <div class="team-image" style="flex: 1; padding: 20px; min-width: 300px;">
+                        <div class="cyber-image-container animate-on-scroll">
+                            <div class="cyber-image-frame"></div>
+                            <img src="images/team.jpg" alt="Our Team" class="cyber-image" onerror="this.src='https://via.placeholder.com/500x400/0a192f/64ffda?text=Our+Team'">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Team Members Section -->
+        <section class="cyber-section">
+            <div class="cyber-container">
+                <h2 class="section-title cyber-heading animate-on-scroll">Key Team Members</h2>
+                <div class="cyber-divider"><span></span></div>
+                
+                <div class="team-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px;">
+                    <!-- Team Member 1 -->
+                    <div class="team-member-card" style="background: rgba(10, 25, 47, 0.7); border: 1px solid var(--cyber-accent); padding: 0; overflow: hidden; position: relative;">
+                        <div class="member-image-container" style="position: relative; height: 300px; overflow: hidden;">
+                            <img src="images/1.jpg" alt="Ma. Joy Colico" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://via.placeholder.com/300x300/0a192f/64ffda?text=Maria+Santos'">
+                            <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to bottom, rgba(10, 25, 47, 0) 50%, rgba(10, 25, 47, 0.9) 100%);"></div>
+                        </div>
+                        <div style="padding: 20px;">
+                            <h3 class="cyber-heading">Ma. Joy Colico</h3>
+                            <p class="cyber-text" style="color: var(--cyber-accent); margin-bottom: 15px;">Team Coordinator</p>
+                            <p class="cyber-text">As our team powerhouse, Joy ensures the Cyberface project flows smoothly. She manages schedules, allocates resources, and keeps every milestone on track—making sure our Cyberface team meets deadlines and stays aligned.</p>
+                            <div class="member-social" style="margin-top: 20px;">
+                                <a href="#" class="cyber-social-link" style="margin-right: 15px;"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" class="cyber-social-link" style="margin-right: 15px;"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="cyber-social-link"><i class="fas fa-globe"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Team Member 2 -->
+                    <div class="team-member-card" style="background: rgba(10, 25, 47, 0.7); border: 1px solid var(--cyber-accent); padding: 0; overflow: hidden; position: relative;">
+                        <div class="member-image-container" style="position: relative; height: 300px; overflow: hidden;">
+                            <img src="images/2.jpg" alt="James Quintana" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://via.placeholder.com/300x300/0a192f/64ffda?text=Juan+Reyes'">
+                            <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to bottom, rgba(10, 25, 47, 0) 50%, rgba(10, 25, 47, 0.9) 100%);"></div>
+                        </div>
+                        <div style="padding: 20px;">
+                            <h3 class="cyber-heading">James Quintana</h3>
+                            <p class="cyber-text" style="color: var(--cyber-accent); margin-bottom: 15px;">Team Leader</p>
+                            <p class="cyber-text">James drives the technical vision for Cyberface. He mentors the group, makes key architecture and design decisions, and guarantees that every articles is aligned with cybersecurity.</p>
+                            <div class="member-social" style="margin-top: 20px;">
+                                <a href="#" class="cyber-social-link" style="margin-right: 15px;"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" class="cyber-social-link" style="margin-right: 15px;"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="cyber-social-link"><i class="fas fa-globe"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Team Member 3 -->
+                    <div class="team-member-card" style="background: rgba(10, 25, 47, 0.7); border: 1px solid var(--cyber-accent); padding: 0; overflow: hidden; position: relative;">
+                        <div class="member-image-container" style="position: relative; height: 300px; overflow: hidden;">
+                            <img src="images/3.jpg" alt="Mariane Bantayan" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://via.placeholder.com/300x300/0a192f/64ffda?text=Ana+Lim'">
+                            <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to bottom, rgba(10, 25, 47, 0) 50%, rgba(10, 25, 47, 0.9) 100%);"></div>
+                        </div>
+                        <div style="padding: 20px;">
+                            <h3 class="cyber-heading">Mariane Bantayan</h3>
+                            <p class="cyber-text" style="color: var(--cyber-accent); margin-bottom: 15px;">Team Editor</p>
+                            <p class="cyber-text">Joy refines every blog post. She ensures clarity, consistency, and technical accuracy, maintaining the unified voice of Cyberface and transforming our hands-on guides and articles into polished, reader-friendly content.</p>
+                            <div class="member-social" style="margin-top: 20px;">
+                                <a href="#" class="cyber-social-link" style="margin-right: 15px;"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" class="cyber-social-link" style="margin-right: 15px;"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="cyber-social-link"><i class="fas fa-globe"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo cyber-logo">
+                <img src="images/logo.jpg" style="max-width: 50px;" alt="CyberFace Logo" class="footer-logo-img cyber-image">
+                <p class="cyber-text">CyberFace is your trusted source for cybersecurity knowledge and defense strategies.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="lesson.html">Lessons</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>Contact Info</h4>
+                <p><i class="fas fa-phone nav-icon"></i> +1 234 567 890</p>
+                <p><i class="fas fa-envelope nav-icon"></i> info@cyberface.com</p>
+                <p><i class="fas fa-map-marker-alt nav-icon"></i> 123 Cyber Street, Security City</p>
+            </div>
+            
+            <div class="footer-newsletter">
+                <h4>Follow Us</h4>
+                <p>Stay connected with us on social media for daily tips and updates.</p>
+                <div class="cyber-social">
+                    <a href="#" class="cyber-social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="cyber-social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="cyber-social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="cyber-social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-developers">
+            <h4>CyberFace's Developers</h4>
+            <div class="developers-grid">
+                <div class="developer-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="developer-img-container">
+                        <img src="images/1.jpg" alt="Developer 1" class="developer-img">
+                    </div>
+                    <p class="developer-name">Team Coordinator</p>
+                </div>
+                <div class="developer-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="developer-img-container">
+                        <img src="images/2.jpg" alt="Developer 2" class="developer-img">
+                    </div>
+                    <p class="developer-name">Team Leader</p>
+                </div>
+                <div class="developer-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="developer-img-container">
+                        <img src="images/3.jpg" alt="Developer 3" class="developer-img">
+                    </div>
+                    <p class="developer-name">Team Editor</p>
+                </div>
+            </div>
+            <p class="more-info">For more information, <a href="team.html" class="click-here">click here</a>.</p>
+        </div>
+        
+        <div class="footer-bottom">
+           <p>&copy; 2025 CyberFace. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- JavaScript -->
+<script src="js/script.js"></script>
+<script src="js/image-handlers.js"></script>
+<script src="js/enhanced-image-handlers.js"></script>
+<script src="js/advanced-image-handlers.js"></script>
+</body>
+</html>

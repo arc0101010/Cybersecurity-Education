@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberFace - Learn Defense</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/image-handlers.css">
+    <link rel="stylesheet" href="css/enhanced-image-handlers.css">
+    <link rel="stylesheet" href="css/advanced-image-handlers.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/enhanced-animations.css">
+    <link rel="stylesheet" href="css/cyber-theme.css">
+    <link rel="stylesheet" href="css/cyber-blog.css">
+    <link rel="stylesheet" href="css/blog-organization.css">
+    <link rel="stylesheet" href="css/featured-grid.css">
+    <link rel="stylesheet" href="css/cyber-forms.css">
+    <link rel="stylesheet" href="css/cyber-sections.css">
+    <link rel="stylesheet" href="css/cyber-interactive.css">
+    <link rel="stylesheet" href="css/cyber-contact.css">
+    <link rel="stylesheet" href="css/cyber-consistency.css">
+    <link rel="stylesheet" href="css/custom-overrides.css">
+    <link rel="stylesheet" href="css/game-button.css">
+    <link rel="stylesheet" href="css/contact-enhancements.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&family=JetBrains+Mono:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <!-- Cybersecurity Network Animation -->
+    <script src="js/cyber-network.js"></script>
+    <script src="js/constellation-animation.js"></script>
+</head>
+<body>
+    <!-- Grid Background -->
+    <div class="grid-background"></div>
+    <div class="scan-line"></div>
+    <div class="cyber-noise"></div>
+    
+  <header>
+        <div class="logo-container">
+            <img src="images/logo.jpg" alt="CyberFace Logo" id="logo">
+            <h1>CyberFace <span class="subtitle">Learn Defense</span></h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home nav-icon"></i>HOME</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle nav-icon"></i>ABOUT</a></li>
+                <li><a href="lesson.html"><i class="fas fa-book nav-icon"></i>LESSON</a></li>
+                <li><a href="blog.html"><i class="fas fa-newspaper nav-icon"></i>BLOG</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope nav-icon"></i>CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="nav-right">
+            <a href="game.html" class="game-btn"><i class="fas fa-gamepad"></i> GAME<div class="circuit-overlay"></div></a>
+            <div class="menu-dropdown">
+                <button class="menu-btn"><i class="fas fa-bars"></i></button>
+                <div class="dropdown-content">
+                        <a href="profile.html">Profile</a>
+                        <a href="videos.html">Videos</a>
+                         <a href="#" id="logoutLink">Logout</a>
+                        <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            const logoutLink = document.getElementById('logoutLink');
+                            logoutLink.addEventListener('click', function(e) {
+                                e.preventDefault();
+                                // Create modal
+                                const modal = document.createElement('div');
+                                modal.style.position = 'fixed';
+                                modal.style.top = 0;
+                                modal.style.left = 0;
+                                modal.style.width = '100vw';
+                                modal.style.height = '100vh';
+                                modal.style.background = 'rgba(0,0,0,0.5)';
+                                modal.style.display = 'flex';
+                                modal.style.alignItems = 'center';
+                                modal.style.justifyContent = 'center';
+                                modal.style.zIndex = 9999;
+
+                                const box = document.createElement('div');
+                                box.style.background = '#fff';
+                                box.style.padding = '30px 40px';
+                                box.style.borderRadius = '10px';
+                                box.style.boxShadow = '0 2px 16px rgba(0,0,0,0.2)';
+                                box.style.textAlign = 'center';
+
+                                const msg = document.createElement('div');
+                                msg.textContent = 'Are you sure you want to logout?';
+                                msg.style.fontWeight = 'bold';
+                                msg.style.color = 'black';
+                                msg.style.marginBottom = '20px';
+
+                                const yesBtn = document.createElement('button');
+                                yesBtn.textContent = 'Yes';
+                                yesBtn.style.margin = '0 10px';
+                                yesBtn.style.padding = '8px 20px';
+                                yesBtn.style.background = 'cyan';
+                                yesBtn.style.color = '#fff';
+                                yesBtn.style.border = 'none';
+                                yesBtn.style.borderRadius = '5px';
+                                yesBtn.style.cursor = 'pointer';
+
+                                const cancelBtn = document.createElement('button');
+                                cancelBtn.textContent = 'Cancel';
+                                cancelBtn.style.margin = '0 10px';
+                                cancelBtn.style.padding = '8px 20px';
+                                cancelBtn.style.background = 'red';
+                                cancelBtn.style.color = 'white';
+                                cancelBtn.style.border = 'none';
+                                cancelBtn.style.borderRadius = '5px';
+                                cancelBtn.style.cursor = 'pointer';
+
+                                box.appendChild(msg);
+                                box.appendChild(yesBtn);
+                                box.appendChild(cancelBtn);
+                                modal.appendChild(box);
+                                document.body.appendChild(modal);
+
+                                yesBtn.onclick = function() {
+                                    // Clear session/local storage (simulate logout)
+                                    sessionStorage.clear();
+                                    localStorage.clear();
+                                    // Redirect to dashboard.html
+                                    window.location.href = 'dashboard.html';
+                                };
+                                cancelBtn.onclick = function() {
+                                    document.body.removeChild(modal);
+                                };
+                            });
+                        });
+                        </script>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="game-container">
+            <div class="game-header">
+                <h2>Cybersecurity Typing Test</h2>
+                <p>Improve your typing skills with cybersecurity-related content</p>
+            </div>
+            
+            <div class="typing-monitor enhanced">
+                <div class="monitor-frame">
+                    <div class="monitor-screen">
+                        <div class="monitor-header">
+                            <div class="monitor-controls">
+                                <span class="control-dot red"></span>
+                                <span class="control-dot yellow"></span>
+                                <span class="control-dot green"></span>
+                            </div>
+                            <div class="monitor-title">CyberFace Terminal</div>
+                            <div class="monitor-icons">
+                                <i class="fas fa-lock"></i>
+                                <i class="fas fa-shield-alt"></i>
+                                <i class="fas fa-fingerprint"></i>
+                                <i class="fas fa-server"></i>
+                            </div>
+                        </div>
+                        <div class="monitor-content">
+                            <div class="terminal-line">$ initiating cybersecurity typing test...</div>
+                            <div class="terminal-line">$ loading security protocols...</div>
+                            <div class="terminal-line">$ establishing secure connection...</div>
+                            <div class="terminal-line">$ verifying encryption keys...</div>
+                            <div class="terminal-line success">$ ready to begin</div>
+                            <div class="matrix-effect"></div>
+                            <div id="text-display" class="text-display"></div>
+                            <div class="input-area">
+                                <span class="prompt-symbol">></span>
+                                <input type="text" id="typing-input" class="typing-input" autocomplete="off">
+                                <span class="cursor-blink"></span>
+                            </div>
+                        </div>
+                        <div class="typing-prompt" id="typing-prompt">I-click dito o pindutin ang anumang key para magsimula</div>
+                        <div class="monitor-overlay"></div>
+                    </div>
+                </div>
+                <div class="monitor-stand"></div>
+                <div class="keyboard-graphic"></div>
+                <div class="cyber-decoration left"></div>
+                <div class="cyber-decoration right"></div>
+            </div>
+            
+            <div class="game-stats">
+                <div class="stat-box">
+                    <h3><i class="fas fa-tachometer-alt"></i> WPM</h3>
+                    <div id="wpm" class="value">0</div>
+                </div>
+                <div class="stat-box">
+                    <h3><i class="fas fa-bullseye"></i> Accuracy</h3>
+                    <div id="accuracy" class="value">0%</div>
+                </div>
+                <div class="stat-box">
+                    <h3><i class="fas fa-clock"></i> Time</h3>
+                    <div id="time" class="value">60s</div>
+                </div>
+                <div class="stat-box">
+                    <h3><i class="fas fa-exclamation-triangle"></i> Errors</h3>
+                    <div id="errors" class="value">0</div>
+                </div>
+            </div>
+            
+            <div class="game-controls">
+                <button id="restart-btn" class="cyber-btn"><i class="fas fa-redo"></i> Restart</button>
+                <button id="difficulty-btn" class="cyber-btn"><i class="fas fa-sliders-h"></i> Difficulty</button>
+            </div>
+            
+            <div class="difficulty-modal" id="difficulty-modal">
+                <div class="difficulty-content">
+                    <h3>Select Difficulty</h3>
+                    <div class="difficulty-options">
+                        <button class="difficulty-option active" data-difficulty="easy">Beginner</button>
+                        <button class="difficulty-option" data-difficulty="medium">Intermediate</button>
+                        <button class="difficulty-option" data-difficulty="hard">Advanced</button>
+                        <button class="difficulty-option" data-difficulty="code">Code Snippets</button>
+                    </div>
+                    <button class="close-modal"><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+            </div>
+
+            <style>
+            /* Button Styles */
+            .cyber-btn {
+                background: linear-gradient(90deg, #00ffd0 0%, #007cf0 100%);
+                color: #181c23;
+                border: none;
+                border-radius: 6px;
+                padding: 10px 28px;
+                margin: 0 8px;
+                font-family: 'Orbitron', 'Rajdhani', sans-serif;
+                font-size: 1rem;
+                font-weight: 600;
+                letter-spacing: 1px;
+                box-shadow: 0 2px 10px #00ffd055;
+                cursor: pointer;
+                transition: background 0.2s, color 0.2s, transform 0.1s;
+                position: relative;
+                overflow: hidden;
+            }
+            .cyber-btn i {
+                margin-right: 6px;
+            }
+            .cyber-btn:hover, .cyber-btn:focus {
+                background: linear-gradient(90deg, #007cf0 0%, #00ffd0 100%);
+                color: #fff;
+                transform: translateY(-2px) scale(1.04);
+                box-shadow: 0 4px 20px #00ffd099;
+            }
+            #save-btn {
+                background: linear-gradient(90deg, #ffeb3b 0%, #ff9800 100%);
+                color: #222;
+            }
+            #save-btn:hover, #save-btn:focus {
+                background: linear-gradient(90deg, #ff9800 0%, #ffeb3b 100%);
+                color: #fff;
+            }
+            #difficulty-btn {
+                background: linear-gradient(90deg, #e100ff 0%, #007cf0 100%);
+                color: #fff;
+            }
+            #difficulty-btn:hover, #difficulty-btn:focus {
+                background: linear-gradient(90deg, #007cf0 0%, #e100ff 100%);
+                color: #fff;
+            }
+
+            /* Difficulty Modal Styles */
+            .difficulty-modal {
+                display: none;
+                position: fixed;
+                z-index: 9999;
+                left: 0; top: 0; right: 0; bottom: 0;
+                background: rgba(24,28,35,0.85);
+                align-items: center;
+                justify-content: center;
+            }
+            .difficulty-modal.show {
+                display: flex;
+            }
+            .difficulty-content {
+                background: #181c23;
+                border-radius: 12px;
+                padding: 32px 24px 24px 24px;
+                box-shadow: 0 8px 32px #00ffd055;
+                min-width: 320px;
+                position: relative;
+                text-align: center;
+            }
+            .difficulty-content h3 {
+                color: #00ffd0;
+                margin-bottom: 18px;
+                font-family: 'Orbitron', sans-serif;
+                letter-spacing: 1px;
+            }
+            .difficulty-options {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                margin-bottom: 18px;
+            }
+            .difficulty-option {
+                background: linear-gradient(90deg, #23272f 0%, #2c313a 100%);
+                color: #00ffd0;
+                border: 2px solid #00ffd0;
+                border-radius: 6px;
+                padding: 10px 0;
+                font-family: 'Orbitron', 'Rajdhani', sans-serif;
+                font-size: 1rem;
+                font-weight: 600;
+                cursor: pointer;
+                transition: background 0.2s, color 0.2s, border 0.2s;
+            }
+            .difficulty-option.active, .difficulty-option:hover, .difficulty-option:focus {
+                background: linear-gradient(90deg, #00ffd0 0%, #007cf0 100%);
+                color: #181c23;
+                border: 2px solid #007cf0;
+            }
+            .close-modal {
+                position: absolute;
+                top: 12px;
+                right: 12px;
+                background: none;
+                border: none;
+                color: #00ffd0;
+                font-size: 1.5rem;
+                cursor: pointer;
+                transition: color 0.2s;
+            }
+            .close-modal:hover, .close-modal:focus {
+                color: #ff007c;
+            }
+            </style>
+
+            <script>
+            // --- Typing Test Data ---
+            const typingTexts = {
+                easy: [
+                    "Cybersecurity is the practice of protecting computers, networks, and data from theft, damage, or unauthorized access. Every time we go online, we are exposed to risks such as viruses, phishing emails, and weak passwords. That is why it is important to use strong, unique passwords and keep our devices updated to prevent possible attacks.",
+                    "When you use public Wi-Fi in places like coffee shops or malls, your personal information may not be safe. Hackers can use special tools to see what websites you visit or steal your login details. To stay safe, avoid logging into important accounts or using online banking while connected to public Wi-Fi networks.",
+                    "Phishing is a common type of cyberattack where attackers send fake emails or messages to trick people into giving away their personal information. These messages often look real and ask you to click a link or download a file. Always check the sender’s email address and never click on suspicious links.",
+                    "Updating your software and apps regularly helps fix security bugs that hackers might use to get into your system. Developers often release updates to improve performance and protect you from known threats. If you ignore updates, you might leave your device open to cyberattacks.",
+                    "A firewall is a security system that acts like a barrier between your device and the internet. It helps block harmful traffic and prevents hackers from accessing your data. Most computers and routers come with built-in firewalls, and it's important to keep them turned on.",
+                    "Never share your passwords with anyone, even if they claim to be from your bank or a trusted company. Legitimate organizations will never ask for your password. If you think your password has been stolen, change it immediately.",
+                    "Antivirus software helps protect your computer from harmful programs that can steal your information or damage your files. Make sure your antivirus is always updated and run regular scans to keep your device safe.",
+                    "Be careful when downloading files or apps from the internet. Only download from official websites or trusted sources. Malicious files can contain viruses or spyware that can harm your device or steal your data.",
+                    "If you receive a message that seems urgent or scary, like a warning that your account will be closed, take a moment to think before acting. Scammers often use fear to trick people into making mistakes.",
+                    "Backing up your important files regularly ensures you won’t lose your data if your computer gets hacked or breaks down. Use an external drive or a secure cloud service for your backups."
+                ],
+                medium: [
+                    "In today’s digital world, cybersecurity is no longer just an IT concern—it affects everyone, from individual users to large businesses. Cyberattacks can lead to data breaches, financial loss, and reputational damage. That’s why companies invest in cybersecurity training, incident response plans, and tools like intrusion detection systems to stay protected.",
+                    "A strong password policy is a critical defense against unauthorized access. Instead of using common words or personal info, users are encouraged to create long, complex passwords that include uppercase and lowercase letters, numbers, and special characters. Additionally, two-factor authentication (2FA) adds another layer of protection by requiring a second verification step.",
+                    "Social engineering attacks exploit human psychology rather than technical flaws. An attacker might pretend to be an IT technician to convince an employee to give out their login credentials. These tactics rely on trust, urgency, or fear to manipulate victims into making security mistakes. Awareness and training are key to resisting such schemes.",
+                    "Malware is software designed to harm or exploit computers and networks. It can come in many forms, such as viruses, worms, spyware, and ransomware. Ransomware, for instance, locks your files and demands payment to unlock them. To avoid infection, never open attachments from unknown senders and always run antivirus software.",
+                    "Cloud services have transformed how organizations store and access data, but they also introduce new security risks. Misconfigured storage settings, lack of encryption, and unauthorized access can all lead to data exposure. It is essential to apply proper access controls, monitor user activity, and conduct regular audits in cloud environments.",
+                    "Did you know? Even a simple click on a suspicious link can compromise your device! Always hover over links to check their destination before clicking, and never download files from untrusted sources.",
+                    "Cybercriminals often use urgency in their messages—'Your account will be locked in 24 hours!'—to trick users into acting quickly. Pause, verify the sender, and never provide sensitive information unless you’re sure it’s legitimate.",
+                    "Regularly backing up your data is crucial; if ransomware strikes, you can restore your files without paying the attacker. Use both cloud and offline backups for maximum protection.",
+                    "Public computers (like those in libraries or cafes) may have keyloggers installed. Avoid logging into personal accounts or entering sensitive information on shared devices, and always log out when finished.",
+                    "Firewalls, antivirus software, and secure Wi-Fi settings work together to create a layered defense. However, human error—such as sharing passwords or ignoring software updates—can still open the door to attackers. Stay vigilant!"
+                ],
+                hard: [
+                    "In the ever-evolving landscape of cybersecurity, the implementation of multi-factor authentication (MFA)—which may include biometrics, hardware tokens, and time-based one-time passwords (TOTP)—serves as a critical defense against credential stuffing attacks, especially when adversaries leverage large-scale data breaches and automated scripts to compromise user accounts. However, even MFA is not infallible; sophisticated phishing kits and adversary-in-the-middle (AiTM) proxies can intercept session tokens, necessitating continuous user education and adaptive risk-based authentication policies.",
+                    "The concept of defense-in-depth, originally derived from military strategy, is paramount in modern enterprise security architectures. By layering controls such as network segmentation (using VLANs and firewalls), endpoint detection and response (EDR), intrusion prevention systems (IPS), and zero-trust network access (ZTNA), organizations can mitigate the risk of lateral movement post-compromise. Nevertheless, the efficacy of these controls is contingent upon rigorous configuration management, regular vulnerability assessments, and the elimination of implicit trust relationships.",
+                    "Advanced Persistent Threats (APTs), often attributed to nation-state actors, employ a combination of zero-day exploits, custom malware (e.g., fileless payloads leveraging PowerShell or WMI), and social engineering to establish long-term footholds within target environments. The detection of such threats requires the integration of Security Information and Event Management (SIEM) platforms, threat intelligence feeds, and behavioral analytics, as well as the deployment of deception technologies like honeypots and honeytokens to identify anomalous activity indicative of reconnaissance or privilege escalation.",
+                    "Cryptographic agility—the ability to rapidly transition between cryptographic algorithms in response to emerging vulnerabilities or advances in quantum computing—is increasingly vital. For instance, the migration from RSA-2048 to elliptic curve cryptography (ECC) and, eventually, to post-quantum algorithms (such as lattice-based or hash-based cryptography) must be orchestrated with minimal disruption to existing workflows, ensuring backward compatibility and compliance with regulatory frameworks like FIPS 140-3 and eIDAS.",
+                    "Supply chain attacks, exemplified by incidents like SolarWinds and the compromise of open-source libraries (e.g., event-stream, log4j), highlight the necessity for comprehensive software bill of materials (SBOM), code signing, and continuous monitoring of third-party dependencies. Organizations must implement strict vendor risk management processes, enforce least privilege principles for build pipelines, and utilize runtime application self-protection (RASP) to detect and block malicious behavior at execution time.",
+                    "Zero Trust Architecture (ZTA) fundamentally challenges the traditional perimeter-based security model by asserting that no user, device, or application—whether inside or outside the corporate network—should be inherently trusted. Instead, granular access controls are enforced through continuous authentication, device posture assessment, and micro-segmentation, often orchestrated via software-defined perimeters (SDP) and identity-aware proxies. This paradigm shift requires a robust identity and access management (IAM) infrastructure, as well as comprehensive logging and anomaly detection.",
+                    "The proliferation of Internet of Things (IoT) devices, many of which operate on legacy protocols (e.g., Telnet, SNMPv1) and lack secure boot or firmware validation, has expanded the attack surface exponentially. Botnets such as Mirai and Mozi exploit default credentials and unpatched vulnerabilities to orchestrate large-scale distributed denial-of-service (DDoS) attacks, underscoring the importance of network segmentation, device inventory management, and the adoption of secure firmware update mechanisms (e.g., signed over-the-air updates).",
+                    "Cloud-native security introduces unique challenges, including the management of ephemeral workloads (e.g., containers, serverless functions), the enforcement of least privilege via IAM roles and policies, and the detection of misconfigurations in infrastructure-as-code (IaC) templates. Tools such as Cloud Security Posture Management (CSPM), Kubernetes Admission Controllers, and runtime threat detection (e.g., Falco, Aqua) are essential for maintaining visibility and control in dynamic, multi-cloud environments.",
+                    "Insider threats—whether malicious, negligent, or compromised—remain a persistent risk, particularly in organizations with complex access hierarchies and sensitive intellectual property. Mitigation strategies include the deployment of User and Entity Behavior Analytics (UEBA), strict enforcement of separation of duties (SoD), and the implementation of just-in-time (JIT) access provisioning. Furthermore, regular security awareness training and robust incident response playbooks are critical for early detection and containment.",
+                    "The emergence of artificial intelligence (AI) and machine learning (ML) in cybersecurity has enabled both defenders and adversaries to automate tasks such as anomaly detection, malware classification, and phishing campaign generation. Adversarial machine learning—where attackers manipulate training data or model inputs to evade detection—necessitates the adoption of robust model validation, explainability, and continuous monitoring to ensure the integrity and reliability of AI-driven security solutions."
+                ],
+                            code: [
+                        `def hash_password(password):
+                import hashlib
+                return hashlib.sha256(password.encode()).hexdigest()`,
+                        `if (user.isAuthenticated() && user.hasRole('admin')) {
+                grantAccess();
+            } else {
+                denyAccess();
+            }`,
+                        `SELECT * FROM users WHERE email = ? AND password = ?;`,
+                        `try {
+                socket.connect(server_address)
+            } catch (Exception e) {
+                log(e)
+            }`,
+                        `const encrypted = crypto.publicEncrypt(publicKey, Buffer.from(secret));`,
+                        `<script>
+            document.cookie = "session=secure; HttpOnly; Secure";
+            <\/script>`,
+                        `function validateInput(input) {
+                return /^[a-zA-Z0-9_]+$/.test(input);
+            }`,
+                        `# Linux: Add user to sudoers
+            echo "username ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/username`,
+                        `$ openssl enc -aes-256-cbc -in file.txt -out file.enc -k password`,
+                        `public class Auth {
+                public boolean check(String user, String pass) {
+                    // authentication logic
+                    return true;
+                }
+            }`
+                            ]
+            };
+
+            // Shuffle array utility
+            function shuffleArray(array) {
+                let arr = array.slice();
+                for (let i = arr.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [arr[i], arr[j]] = [arr[j], arr[i]];
+                }
+                return arr;
+            }
+
+            let currentDifficulty = 'easy';
+            let currentText = '';
+            let timer = null;
+            let timeLeft = 60;
+            let started = false;
+            let charIndex = 0;
+            let errors = 0;
+            let correctChars = 0;
+            let totalTyped = 0;
+
+            // --- DOM Elements ---
+            const textDisplay = document.getElementById('text-display');
+            const typingInput = document.getElementById('typing-input');
+            const typingPrompt = document.getElementById('typing-prompt');
+            const wpmDisplay = document.getElementById('wpm');
+            const accuracyDisplay = document.getElementById('accuracy');
+            const timeDisplay = document.getElementById('time');
+            const errorsDisplay = document.getElementById('errors');
+            const restartBtn = document.getElementById('restart-btn');
+            const saveBtn = document.getElementById('save-btn');
+            const difficultyBtn = document.getElementById('difficulty-btn');
+            const difficultyModal = document.getElementById('difficulty-modal');
+            const difficultyOptions = document.querySelectorAll('.difficulty-option');
+
+            // --- Utility Functions ---
+            function pickRandomText(difficulty) {
+                // Shuffle and pick first 10 samples for the session
+                if (!typingTexts[`_${difficulty}_shuffled`] || typingTexts[`_${difficulty}_shuffled`].length === 0) {
+                    typingTexts[`_${difficulty}_shuffled`] = shuffleArray(typingTexts[difficulty]);
+                }
+                // Always keep 10 samples in the shuffled array
+                if (typingTexts[`_${difficulty}_shuffled`].length > 10) {
+                    typingTexts[`_${difficulty}_shuffled`] = typingTexts[`_${difficulty}_shuffled`].slice(0, 10);
+                }
+                // Pick a random sample from the 10
+                const arr = typingTexts[`_${difficulty}_shuffled`];
+                return arr[Math.floor(Math.random() * arr.length)];
+            }
+
+            function renderText(text) {
+                // For code snippets, preserve formatting
+                if (currentDifficulty === 'code') {
+                    textDisplay.innerHTML = `<pre style="margin:0;font-family:'JetBrains Mono',monospace;font-size:1rem;">${[...text].map((ch, i) =>
+                        `<span class="char" data-idx="${i}">${ch === '\n' ? '<br>' : ch}</span>`
+                    ).join('')}</pre>`;
+                } else {
+                    textDisplay.innerHTML = [...text].map((ch, i) =>
+                        `<span class="char" data-idx="${i}">${ch}</span>`
+                    ).join('');
+                }
+            }
+
+            function updateStats() {
+                const minutes = (60 - timeLeft) / 60;
+                const wpm = minutes > 0 ? Math.round((correctChars / 5) / minutes) : 0;
+                const accuracy = totalTyped > 0 ? Math.round((correctChars / totalTyped) * 100) : 100;
+                wpmDisplay.textContent = wpm;
+                accuracyDisplay.textContent = accuracy + '%';
+                timeDisplay.textContent = timeLeft + 's';
+                errorsDisplay.textContent = errors;
+            }
+
+            function resetStats() {
+                charIndex = 0;
+                errors = 0;
+                correctChars = 0;
+                totalTyped = 0;
+                timeLeft = 60;
+                started = false;
+                typingInput.value = '';
+                typingInput.disabled = false;
+                updateStats();
+            }
+
+            function highlightChar(idx, correct) {
+                const chars = textDisplay.querySelectorAll('.char');
+                if (chars[idx]) {
+                    chars[idx].classList.remove('correct', 'incorrect');
+                    if (correct === true) chars[idx].classList.add('correct');
+                    else if (correct === false) chars[idx].classList.add('incorrect');
+                }
+            }
+
+            function clearHighlights() {
+                textDisplay.querySelectorAll('.char').forEach(span => {
+                    span.classList.remove('correct', 'incorrect');
+                });
+            }
+
+            // --- Game Logic ---
+            function initGame() {
+                currentText = pickRandomText(currentDifficulty);
+                renderText(currentText);
+                resetStats();
+                clearHighlights();
+                typingPrompt.style.display = '';
+                typingInput.blur();
+            }
+
+            function startGame() {
+                if (started) return;
+                started = true;
+                typingPrompt.style.display = 'none';
+                typingInput.focus();
+                timer = setInterval(() => {
+                    timeLeft--;
+                    updateStats();
+                    if (timeLeft <= 0) {
+                        endGame();
+                    }
+                }, 1000);
+            }
+
+            function endGame() {
+                clearInterval(timer);
+                typingInput.disabled = true;
+                typingPrompt.textContent = 'Test finished! Click Restart to try again.';
+                typingPrompt.style.display = '';
+            }
+
+            typingInput.addEventListener('input', function() {
+                if (!started) startGame();
+                const val = typingInput.value;
+                totalTyped++;
+                if (val[val.length - 1] === undefined) return;
+                if (val[val.length - 1] === currentText[charIndex]) {
+                    highlightChar(charIndex, true);
+                    correctChars++;
+                } else {
+                    highlightChar(charIndex, false);
+                    errors++;
+                }
+                charIndex++;
+                if (charIndex === currentText.length) {
+                    endGame();
+                }
+                updateStats();
+            });
+
+            typingInput.addEventListener('keydown', function(e) {
+                if (!started) startGame();
+                // Prevent typing after finished
+                if (typingInput.disabled) e.preventDefault();
+            });
+
+            typingPrompt.addEventListener('click', function() {
+                typingInput.focus();
+                if (!started) startGame();
+            });
+            document.addEventListener('keydown', function(e) {
+                if (!started && document.activeElement !== typingInput) {
+                    typingInput.focus();
+                    startGame();
+                }
+            });
+
+            // --- Button Functionality ---
+            restartBtn.addEventListener('click', function() {
+                clearInterval(timer);
+                initGame();
+            });
+
+            saveBtn.addEventListener('click', function() {
+                // Demo only: Show alert. Implement AJAX for real save.
+                alert('Results saved! (Implement backend logic as needed)');
+            });
+
+            // --- Difficulty Modal Logic ---
+            difficultyBtn.addEventListener('click', function() {
+                difficultyModal.classList.add('show');
+            });
+            difficultyModal.querySelector('.close-modal').addEventListener('click', function() {
+                difficultyModal.classList.remove('show');
+            });
+            window.addEventListener('click', function(e) {
+                if (e.target === difficultyModal) {
+                    difficultyModal.classList.remove('show');
+                }
+            });
+            difficultyOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    difficultyOptions.forEach(opt => opt.classList.remove('active'));
+                    this.classList.add('active');
+                    currentDifficulty = this.getAttribute('data-difficulty');
+                    difficultyModal.classList.remove('show');
+                    initGame();
+                });
+            });
+
+            // --- Highlighting Styles ---
+            const style = document.createElement('style');
+            style.innerHTML = `
+            .char.correct { color: #00ffd0; background: #23272f; border-radius: 2px; }
+            .char.incorrect { color: #ff007c; background: #2c1a2c; border-radius: 2px; }
+            .text-display { min-height: 2.5em; font-size: 1.15rem; font-family: 'JetBrains Mono', 'Rajdhani', monospace; }
+            pre { margin:0; }
+            `;
+            document.head.appendChild(style);
+
+            // --- Initialize Game on Load ---
+            initGame();
+            </script>
+    </main>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo cyber-logo">
+                <img src="images/logo.jpg" style="max-width: 50px;" alt="CyberFace Logo" class="footer-logo-img cyber-image">
+                <p class="cyber-text">CyberFace is your trusted source for cybersecurity knowledge and defense strategies.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="lesson.html">Lessons</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>Contact Info</h4>
+                <p><i class="fas fa-phone nav-icon"></i> +1 234 567 890</p>
+                <p><i class="fas fa-envelope nav-icon"></i> info@cyberface.com</p>
+                <p><i class="fas fa-map-marker-alt nav-icon"></i> 123 Cyber Street, Security City</p>
+            </div>
+            
+            <div class="footer-newsletter">
+                <h4>Follow Us</h4>
+                <p>Stay connected with us on social media for daily tips and updates.</p>
+                <div class="cyber-social">
+                    <a href="#" class="cyber-social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="cyber-social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="cyber-social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="cyber-social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-developers">
+            <h4>CyberFace's Developers</h4>
+            <div class="developers-grid">
+                <div class="developer-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="developer-img-container">
+                        <img src="images/1.jpg" alt="Developer 1" class="developer-img">
+                    </div>
+                    <p class="developer-name">Team Coordinator</p>
+                </div>
+                <div class="developer-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="developer-img-container">
+                        <img src="images/2.jpg" alt="Developer 2" class="developer-img">
+                    </div>
+                    <p class="developer-name">Team Leader</p>
+                </div>
+                <div class="developer-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="developer-img-container">
+                        <img src="images/3.jpg" alt="Developer 3" class="developer-img">
+                    </div>
+                    <p class="developer-name">Team Editor</p>
+                </div>
+            </div>
+            <p class="more-info">For more information, <a href="team.html" class="click-here">click here</a>.</p>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 CyberFace. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- JavaScript -->
+<script src="js/script.js"></script>
+<script src="js/image-handlers.js"></script>
+<script src="js/enhanced-image-handlers.js"></script>
+<script src="js/advanced-image-handlers.js"></script>
+<script src="js/game.js"></script>
+<script>
+        // Handle difficulty modal
+        document.addEventListener('DOMContentLoaded', function() {
+            const difficultyBtn = document.getElementById('difficulty-btn');
+            const difficultyModal = document.getElementById('difficulty-modal');
+            const closeModal = document.querySelector('.close-modal');
+            const difficultyOptions = document.querySelectorAll('.difficulty-option');
+            
+            // Show modal
+            difficultyBtn.addEventListener('click', function() {
+                difficultyModal.classList.add('show');
+            });
+            
+            // Close modal
+            closeModal.addEventListener('click', function() {
+                difficultyModal.classList.remove('show');
+            });
+            
+            // Close modal when clicking outside
+            window.addEventListener('click', function(e) {
+                if (e.target === difficultyModal) {
+                    difficultyModal.classList.remove('show');
+                }
+            });
+            
+            // Handle difficulty selection
+            difficultyOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    // Remove active class from all options
+                    difficultyOptions.forEach(opt => opt.classList.remove('active'));
+                    
+                    // Add active class to selected option
+                    this.classList.add('active');
+                    
+                    // Set difficulty level
+                    const difficulty = this.getAttribute('data-difficulty');
+                    setDifficulty(difficulty);
+                    
+                    // Close modal
+                    difficultyModal.classList.remove('show');
+                    
+                    // Restart game with new difficulty
+                    if (window.initGame) {
+                        window.initGame();
+                    }
+                });
+            });
+            
+            // Function to set difficulty level
+            function setDifficulty(level) {
+                // This function will be implemented in game.js
+                if (window.setDifficultyLevel) {
+                    window.setDifficultyLevel(level);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

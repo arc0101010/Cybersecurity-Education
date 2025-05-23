@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberFace - Learn Defense</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/image-handlers.css">
+    <link rel="stylesheet" href="css/enhanced-image-handlers.css">
+    <link rel="stylesheet" href="css/advanced-image-handlers.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/enhanced-animations.css">
+    <link rel="stylesheet" href="css/cyber-theme.css">
+    <link rel="stylesheet" href="css/cyber-blog.css">
+    <link rel="stylesheet" href="css/blog-organization.css">
+    <link rel="stylesheet" href="css/featured-grid.css">
+    <link rel="stylesheet" href="css/cyber-forms.css">
+    <link rel="stylesheet" href="css/cyber-sections.css">
+    <link rel="stylesheet" href="css/cyber-interactive.css">
+    <link rel="stylesheet" href="css/cyber-contact.css">
+    <link rel="stylesheet" href="css/cyber-consistency.css">
+    <link rel="stylesheet" href="css/custom-overrides.css">
+    <link rel="stylesheet" href="css/game-button.css">
+    <link rel="stylesheet" href="css/contact-enhancements.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&family=JetBrains+Mono:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <!-- Cybersecurity Network Animation -->
+    <script src="js/cyber-network.js"></script>
+    <script src="js/constellation-animation.js"></script>
+    
+</head>
+<body>
+     <!-- Grid Background -->
+    <div class="grid-background"></div>
+    <div class="scan-line"></div>
+    <div class="cyber-noise"></div>
+    
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.jpg" alt="CyberFace Logo" id="logo">
+            <h1>CyberFace <span class="subtitle">Learn Defense</span></h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active"><i class="fas fa-home nav-icon"></i>HOME</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle nav-icon"></i>ABOUT</a></li>
+                <li><a href="lesson.html"><i class="fas fa-book nav-icon"></i>LESSON</a></li>
+                <li><a href="blog.html"><i class="fas fa-newspaper nav-icon"></i>BLOG</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope nav-icon"></i>CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="nav-right">
+            <a href="game.html" class="game-btn"><i class="fas fa-gamepad"></i> GAME<div class="circuit-overlay"></div></a>
+            <div class="menu-dropdown">
+                <button class="menu-btn"><i class="fas fa-bars"></i></button>
+                <div class="dropdown-content">
+                        <a href="profile.html">Profile</a>
+                        <a href="videos.html">Videos</a>
+                        
+                         <a href="#" id="logoutLink">Logout</a>
+                        <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            const logoutLink = document.getElementById('logoutLink');
+                            logoutLink.addEventListener('click', function(e) {
+                                e.preventDefault();
+                                // Create modal
+                                const modal = document.createElement('div');
+                                modal.style.position = 'fixed';
+                                modal.style.top = 0;
+                                modal.style.left = 0;
+                                modal.style.width = '100vw';
+                                modal.style.height = '100vh';
+                                modal.style.background = 'rgba(0,0,0,0.5)';
+                                modal.style.display = 'flex';
+                                modal.style.alignItems = 'center';
+                                modal.style.justifyContent = 'center';
+                                modal.style.zIndex = 9999;
+
+                                const box = document.createElement('div');
+                                box.style.background = '#fff';
+                                box.style.padding = '30px 40px';
+                                box.style.borderRadius = '10px';
+                                box.style.boxShadow = '0 2px 16px rgba(0,0,0,0.2)';
+                                box.style.textAlign = 'center';
+
+                                const msg = document.createElement('div');
+                                msg.textContent = 'Are you sure you want to logout?';
+                                msg.style.fontWeight = 'bold';
+                                msg.style.color = 'black';
+                                msg.style.marginBottom = '20px';
+
+                                const yesBtn = document.createElement('button');
+                                yesBtn.textContent = 'Yes';
+                                yesBtn.style.margin = '0 10px';
+                                yesBtn.style.padding = '8px 20px';
+                                yesBtn.style.background = 'cyan';
+                                yesBtn.style.color = '#fff';
+                                yesBtn.style.border = 'none';
+                                yesBtn.style.borderRadius = '5px';
+                                yesBtn.style.cursor = 'pointer';
+
+                                const cancelBtn = document.createElement('button');
+                                cancelBtn.textContent = 'Cancel';
+                                cancelBtn.style.margin = '0 10px';
+                                cancelBtn.style.padding = '8px 20px';
+                                cancelBtn.style.background = 'red';
+                                cancelBtn.style.color = 'white';
+                                cancelBtn.style.border = 'none';
+                                cancelBtn.style.borderRadius = '5px';
+                                cancelBtn.style.cursor = 'pointer';
+
+                                box.appendChild(msg);
+                                box.appendChild(yesBtn);
+                                box.appendChild(cancelBtn);
+                                modal.appendChild(box);
+                                document.body.appendChild(modal);
+
+                                yesBtn.onclick = function() {
+                                    // Clear session/local storage (simulate logout)
+                                    sessionStorage.clear();
+                                    localStorage.clear();
+                                    // Redirect to dashboard.html
+                                    window.location.href = 'dashboard.html';
+                                };
+                                cancelBtn.onclick = function() {
+                                    document.body.removeChild(modal);
+                                };
+                            });
+                        });
+                        </script>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="profile-section">
+            <div class="profile-container">
+                <div class="profile-header">
+                    <div class="profile-avatar-wrapper">
+                        <img src="images/default-avatar.png" alt="Avatar" class="profile-avatar" id="profileAvatar">
+                        <input type="file" id="avatarInput" accept="image/*" style="display:none;">
+                        <button class="avatar-edit-btn" id="avatarEditBtn" title="Change Avatar"><i class="fas fa-camera"></i></button>
+                    </div>
+                    <div class="profile-main-info">
+                        <div class="profile-username" id="profileUsername">Username</div>
+                        <div class="profile-role" id="profileRole"><i class="fas fa-user-shield"></i> CyberFace Member</div>
+                    </div>
+                </div>
+                <div class="profile-info-flex">
+                    <div class="profile-info-block">
+                        <h3>Personal Information</h3>
+                        <div class="profile-details">
+                            <label>Email:</label>
+                            <p id="profileEmail">user@email.com</p>
+                            <label>Member Since:</label>
+                            <p id="profileSince">2024-01-01</p>
+                            <label>Full Name:</label>
+                            <p id="profileFullName">Not set</p>
+                            <label>Birthday:</label>
+                            <p id="profileBirthday">Not set</p>
+                        </div>
+                        <button class="edit-btn" id="editProfileBtn"><i class="fas fa-user-edit"></i> Edit Profile</button>
+                    </div>
+                    <div class="profile-info-block">
+                        <h3>Account Settings</h3>
+                        <button class="change-account-btn" id="changeAccountBtn"><i class="fas fa-cog"></i> Change Account Information</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Edit Profile Modal -->
+            <div class="modal" id="editProfileModal">
+                <div class="modal-content">
+                    <span class="close" id="closeEditProfile">&times;</span>
+                    <h2>Edit Profile</h2>
+                    <form id="editProfileForm">
+                        <label for="editFullName">Full Name:</label>
+                        <input type="text" id="editFullName" name="fullName" required>
+                        <label for="editBirthday">Birthday:</label>
+                        <input type="date" id="editBirthday" name="birthday">
+                        <button type="submit" class="save-btn">Save Changes</button>
+                    </form>
+                </div>
+            </div>
+            <!-- Change Account Modal -->
+            <div class="modal" id="changeAccountModal">
+                <div class="modal-content">
+                    <span class="close" id="closeChangeAccount">&times;</span>
+                    <h2>Change Account Information</h2>
+                    <form id="changeAccountForm">
+                        <label for="changeUsername">Username:</label>
+                        <input type="text" id="changeUsername" name="username" required>
+                        <label for="currentPassword">Current Password:</label>
+                        <input type="password" id="currentPassword" name="currentPassword" required>
+                        <label for="newPassword">New Password:</label>
+                        <input type="password" id="newPassword" name="newPassword">
+                        <label for="confirmNewPassword">Confirm New Password:</label>
+                        <input type="password" id="confirmNewPassword" name="confirmNewPassword">
+                        <button type="submit" class="save-btn">Save Changes</button>
+                    </form>
+                </div>
+            </div>
+            <style>
+                .profile-section {
+                    min-height: 80vh;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: center;
+                    padding: 40px 0;
+                    background: none;
+                }
+                .profile-container {
+                    background: rgba(0,255,231,0.06);
+                    border-radius: 18px;
+                    box-shadow: 0 8px 32px 0 rgba(0,255,231,0.10);
+                    max-width: 900px;
+                    width: 100%;
+                    padding: 38px 40px 32px 40px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 32px;
+                }
+                .profile-header {
+                    display: flex;
+                    align-items: center;
+                    gap: 32px;
+                    margin-bottom: 10px;
+                }
+                .profile-avatar-wrapper {
+                    position: relative;
+                    width: 140px;
+                    height: 140px;
+                    min-width: 140px;
+                }
+                .profile-avatar {
+                    width: 140px;
+                    height: 140px;
+                    border-radius: 50%;
+                    border: 4px solid var(--cyber-accent, #00ffe7);
+                    object-fit: cover;
+                    background: #222;
+                    box-shadow: 0 0 16px #00ffe7a0;
+                    display: block;
+                }
+                .avatar-edit-btn {
+                    position: absolute;
+                    bottom: 10px;
+                    right: 10px;
+                    background: #00ffe7;
+                    color: #181c2a;
+                    border: none;
+                    border-radius: 50%;
+                    width: 38px;
+                    height: 38px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    box-shadow: 0 0 8px #00ffe7a0;
+                    font-size: 1.2rem;
+                    transition: background 0.18s;
+                }
+                .avatar-edit-btn:hover {
+                    background: #0fffc1;
+                }
+                .profile-main-info {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+            }
+            .profile-avatar {
+                width: 80px;
+                height: 80px;
+            }
+        
+    </style>
+        </section>
+        <script>
+            // Load user profile from localStorage
+            document.addEventListener('DOMContentLoaded', function() {
+                const user = JSON.parse(localStorage.getItem('cyberface_user') || 'null');
+                if (!user) {
+                    window.location.href = 'login.html';
+                    return;
+                }
+                document.getElementById('profileUsername').textContent = user.username || 'Unknown';
+                document.getElementById('profileEmail').textContent = user.email || 'Not set';
+                document.getElementById('profileSince').textContent = user.since || '2024-01-01';
+                // Optionally, set avatar if user uploaded one
+                if (user.avatar) {
+                    document.getElementById('profileAvatar').src = user.avatar;
+                }
+                // Edit Profile (simple demo)
+                document.getElementById('editProfileBtn').onclick = function() {
+                    alert('Profile editing coming soon!');
+                };
+                // Logout
+                document.getElementById('logoutBtn').onclick = function() {
+                    localStorage.removeItem('cyberface_user');
+                    window.location.href = 'login.html';
+                };
+            });
+        </script>
+    <style>
+        .profile-section {
+            min-height: 80vh;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 40px 0;
+            background: none;
+        }
+        .profile-container {
+            background: rgba(0,255,231,0.06);
+            border-radius: 18px;
+            box-shadow: 0 8px 32px 0 rgba(0,255,231,0.10);
+            max-width: 1100px;
+            width: 95%;
+            padding: 48px 56px 40px 56px;
+            display: flex;
+            flex-direction: column;
+            gap: 36px;
+        }
+        .profile-header-flex {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 18px;
+        }
+        .profile-avatar-wrapper {
+            position: relative;
+            width: 160px;
+            height: 160px;
+            min-width: 160px;
+        }
+        .profile-avatar {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 4px solid var(--cyber-accent, #00ffe7);
+            object-fit: cover;
+            background: #222;
+            box-shadow: 0 0 16px #00ffe7a0;
+            display: block;
+            aspect-ratio: 1/1;
+        }
+        .avatar-edit-btn {
+            position: absolute;
+            bottom: 12px;
+            right: 12px;
+            background: #00ffe7;
+            color: #181c2a;
+            border: none;
+            border-radius: 50%;
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 0 8px #00ffe7a0;
+            font-size: 1.3rem;
+            transition: background 0.18s;
+        }
+        .avatar-edit-btn:hover {
+            background: #0fffc1;
+        }
+        .profile-main-info {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .profile-username {
+            font-size: 2.2rem;
+            font-family: 'Orbitron', sans-serif;
+            color: var(--cyber-accent, #00ffe7);
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+        .profile-role {
+            font-size: 1.1rem;
+            color: #b8eaff;
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 500;
+        }
+        .profile-info-flex {
+            display: flex;
+            gap: 48px;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+        .profile-info-block {
+            background: rgba(0,255,231,0.04);
+            border-radius: 12px;
+            box-shadow: 0 2px 12px 0 rgba(0,255,231,0.04);
+            padding: 32px 28px 24px 28px;
+            min-width: 320px;
+            flex: 1 1 340px;
+            max-width: 420px;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+        .profile-details label {
+            font-weight: 600;
+            color: var(--cyber-accent, #00ffe7);
+            letter-spacing: 1px;
+            margin-bottom: 2px;
+            display: block;
+        }
+        .profile-details p {
+            margin-bottom: 12px;
+            color: #fff;
+            font-size: 1.08rem;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .edit-btn, .change-account-btn {
+            background: linear-gradient(90deg, var(--cyber-accent, #00ffe7) 0%, #0fffc1 100%);
+            color: #181c2a;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.08rem;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 600;
+            letter-spacing: 1px;
+            padding: 12px 0;
+            margin-top: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 18px 0 rgba(0,255,231,0.08);
+            transition: background 0.18s, box-shadow 0.18s, transform 0.12s;
+            width: 100%;
+        }
+        .edit-btn:hover, .change-account-btn:hover {
+            background: linear-gradient(90deg, #0fffc1 0%, var(--cyber-accent, #00ffe7) 100%);
+            box-shadow: 0 0 16px 0 #00ffe7a0;
+            color: #181c2a;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0; top: 0;
+            width: 100vw; height: 100vh;
+            overflow: auto;
+            background: rgba(0,0,0,0.55);
+            align-items: center;
+            justify-content: center;
+        }
+        .modal.show {
+            display: flex;
+        }
+        .modal-content {
+            background: #181c2a;
+            margin: auto;
+            border-radius: 14px;
+            padding: 36px 32px 28px 32px;
+            width: 100%;
+            max-width: 420px;
+            box-shadow: 0 8px 32px 0 rgba(0,255,231,0.13);
+            position: relative;
+            color: #fff;
+        }
+        .modal-content h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--cyber-accent, #00ffe7);
+            margin-bottom: 18px;
+            font-size: 1.5rem;
+        }
+        .modal-content label {
+            font-weight: 600;
+            color: var(--cyber-accent, #00ffe7);
+            margin-bottom: 2px;
+            display: block;
+        }
+        .modal-content input[type="text"],
+        .modal-content input[type="date"],
+        .modal-content input[type="password"] {
+            width: 100%;
+            padding: 10px 14px;
+            border-radius: 7px;
+            border: 2px solid var(--cyber-accent, #00ffe7);
+            background: #23273a;
+            color: #fff;
+            margin-bottom: 16px;
+            font-size: 1.05rem;
+            font-family: 'JetBrains Mono', monospace;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .modal-content input:focus {
+            border-color: #fff;
+        }
+        .save-btn {
+            background: linear-gradient(90deg, var(--cyber-accent, #00ffe7) 0%, #0fffc1 100%);
+            color: #181c2a;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.08rem;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 600;
+            letter-spacing: 1px;
+            padding: 12px 0;
+            margin-top: 8px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.18s;
+        }
+        .save-btn:hover {
+            background: linear-gradient(90deg, #0fffc1 0%, var(--cyber-accent, #00ffe7) 100%);
+        }
+        .close {
+            position: absolute;
+            top: 18px;
+            right: 22px;
+            font-size: 2rem;
+            color: #00ffe7;
+            cursor: pointer;
+            font-weight: 700;
+            transition: color 0.18s;
+        }
+        .close:hover {
+            color: #0fffc1;
+        }
+        @media (max-width: 900px) {
+            .profile-container {
+                padding: 24px 8px 20px 8px;
+            }
+            .profile-header-flex {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 18px;
+            }
+            .profile-info-flex {
+                flex-direction: column;
+                gap: 24px;
+            }
+        }
+    </style>
+        </section>    
+    <script>
+        // Load user profile from localStorage
+        document.addEventListener('DOMContentLoaded', function() {
+            let user = JSON.parse(localStorage.getItem('cyberface_user') || 'null');
+            if (!user) {
+                window.location.href = 'login.html';
+                return;
+            }
+            // Set profile info
+            document.getElementById('profileUsername').textContent = user.username || 'Unknown';
+            document.getElementById('profileEmail').textContent = user.email || 'Not set';
+            document.getElementById('profileSince').textContent = user.since || '2024-01-01';
+            document.getElementById('profileFullName').textContent = user.fullName || 'Not set';
+            document.getElementById('profileBirthday').textContent = user.birthday || 'Not set';
+            if (user.avatar) {
+                document.getElementById('profileAvatar').src = user.avatar;
+            }
+
+            // Avatar change handler
+            const avatarEditBtn = document.getElementById('avatarEditBtn');
+            const avatarInput = document.getElementById('avatarInput');
+            avatarEditBtn.onclick = function() {
+                avatarInput.click();
+            };
+            avatarInput.onchange = function(e) {
+                const file = e.target.files[0];
+                if (!file) return;
+                const reader = new FileReader();
+                reader.onload = function(evt) {
+                    document.getElementById('profileAvatar').src = evt.target.result;
+                    user.avatar = evt.target.result;
+                    localStorage.setItem('cyberface_user', JSON.stringify(user));
+                };
+                reader.readAsDataURL(file);
+            };
+
+            // Edit Profile Modal
+            const editProfileBtn = document.getElementById('editProfileBtn');
+            const editProfileModal = document.getElementById('editProfileModal');
+            const closeEditProfile = document.getElementById('closeEditProfile');
+            const editProfileForm = document.getElementById('editProfileForm');
+            editProfileBtn.onclick = function() {
+                editProfileModal.classList.add('show');
+                document.getElementById('editFullName').value = user.fullName || '';
+                document.getElementById('editBirthday').value = user.birthday || '';
+            };
+            closeEditProfile.onclick = function() {
+                editProfileModal.classList.remove('show');
+            };
+            editProfileForm.onsubmit = function(e) {
+                e.preventDefault();
+                user.fullName = document.getElementById('editFullName').value.trim();
+                user.birthday = document.getElementById('editBirthday').value;
+                localStorage.setItem('cyberface_user', JSON.stringify(user));
+                document.getElementById('profileFullName').textContent = user.fullName || 'Not set';
+                document.getElementById('profileBirthday').textContent = user.birthday || 'Not set';
+                editProfileModal.classList.remove('show');
+            };
+
+            // Change Account Modal
+            const changeAccountBtn = document.getElementById('changeAccountBtn');
+            const changeAccountModal = document.getElementById('changeAccountModal');
+            const closeChangeAccount = document.getElementById('closeChangeAccount');
+            const changeAccountForm = document.getElementById('changeAccountForm');
+            const changeAccountError = document.getElementById('changeAccountError');
+            changeAccountBtn.onclick = function() {
+                changeAccountModal.classList.add('show');
+                document.getElementById('changeUsername').value = user.username || '';
+                changeAccountError.style.display = 'none';
+            };
+            closeChangeAccount.onclick = function() {
+                changeAccountModal.classList.remove('show');
+            };
+            changeAccountForm.onsubmit = function(e) {
+                e.preventDefault();
+                const newUsername = document.getElementById('changeUsername').value.trim();
+                const currentPassword = document.getElementById('currentPassword').value;
+                const newPassword = document.getElementById('newPassword').value;
+                const confirmNewPassword = document.getElementById('confirmNewPassword').value;
+                changeAccountError.style.display = 'none';
+
+                if (currentPassword !== user.password) {
+                    changeAccountError.textContent = 'Current password is incorrect.';
+                    changeAccountError.style.display = 'block';
+                    return;
+                }
+                if (newPassword && newPassword !== confirmNewPassword) {
+                    changeAccountError.textContent = 'New passwords do not match.';
+                    changeAccountError.style.display = 'block';
+                    return;
+                }
+                // Update username and password if changed
+                user.username = newUsername;
+                if (newPassword) user.password = newPassword;
+                localStorage.setItem('cyberface_user', JSON.stringify(user));
+                document.getElementById('profileUsername').textContent = user.username;
+                changeAccountModal.classList.remove('show');
+                // Optionally, show a success message
+            };
+
+            // Close modals when clicking outside
+            window.onclick = function(event) {
+                if (event.target === editProfileModal) editProfileModal.classList.remove('show');
+                if (event.target === changeAccountModal) changeAccountModal.classList.remove('show');
+            };
+        });
+    </script>
+    </main>
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo cyber-logo">
+                <img src="images/logo.jpg" style="max-width: 50px;" alt="CyberFace Logo" class="footer-logo-img cyber-image">
+                <p class="cyber-text">CyberFace is your trusted source for cybersecurity knowledge and defense strategies.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="lesson.html">Lessons</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>Contact Info</h4>
+                 <p><i class="fas fa-phone nav-icon"></i> +1 234 567 890</p>
+                <p><i class="fas fa-envelope nav-icon"></i> info@cyberface.com</p>
+                <p><i class="fas fa-map-marker-alt nav-icon"></i> 123 Cyber Street, Security City</p>
+            </div>
+            
+            <div class="footer-newsletter">
+                <h4>Follow Us</h4>
+                <p>Stay connected with us on social media for daily tips and updates.</p>
+                <div class="cyber-social">
+                    <a href="#" class="cyber-social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="cyber-social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="cyber-social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="cyber-social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-developers">
+            <h4>CyberFace's Developers</h4>
+            <div class="developers-grid">
+                <div class="developer-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="developer-img-container">
+                        <img src="images/1.jpg" alt="Developer 1" class="developer-img">
+                    </div>
+                    <p class="developer-name">Team Coordinator</p>
+                </div>
+                <div class="developer-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="developer-img-container">
+                        <img src="images/2.jpg" alt="Developer 2" class="developer-img">
+                    </div>
+                    <p class="developer-name">Team Leader</p>
+                </div>
+                <div class="developer-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="developer-img-container">
+                        <img src="images/3.jpg" alt="Developer 3" class="developer-img">
+                    </div>
+                    <p class="developer-name">Team Editor</p>
+                </div>
+            </div>
+            <p class="more-info">For more information, <a href="team.html" class="click-here">click here</a>.</p>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 CyberFace. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- JavaScript -->
+<script src="js/script.js"></script>
+<script src="js/image-handlers.js"></script>
+<script src="js/enhanced-image-handlers.js"></script>
+<script src="js/advanced-image-handlers.js"></script>
+</body>
+</html>

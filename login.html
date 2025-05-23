@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberFace - Learn Defense</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/image-handlers.css">
+    <link rel="stylesheet" href="css/enhanced-image-handlers.css">
+    <link rel="stylesheet" href="css/advanced-image-handlers.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/enhanced-animations.css">
+    <link rel="stylesheet" href="css/cyber-theme.css">
+    <link rel="stylesheet" href="css/cyber-blog.css">
+    <link rel="stylesheet" href="css/blog-organization.css">
+    <link rel="stylesheet" href="css/featured-grid.css">
+    <link rel="stylesheet" href="css/cyber-forms.css">
+    <link rel="stylesheet" href="css/cyber-sections.css">
+    <link rel="stylesheet" href="css/cyber-interactive.css">
+    <link rel="stylesheet" href="css/cyber-contact.css">
+    <link rel="stylesheet" href="css/cyber-consistency.css">
+    <link rel="stylesheet" href="css/custom-overrides.css">
+    <link rel="stylesheet" href="css/game-button.css">
+    <link rel="stylesheet" href="css/contact-enhancements.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&family=JetBrains+Mono:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <!-- Cybersecurity Network Animation -->
+    <script src="js/cyber-network.js"></script>
+    <script src="js/constellation-animation.js"></script>
+</head>
+<body>
+    <!-- Grid Background -->
+    <div class="grid-background"></div>
+    <div class="scan-line"></div>
+    <div class="cyber-noise"></div>
+    
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.jpg" alt="CyberFace Logo" id="logo">
+            <h1>CyberFace <span class="subtitle">Learn Defense</span></h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="dashboard.html"><i class="fas fa-home nav-icon"></i>HOME</a></li>
+                <li><a href="login.html"><i class="fas fa-info-circle nav-icon"></i>ABOUT</a></li>
+                <li><a href="login.html"><i class="fas fa-book nav-icon"></i>LESSON</a></li>
+                <li><a href="login.html"><i class="fas fa-newspaper nav-icon"></i>BLOG</a></li>
+                <li><a href="login.html"><i class="fas fa-envelope nav-icon"></i>CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="nav-right">
+            <a href="login.html" class="game-btn"><i class="fas fa-gamepad"></i> GAME<div class="circuit-overlay"></div></a>
+            <div class="menu-dropdown">
+                <button class="menu-btn"><i class="fas fa-bars"></i></button>
+                <div class="dropdown-content">
+                    <a href="login.html">Profile</a>
+                    <a href="login.html">Videos</a>
+                    <a href="login.html">Login</a>
+                    <a href="register.html">Register</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="login-section cyber-section">
+            <div class="login-card">
+                <div class="login-form-header">
+                    <h2 class="cyber-title">Sign In</h2>
+                    <p class="cyber-text">
+                        Log in to your CyberFace account to access exclusive cybersecurity lessons, blogs, and more.
+                    </p>
+                </div>
+                <form id="loginForm" class="cyber-form enhanced-cyber-form" autocomplete="off" style="display: flex; flex-direction: column; gap: 22px;">
+                    <div class="cyber-form-group vertical-form-group">
+                        <label for="username"><i class="fas fa-user"></i> Username</label>
+                        <input type="text" id="username" name="username" required autocomplete="username" placeholder="Enter your username" class="cyber-input enhanced-input">
+                    </div>
+                    <div id="username-error" style="color:#ff4d4d; font-size:0.98rem; margin-bottom:10px; display:none;"></div>
+                    <div class="cyber-form-group vertical-form-group">
+                        <label for="password"><i class="fas fa-lock"></i> Password</label>
+                        <div class="cyber-input-wrapper">
+                            <input type="password" id="password" name="password" required autocomplete="current-password" placeholder="Enter your password" class="cyber-input enhanced-input">
+                            <button type="button" class="toggle-password" tabindex="-1" aria-label="Show/Hide password"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div id="password-error" style="color:#ff4d4d; font-size:0.98rem; margin-bottom:10px; display:none;"></div>
+                    <div class="cyber-form-options">
+                        <label class="cyber-checkbox">
+                            <input type="checkbox" id="rememberMe" name="remember">
+                            <span class="checkmark"></span>
+                            Remember me
+                        </label>
+                    </div>
+                    <button type="submit" class="cyber-btn cyber-btn-accent enhanced-btn" id="loginBtn">
+                        <span id="loginBtnText"><i class="fas fa-sign-in-alt"></i> Log In</span>
+                        <span id="loginLoading" style="display:none;"><i class="fas fa-spinner fa-spin"></i> Logging in...</span>
+                    </button>
+                </form>
+                <p class="cyber-text signup-link">
+                    Don't have an account? <a href="register.html" class="cyber-link">Sign up here</a>.
+                </p>
+            </div>
+            <style>
+        .login-section {
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .login-card {
+            background: rgba(20, 24, 34, 0.92);
+            border-radius: 18px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
+            max-width: 420px;
+            width: 100%;
+            margin: 60px auto 40px auto;
+            padding: 36px 28px;
+        }
+        .login-form-header {
+            margin-bottom: 18px;
+            text-align: center;
+        }
+        .login-form-header .cyber-title {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--cyber-accent, #00ffe7);
+            font-size: 2rem;
+            margin-bottom: 6px;
+        }
+        .login-form-header .cyber-text {
+            font-size: 1.05rem;
+            color: #b8eaff;
+        }
+        .enhanced-cyber-form label {
+            font-weight: 600;
+            color: var(--cyber-accent, #00ffe7);
+            letter-spacing: 1px;
+            margin-bottom: 2px;
+        }
+        .vertical-form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-bottom: 18px;
+        }
+        .cyber-input-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        .enhanced-input {
+            width: 100%;
+            padding: 12px 44px 12px 16px;
+            border: 2px solid var(--cyber-accent, #00ffe7);
+            border-radius: 8px;
+            background: rgba(20, 24, 34, 0.95);
+            color: #fff;
+            font-size: 1.08rem;
+            font-family: 'JetBrains Mono', monospace;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            outline: none;
+            box-shadow: 0 2px 8px 0 rgba(0,255,231,0.04);
+        }
+        .enhanced-input:focus {
+            border-color: #fff;
+            box-shadow: 0 0 0 2px var(--cyber-accent, #00ffe7), 0 2px 12px 0 rgba(0,255,231,0.10);
+            background: rgba(30, 34, 54, 0.98);
+        }
+        .toggle-password {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: var(--cyber-accent, #00ffe7);
+            font-size: 1.1rem;
+            cursor: pointer;
+            padding: 0 6px;
+            z-index: 2;
+            transition: color 0.2s;
+        }
+        .toggle-password:hover {
+            color: #fff;
+        }
+        .cyber-form-options {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin: 0 0 18px 0;
+        }
+        .cyber-checkbox {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            font-size: 0.98rem;
+        }
+        .cyber-checkbox input[type="checkbox"] {
+            margin-right: 8px;
+        }
+        .enhanced-btn {
+            width: 100%;
+            padding: 13px 0;
+            border-radius: 8px;
+            font-size: 1.13rem;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 600;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 18px 0 rgba(0,255,231,0.08);
+            border: none;
+            transition: background 0.18s, box-shadow 0.18s, transform 0.12s;
+        }
+        .enhanced-btn:active {
+            transform: scale(0.98);
+        }
+        .cyber-btn-accent.enhanced-btn {
+            background: linear-gradient(90deg, var(--cyber-accent, #00ffe7) 0%, #0fffc1 100%);
+            color: #181c2a;
+            text-shadow: 0 1px 8px #00ffe7a0;
+        }
+        .cyber-btn-accent.enhanced-btn:hover,
+        .cyber-btn-accent.enhanced-btn:focus {
+            background: linear-gradient(90deg, #0fffc1 0%, var(--cyber-accent, #00ffe7) 100%);
+            box-shadow: 0 0 16px 0 #00ffe7a0;
+            color: #181c2a;
+        }
+        .signup-link {
+            margin-top: 28px;
+            text-align: center;
+        }
+        .signup-link .cyber-link {
+            color: var(--cyber-accent, #00ffe7);
+            text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            .login-card {
+                padding: 18px 6px;
+            }
+            .enhanced-input, .enhanced-btn {
+                font-size: 1rem;
+                padding: 11px 0;
+            }
+            .login-form-header .cyber-title {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+        </section>
+        <script>
+            // Password show/hide toggle
+            document.addEventListener('DOMContentLoaded', function() {
+                const toggleBtn = document.querySelector('.toggle-password');
+                const pwdInput = document.getElementById('password');
+                if (toggleBtn && pwdInput) {
+                    toggleBtn.addEventListener('click', function() {
+                        if (pwdInput.type === 'password') {
+                            pwdInput.type = 'text';
+                            toggleBtn.innerHTML = '<i class="fas fa-eye-slash"></i>';
+                        } else {
+                            pwdInput.type = 'password';
+                            toggleBtn.innerHTML = '<i class="fas fa-eye"></i>';
+                        }
+                    });
+                }
+
+                // Autofill if Remember Me is set
+                const remembered = JSON.parse(localStorage.getItem('cyberface_remembered') || 'null');
+                if (remembered && remembered.username && remembered.password) {
+                    document.getElementById('username').value = remembered.username;
+                    document.getElementById('password').value = remembered.password;
+                    document.getElementById('rememberMe').checked = true;
+                }
+
+                // Login logic
+                document.getElementById('loginForm').addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const username = document.getElementById('username').value.trim();
+                    const password = document.getElementById('password').value;
+                    const rememberMe = document.getElementById('rememberMe').checked;
+                    const usernameError = document.getElementById('username-error');
+                    const passwordError = document.getElementById('password-error');
+                    usernameError.style.display = 'none';
+                    passwordError.style.display = 'none';
+
+                    // Get registered user from localStorage
+                    const user = JSON.parse(localStorage.getItem('cyberface_user') || 'null');
+                    if (!user || user.username !== username) {
+                        usernameError.style.display = 'block';
+                        usernameError.textContent = 'Account is not found.';
+                        return;
+                    }
+                    if (user.password !== password) {
+                        passwordError.style.display = 'block';
+                        passwordError.textContent = 'Password is incorrect.';
+                        return;
+                    }
+
+                    // Remember Me
+                    if (rememberMe) {
+                        localStorage.setItem('cyberface_remembered', JSON.stringify({
+                            username: username,
+                            password: password
+                        }));
+                    } else {
+                        localStorage.removeItem('cyberface_remembered');
+                    }
+
+                    // Loading animation
+                    const loginBtn = document.getElementById('loginBtn');
+                    const loginBtnText = document.getElementById('loginBtnText');
+                    const loginLoading = document.getElementById('loginLoading');
+                    loginBtn.disabled = true;
+                    loginBtnText.style.display = 'none';
+                    loginLoading.style.display = 'inline-block';
+
+                    setTimeout(function() {
+                        window.location.href = 'index.html';
+                    }, 1500);
+                });
+            });
+        </script>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo cyber-logo">
+                    <img src="images/logo.jpg" style="max-width: 50px;" alt="CyberFace Logo" class="footer-logo-img cyber-image">
+                    <p class="cyber-text">CyberFace is your trusted source for cybersecurity knowledge and defense strategies.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="login.html">About Us</a></li>
+                        <li><a href="login.html">Lessons</a></li>
+                        <li><a href="login.html">Blog</a></li>
+                        <li><a href="login.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-phone nav-icon"></i> +1 234 567 890</p>
+                <p><i class="fas fa-envelope nav-icon"></i> info@cyberface.com</p>
+                <p><i class="fas fa-map-marker-alt nav-icon"></i> 123 Cyber Street, Security City</p>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h4>Follow Us</h4>
+                    <p>Stay connected with us on social media for daily tips and updates.</p>
+                    <div class="cyber-social">
+                        <a href="#" class="cyber-social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="cyber-social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="cyber-social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="cyber-social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-developers">
+                <h4>CyberFace's Developers</h4>
+                <div class="developers-grid">
+                    <div class="developer-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="developer-img-container">
+                            <img src="images/1.jpg" alt="Developer 1" class="developer-img">
+                        </div>
+                        <p class="developer-name">Team Coordinator</p>
+                    </div>
+                    <div class="developer-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="developer-img-container">
+                            <img src="images/2.jpg" alt="Developer 2" class="developer-img">
+                        </div>
+                        <p class="developer-name">Team Leader</p>
+                    </div>
+                    <div class="developer-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="developer-img-container">
+                            <img src="images/3.jpg" alt="Developer 3" class="developer-img">
+                        </div>
+                        <p class="developer-name">Team Editor</p>
+                    </div>
+                </div>
+                <p class="more-info">For more information, <a href="login.html" class="click-here">click here</a>.</p>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 CyberFace. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+    <script src="js/image-handlers.js"></script>
+    <script src="js/enhanced-image-handlers.js"></script>
+    <script src="js/advanced-image-handlers.js"></script>
+    <script src="js/game.js"></script>
+    <script>
+        // Handle difficulty modal
+        document.addEventListener('DOMContentLoaded', function() {
+            const difficultyBtn = document.getElementById('difficulty-btn');
+            const difficultyModal = document.getElementById('difficulty-modal');
+            const closeModal = document.querySelector('.close-modal');
+            const difficultyOptions = document.querySelectorAll('.difficulty-option');
+            
+            if (!difficultyBtn || !difficultyModal) return;
+            
+            // Show modal
+            difficultyBtn.addEventListener('click', function() {
+                difficultyModal.classList.add('show');
+            });
+            
+            // Close modal
+            closeModal.addEventListener('click', function() {
+                difficultyModal.classList.remove('show');
+            });
+            
+            // Close modal when clicking outside
+            window.addEventListener('click', function(e) {
+                if (e.target === difficultyModal) {
+                    difficultyModal.classList.remove('show');
+                }
+            });
+            
+            // Handle difficulty selection
+            difficultyOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    // Remove active class from all options
+                    difficultyOptions.forEach(opt => opt.classList.remove('active'));
+                    
+                    // Add active class to selected option
+                    this.classList.add('active');
+                    
+                    // Set difficulty level
+                    const difficulty = this.getAttribute('data-difficulty');
+                    setDifficulty(difficulty);
+                    
+                    // Close modal
+                    difficultyModal.classList.remove('show');
+                    
+                    // Restart game with new difficulty
+                    if (window.initGame) {
+                        window.initGame();
+                    }
+                });
+            });
+            
+            // Function to set difficulty level
+            function setDifficulty(level) {
+                // This function will be implemented in game.js
+                if (window.setDifficultyLevel) {
+                    window.setDifficultyLevel(level);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

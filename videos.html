@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberFace - Learn Defense</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/image-handlers.css">
+    <link rel="stylesheet" href="css/enhanced-image-handlers.css">
+    <link rel="stylesheet" href="css/advanced-image-handlers.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/enhanced-animations.css">
+    <link rel="stylesheet" href="css/cyber-theme.css">
+    <link rel="stylesheet" href="css/cyber-blog.css">
+    <link rel="stylesheet" href="css/blog-organization.css">
+    <link rel="stylesheet" href="css/featured-grid.css">
+    <link rel="stylesheet" href="css/cyber-forms.css">
+    <link rel="stylesheet" href="css/cyber-sections.css">
+    <link rel="stylesheet" href="css/cyber-interactive.css">
+    <link rel="stylesheet" href="css/cyber-contact.css">
+    <link rel="stylesheet" href="css/cyber-consistency.css">
+    <link rel="stylesheet" href="css/custom-overrides.css">
+    <link rel="stylesheet" href="css/game-button.css">
+    <link rel="stylesheet" href="css/contact-enhancements.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&family=JetBrains+Mono:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <!-- Cybersecurity Network Animation -->
+    <script src="js/cyber-network.js"></script>
+    <script src="js/constellation-animation.js"></script>
+    <style>
+        
+        .video-page-container {
+            display: flex;
+            gap: 32px;
+            max-width: 1200px;
+            margin: 40px auto 0 auto;
+            padding: 0 16px 40px 16px;
+        }
+        .main-video-section {
+            flex: 2;
+            background: transparent;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 8px 32px 0 rgba(0,255,231,0.10); ;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .main-video-frame {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: #222;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 12px;
+        }
+        .main-video-frame iframe, .main-video-frame video {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .main-video-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .main-video-desc {
+            font-size: 1rem;
+            color: #a8b2d1;
+        }
+        .video-sidebar {
+            flex: 1;
+            background: transparent;
+            
+            border-radius: 12px;
+            padding: 16px 0 16px 0;
+            box-shadow: 0 8px 32px 0 rgba(0,255,231,0.10);
+            max-height: 600px;
+            overflow-y: auto;
+        }
+        .sidebar-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #64ffda;
+            padding: 0 24px 12px 24px;
+        }
+        .video-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding: 0 8px;
+        }
+        .video-list-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 8px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.15s;
+        }
+        .video-list-item.active, .video-list-item:hover {
+            background: #233554;
+        }
+        .video-thumb {
+            width: 100px;
+            height: 56px;
+            object-fit: cover;
+            border-radius: 6px;
+            background: #222;
+        }
+        .video-info {
+            flex: 1;
+        }
+        .video-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+        .video-meta {
+            font-size: 0.85rem;
+            color: #8892b0;
+        }
+        /* Custom scrollbar for sidebar */
+        .video-sidebar {
+            scrollbar-width: thin;
+            scrollbar-color: #64ffda #233554;
+        }
+        .video-sidebar::-webkit-scrollbar {
+            width: 8px;
+        }
+        .video-sidebar::-webkit-scrollbar-thumb {
+            background: #64ffda;
+            border-radius: 4px;
+        }
+        .video-sidebar::-webkit-scrollbar-track {
+            background: #233554;
+        }
+        @media (max-width: 900px) {
+            .video-page-container {
+                flex-direction: column;
+                gap: 24px;
+            }
+            .video-sidebar {
+                max-height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Grid Background -->
+    <div class="grid-background"></div>
+    <div class="scan-line"></div>
+    <div class="cyber-noise"></div>
+    
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.jpg" alt="CyberFace Logo" id="logo">
+            <h1>CyberFace <span class="subtitle">Learn Defense</span></h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active"><i class="fas fa-home nav-icon"></i>HOME</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle nav-icon"></i>ABOUT</a></li>
+                <li><a href="lesson.html"><i class="fas fa-book nav-icon"></i>LESSON</a></li>
+                <li><a href="blog.html"><i class="fas fa-newspaper nav-icon"></i>BLOG</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope nav-icon"></i>CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="nav-right">
+            <a href="game.html" class="game-btn"><i class="fas fa-gamepad"></i> GAME<div class="circuit-overlay"></div></a>
+            <div class="menu-dropdown">
+                <button class="menu-btn"><i class="fas fa-bars"></i></button>
+                <div class="dropdown-content">
+                        <a href="profile.html">Profile</a>
+                        <a href="videos.html">Videos</a>
+                        <a href="login.html">Login</a>
+                       
+                        <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            const logoutLink = document.getElementById('logoutLink');
+                            logoutLink.addEventListener('click', function(e) {
+                                e.preventDefault();
+                                // Create modal
+                                const modal = document.createElement('div');
+                                modal.style.position = 'fixed';
+                                modal.style.top = 0;
+                                modal.style.left = 0;
+                                modal.style.width = '100vw';
+                                modal.style.height = '100vh';
+                                modal.style.background = 'rgba(0,0,0,0.5)';
+                                modal.style.display = 'flex';
+                                modal.style.alignItems = 'center';
+                                modal.style.justifyContent = 'center';
+                                modal.style.zIndex = 9999;
+
+                                const box = document.createElement('div');
+                                box.style.background = '#fff';
+                                box.style.padding = '30px 40px';
+                                box.style.borderRadius = '10px';
+                                box.style.boxShadow = '0 2px 16px rgba(0,0,0,0.2)';
+                                box.style.textAlign = 'center';
+
+                                const msg = document.createElement('div');
+                                msg.textContent = 'Are you sure you want to logout?';
+                                msg.style.fontWeight = 'bold';
+                                msg.style.color = 'black';
+                                msg.style.marginBottom = '20px';
+
+                                const yesBtn = document.createElement('button');
+                                yesBtn.textContent = 'Yes';
+                                yesBtn.style.margin = '0 10px';
+                                yesBtn.style.padding = '8px 20px';
+                                yesBtn.style.background = 'cyan';
+                                yesBtn.style.color = '#fff';
+                                yesBtn.style.border = 'none';
+                                yesBtn.style.borderRadius = '5px';
+                                yesBtn.style.cursor = 'pointer';
+
+                                const cancelBtn = document.createElement('button');
+                                cancelBtn.textContent = 'Cancel';
+                                cancelBtn.style.margin = '0 10px';
+                                cancelBtn.style.padding = '8px 20px';
+                                cancelBtn.style.background = 'red';
+                                cancelBtn.style.color = 'white';
+                                cancelBtn.style.border = 'none';
+                                cancelBtn.style.borderRadius = '5px';
+                                cancelBtn.style.cursor = 'pointer';
+
+                                box.appendChild(msg);
+                                box.appendChild(yesBtn);
+                                box.appendChild(cancelBtn);
+                                modal.appendChild(box);
+                                document.body.appendChild(modal);
+
+                                yesBtn.onclick = function() {
+                                    // Clear session/local storage (simulate logout)
+                                    sessionStorage.clear();
+                                    localStorage.clear();
+                                    // Redirect to dashboard.html
+                                    window.location.href = 'dashboard.html';
+                                };
+                                cancelBtn.onclick = function() {
+                                    document.body.removeChild(modal);
+                                };
+                            });
+                        });
+                        </script>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="video-page-container">
+        <section class="main-video-section">
+            <div class="main-video-frame" id="mainVideoFrame">
+                <video src="IntroductionToCyber.mp4" controls autoplay></video>
+            </div>
+            <div class="main-video-title" id="mainVideoTitle">
+                Introduction to Cybersecurity
+            </div>
+            <div class="main-video-desc" id="mainVideoDesc">
+                Learn the basics of cybersecurity, why it matters, and how you can protect yourself online.
+            </div>
+        </section>
+        <aside class="video-sidebar">
+            <div class="sidebar-title">Video List</div>
+            <div class="video-list" id="videoList">
+                <div class="video-list-item active" data-src="IntroductionToCyber.mp4" data-title="Introduction to Cybersecurity" data-desc="Learn the basics of cybersecurity, why it matters, and how you can protect yourself online.">
+                    <img class="video-thumb" src="IntroductionToCyber.jpg" alt="Intro">
+                    <div class="video-info">
+                        <div class="video-title">Introduction to Cybersecurity</div>
+                        <div class="video-meta">10:05 &bull; CyberFace</div>
+                    </div>
+                </div>
+                <div class="video-list-item" data-src="CyberAttacks.mp4" data-title="Types of Cyber Attacks" data-desc="Explore common types of cyber attacks and how to defend against them.">
+                    <img class="video-thumb" src="CyberAttacks.jpg" alt="Types of Attacks">
+                    <div class="video-info">
+                        <div class="video-title">Types of Cyber Attacks</div>
+                        <div class="video-meta">8:42 &bull; CyberFace</div>
+                    </div>
+                </div>
+                <div class="video-list-item" data-src="PasswordTips.mp4" data-title="Password Security Tips" data-desc="Best practices for creating and managing strong passwords.">
+                    <img class="video-thumb" src="PasswordTips.jpg" alt="Password Security">
+                    <div class="video-info">
+                        <div class="video-title">Password Security Tips</div>
+                        <div class="video-meta">6:30 &bull; CyberFace</div>
+                    </div>
+                </div>
+                <div class="video-list-item" data-src="Phishing.mp4" data-title="Phishing Awareness" data-desc="How to spot phishing emails and avoid scams.">
+                    <img class="video-thumb" src="Phishing.jpg" alt="Phishing Awareness">
+                    <div class="video-info">
+                        <div class="video-title">Phishing Awareness</div>
+                        <div class="video-meta">7:15 &bull; CyberFace</div>
+                    </div>
+                </div>
+                <div class="video-list-item" data-src="SafeBrowsing.mp4" data-title="Safe Browsing Habits" data-desc="Tips for browsing the web safely and protecting your privacy.">
+                    <img class="video-thumb" src="SafeBrowsing.jpg" alt="Safe Browsing">
+                    <div class="video-info">
+                        <div class="video-title">Safe Browsing Habits</div>
+                        <div class="video-meta">5:50 &bull; CyberFace</div>
+                    </div>
+                </div>
+                <!-- Add more video-list-item blocks as needed -->
+            </div>
+        </aside>
+    </div>
+    <script>
+        // Video switching logic for .mp4 files
+        document.querySelectorAll('.video-list-item').forEach(item => {
+            item.addEventListener('click', function() {
+                document.querySelectorAll('.video-list-item').forEach(i => i.classList.remove('active'));
+                this.classList.add('active');
+                document.getElementById('mainVideoFrame').innerHTML =
+                    `<video src="${this.dataset.src}" controls autoplay></video>`;
+                document.getElementById('mainVideoTitle').textContent = this.dataset.title;
+                document.getElementById('mainVideoDesc').textContent = this.dataset.desc;
+            });
+        });
+    </script>
+    </div>
+
+    <script>
+        // Video switching logic
+        document.querySelectorAll('.video-list-item').forEach(item => {
+            item.addEventListener('click', function() {
+                document.querySelectorAll('.video-list-item').forEach(i => i.classList.remove('active'));
+                this.classList.add('active');
+                document.getElementById('mainVideoFrame').innerHTML =
+                    `<iframe src="${this.dataset.src}" allowfullscreen></iframe>`;
+                document.getElementById('mainVideoTitle').textContent = this.dataset.title;
+                document.getElementById('mainVideoDesc').textContent = this.dataset.desc;
+            });
+        });
+    </script>
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo cyber-logo">
+                <img src="images/logo.jpg" style="max-width: 50px;" alt="CyberFace Logo" class="footer-logo-img cyber-image">
+                <p class="cyber-text">CyberFace is your trusted source for cybersecurity knowledge and defense strategies.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="lesson.html">Lessons</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>Contact Info</h4>
+                <p><i class="fas fa-phone nav-icon"></i> +1 234 567 890</p>
+                <p><i class="fas fa-envelope nav-icon"></i> info@cyberface.com</p>
+                <p><i class="fas fa-map-marker-alt nav-icon"></i> 123 Cyber Street, Security City</p>
+            </div>
+            
+            <div class="footer-newsletter">
+                <h4>Follow Us</h4>
+                <p>Stay connected with us on social media for daily tips and updates.</p>
+                <div class="cyber-social">
+                    <a href="#" class="cyber-social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="cyber-social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="cyber-social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="cyber-social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-developers">
+            <h4>CyberFace's Developers</h4>
+            <div class="developers-grid">
+                <div class="developer-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="developer-img-container">
+                        <img src="images/1.jpg" alt="Developer 1" class="developer-img">
+                    </div>
+                    <p class="developer-name">Team Coordinator</p>
+                </div>
+                <div class="developer-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="developer-img-container">
+                        <img src="images/2.jpg" alt="Developer 2" class="developer-img">
+                    </div>
+                    <p class="developer-name">Team Leader</p>
+                </div>
+                <div class="developer-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="developer-img-container">
+                        <img src="images/3.jpg" alt="Developer 3" class="developer-img">
+                    </div>
+                    <p class="developer-name">Team Editor</p>
+                </div>
+            </div>
+            <p class="more-info">For more information, <a href="team.html" class="click-here">click here</a>.</p>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 CyberFace. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- JavaScript -->
+<script src="js/script.js"></script>
+<script src="js/image-handlers.js"></script>
+<script src="js/enhanced-image-handlers.js"></script>
+<script src="js/advanced-image-handlers.js"></script>
+</body>
+</html>

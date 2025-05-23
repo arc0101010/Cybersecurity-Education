@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberFace - Learn Defense</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/image-handlers.css">
+    <link rel="stylesheet" href="css/enhanced-image-handlers.css">
+    <link rel="stylesheet" href="css/advanced-image-handlers.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/enhanced-animations.css">
+    <link rel="stylesheet" href="css/cyber-theme.css">
+    <link rel="stylesheet" href="css/cyber-blog.css">
+    <link rel="stylesheet" href="css/blog-organization.css">
+    <link rel="stylesheet" href="css/featured-grid.css">
+    <link rel="stylesheet" href="css/cyber-forms.css">
+    <link rel="stylesheet" href="css/cyber-sections.css">
+    <link rel="stylesheet" href="css/cyber-interactive.css">
+    <link rel="stylesheet" href="css/cyber-contact.css">
+    <link rel="stylesheet" href="css/cyber-consistency.css">
+    <link rel="stylesheet" href="css/custom-overrides.css">
+    <link rel="stylesheet" href="css/game-button.css">
+    <link rel="stylesheet" href="css/contact-enhancements.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&family=JetBrains+Mono:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <!-- Cybersecurity Network Animation -->
+    <script src="js/cyber-network.js"></script>
+    <script src="js/constellation-animation.js"></script>
+</head>
+<body>
+    <!-- Grid Background -->
+    <div class="grid-background"></div>
+    <div class="scan-line"></div>
+    <div class="cyber-noise"></div>
+    
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.jpg" alt="CyberFace Logo" id="logo">
+            <h1>CyberFace <span class="subtitle">Learn Defense</span></h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home nav-icon"></i>HOME</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle nav-icon"></i>ABOUT</a></li>
+                <li><a href="lesson.html" class="active"><i class="fas fa-book nav-icon"></i>LESSON</a></li>
+                <li><a href="blog.html"><i class="fas fa-newspaper nav-icon"></i>BLOG</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope nav-icon"></i>CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="nav-right">
+            <a href="game.html" class="game-btn"><i class="fas fa-gamepad"></i> GAME<div class="circuit-overlay"></div></a>
+            <div class="menu-dropdown">
+                <button class="menu-btn"><i class="fas fa-bars"></i></button>
+                <div class="dropdown-content">
+                        <a href="profile.html">Profile</a>
+                        <a href="videos.html">Videos</a>
+                        <a href="login.html">Login</a>
+                         <a href="#" id="logoutLink">Logout</a>
+                        <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            const logoutLink = document.getElementById('logoutLink');
+                            logoutLink.addEventListener('click', function(e) {
+                                e.preventDefault();
+                                // Create modal
+                                const modal = document.createElement('div');
+                                modal.style.position = 'fixed';
+                                modal.style.top = 0;
+                                modal.style.left = 0;
+                                modal.style.width = '100vw';
+                                modal.style.height = '100vh';
+                                modal.style.background = 'rgba(0,0,0,0.5)';
+                                modal.style.display = 'flex';
+                                modal.style.alignItems = 'center';
+                                modal.style.justifyContent = 'center';
+                                modal.style.zIndex = 9999;
+
+                                const box = document.createElement('div');
+                                box.style.background = '#fff';
+                                box.style.padding = '30px 40px';
+                                box.style.borderRadius = '10px';
+                                box.style.boxShadow = '0 2px 16px rgba(0,0,0,0.2)';
+                                box.style.textAlign = 'center';
+
+                                const msg = document.createElement('div');
+                                msg.textContent = 'Are you sure you want to logout?';
+                                msg.style.fontWeight = 'bold';
+                                msg.style.color = 'black';
+                                msg.style.marginBottom = '20px';
+
+                                const yesBtn = document.createElement('button');
+                                yesBtn.textContent = 'Yes';
+                                yesBtn.style.margin = '0 10px';
+                                yesBtn.style.padding = '8px 20px';
+                                yesBtn.style.background = 'cyan';
+                                yesBtn.style.color = '#fff';
+                                yesBtn.style.border = 'none';
+                                yesBtn.style.borderRadius = '5px';
+                                yesBtn.style.cursor = 'pointer';
+
+                                const cancelBtn = document.createElement('button');
+                                cancelBtn.textContent = 'Cancel';
+                                cancelBtn.style.margin = '0 10px';
+                                cancelBtn.style.padding = '8px 20px';
+                                cancelBtn.style.background = 'red';
+                                cancelBtn.style.color = 'white';
+                                cancelBtn.style.border = 'none';
+                                cancelBtn.style.borderRadius = '5px';
+                                cancelBtn.style.cursor = 'pointer';
+
+                                box.appendChild(msg);
+                                box.appendChild(yesBtn);
+                                box.appendChild(cancelBtn);
+                                modal.appendChild(box);
+                                document.body.appendChild(modal);
+
+                                yesBtn.onclick = function() {
+                                    // Clear session/local storage (simulate logout)
+                                    sessionStorage.clear();
+                                    localStorage.clear();
+                                    // Redirect to dashboard.html
+                                    window.location.href = 'dashboard.html';
+                                };
+                                cancelBtn.onclick = function() {
+                                    document.body.removeChild(modal);
+                                };
+                            });
+                        });
+                        </script>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="cyber-main">
+        <section class="hero-section lesson-detail-hero">
+            <div class="cyber-grid-overlay"></div>
+            <div class="hero-content lesson-detail-hero-content fade-in" style="text-align: center; max-width: 800px; margin: 0 auto; position: relative; z-index: 1;">
+                <h2 style="font-family: 'Orbitron', sans-serif; color: var(--cyber-accent); margin-bottom: 20px;">SOCIAL ENGINEERING DEFENSE</h2>
+                <div class="cyber-divider" style="margin: 20px auto;"><span></span></div>
+                <p class="tagalog cyber-text" style="margin-bottom: 25px;">Learn how to protect yourself from psychological manipulation attacks</p>
+            </div>
+        </section>
+
+        <!-- Introduction Section -->
+        <section class="cyber-section">
+            <div class="cyber-container">
+                <div class="lesson-content" style="display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between;">
+                    <!-- Main Content -->
+                    <div class="lesson-main-content" style="flex: 2; padding: 20px; min-width: 300px;">
+                        <h2 class="cyber-heading animate-on-scroll">Understanding Social Engineering</h2>
+                        <div class="cyber-divider"><span></span></div>
+                        <p class="cyber-text">Social engineering attacks target the human element of security, often bypassing technical controls through psychological manipulation. Unlike technical exploits that attack system vulnerabilities, social engineering exploits human psychology and behavior patterns to gain unauthorized access to systems, data, or physical locations.</p>
+                        
+                        <div class="cyber-image-container animate-on-scroll" style="margin: 30px 0;">
+                            <div class="cyber-image-frame" style="height: 400px;"></div>
+                            <img src="images/social-engineering-overview.jpg" style="height: 400px; width: 800px;" alt="Social Engineering Overview" class="cyber-image" onerror="this.src='https://via.placeholder.com/800x400/0a192f/64ffda?text=Social+Engineering+Overview'">
+                            <p class="image-caption" style="text-align: center; font-size: 0.9em; color: var(--cyber-accent); margin-top: 10px;">Social engineers exploit human trust and psychological triggers to bypass security measures</p>
+                        </div>
+                        
+                        <p class="cyber-text">This module explores the psychology behind these attacks and provides practical strategies for recognizing and countering manipulation techniques. You'll learn to identify various attack vectors including phishing, pretexting, baiting, and tailgating, while developing a security-conscious mindset that serves as your first line of defense.</p>
+                    </div>
+                    
+                    <!-- Sidebar Content -->
+                    <div class="lesson-sidebar" style="flex: 1; padding: 20px; min-width: 250px; background: rgba(10, 25, 47, 0.5); border-left: 1px solid var(--cyber-accent);">
+                        <h3 class="cyber-heading">Learning Objectives</h3>
+                        <ul class="cyber-list" style="list-style: none; padding-left: 0;">
+                            <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+                                <i class="fas fa-check-circle" style="color: var(--cyber-accent); margin-right: 10px; margin-top: 5px;"></i>
+                                <span>Recognize common social engineering techniques and attack vectors</span>
+                            </li>
+                            <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+                                <i class="fas fa-check-circle" style="color: var(--cyber-accent); margin-right: 10px; margin-top: 5px;"></i>
+                                <span>Understand the psychological principles exploited in these attacks</span>
+                            </li>
+                            <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+                                <i class="fas fa-check-circle" style="color: var(--cyber-accent); margin-right: 10px; margin-top: 5px;"></i>
+                                <span>Develop practical strategies to identify and counter manipulation attempts</span>
+                            </li>
+                            <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+                                <i class="fas fa-check-circle" style="color: var(--cyber-accent); margin-right: 10px; margin-top: 5px;"></i>
+                                <span>Learn how to create effective security awareness programs</span>
+                            </li>
+                        </ul>
+                        
+                        <div class="cyber-image-container" style="margin: 30px 0;">
+                            <div class="cyber-image-frame"></div>
+                            <img src="images/social-engineering-sidebar.jpg" alt="Social Engineering Defense" class="cyber-image" onerror="this.src='https://via.placeholder.com/300x200/0a192f/64ffda?text=Social+Engineering+Defense'">
+                        </div>
+                        
+                        <div style="margin-top: 30px;">
+                            <a href="lesson.html" class="cyber-btn">BACK TO LESSONS</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Common Attack Vectors Section -->
+        <section class="cyber-section">
+            <div class="cyber-grid-overlay"></div>
+            <div class="cyber-container">
+                <h2 class="section-title cyber-heading animate-on-scroll">Common Social Engineering Attack Vectors</h2>
+                <div class="cyber-divider"><span></span></div>
+                
+                <div class="attack-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px;">
+                    <!-- Attack Vector 1: Phishing -->
+                    <div class="attack-card cyber-card slide-in-left animate-on-scroll">
+                        <div class="attack-icon-container" style="text-align: center; margin-bottom: 20px;">
+                            <i class="fas fa-fish" style="font-size: 3rem; color: var(--cyber-accent);"></i>
+                        </div>
+                        <h3 class="cyber-heading" style="text-align: center;">Phishing</h3>
+                        <p class="cyber-text">Phishing attacks use fraudulent communications that appear to come from trusted sources, typically via email. These messages are designed to steal sensitive data like login credentials and credit card information, or to install malware on the victim's device.</p>
+                        <div class="cyber-image-container" style="margin: 20px 0;">
+                            <div class="cyber-image-frame"></div>
+                            <img src="images/phishing-example.jpg" alt="Phishing Example" class="cyber-image" onerror="this.src='https://via.placeholder.com/300x200/0a192f/64ffda?text=Phishing+Example'">
+                        </div>
+                        <p class="cyber-text">Variants include spear phishing (targeted attacks), whaling (targeting executives), and vishing (voice phishing over phone calls).</p>
+                    </div>
+                    
+                    <!-- Attack Vector 2: Pretexting -->
+                    <div class="attack-card cyber-card fade-in animate-on-scroll">
+                        <div class="attack-icon-container" style="text-align: center; margin-bottom: 20px;">
+                            <i class="fas fa-theater-masks" style="font-size: 3rem; color: var(--cyber-accent);"></i>
+                        </div>
+                        <h3 class="cyber-heading" style="text-align: center;">Pretexting</h3>
+                        <p class="cyber-text">Pretexting involves creating a fabricated scenario (pretext) to engage a victim and gain their trust. The attacker usually impersonates co-workers, police, bank officials, or other trusted individuals to extract information or influence behavior.</p>
+                        <div class="cyber-image-container" style="margin: 20px 0;">
+                            <div class="cyber-image-frame"></div>
+                            <img src="images/pretexting-example.jpg" alt="Pretexting Example" class="cyber-image" onerror="this.src='https://via.placeholder.com/300x200/0a192f/64ffda?text=Pretexting+Example'">
+                        </div>
+                        <p class="cyber-text">This technique often relies on creating a sense of urgency or fear to manipulate victims into acting quickly without verifying the requester's identity.</p>
+                    </div>
+                    
+                    <!-- Attack Vector 3: Baiting -->
+                    <div class="attack-card cyber-card slide-in-right animate-on-scroll">
+                        <div class="attack-icon-container" style="text-align: center; margin-bottom: 20px;">
+                            <i class="fas fa-gift" style="font-size: 3rem; color: var(--cyber-accent);"></i>
+                        </div>
+                        <h3 class="cyber-heading" style="text-align: center;">Baiting</h3>
+                        <p class="cyber-text">Baiting attacks use the promise of an item or good that appeals to the victim's greed or curiosity. Common examples include infected USB drives left in public places, malicious downloads disguised as popular software, or too-good-to-be-true offers.</p>
+                        <div class="cyber-image-container" style="margin: 20px 0;">
+                            <div class="cyber-image-frame"></div>
+                            <img src="images/baiting-example.jpg" alt="Baiting Example" class="cyber-image" onerror="this.src='https://via.placeholder.com/300x200/0a192f/64ffda?text=Baiting+Example'">
+                        </div>
+                        <p class="cyber-text">These attacks exploit human curiosity and the desire for free or valuable items, leading victims to compromise their security.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Defense Strategies Section -->
+        <section class="cyber-section">
+            <div class="cyber-container">
+                <h2 class="section-title cyber-heading animate-on-scroll">Defense Strategies</h2>
+                <div class="cyber-divider"><span></span></div>
+                
+                <div class="defense-content" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; margin-top: 40px;">
+                    <div class="defense-text" style="flex: 1; padding: 20px; min-width: 300px;">
+                        <h3 class="cyber-heading">Building Your Human Firewall</h3>
+                        <p class="cyber-text">The most effective defense against social engineering is a well-informed, security-conscious workforce or individual. Here are key strategies to protect yourself and your organization:</p>
+                        
+                        <ol class="cyber-list" style="padding-left: 20px;">
+                            <li style="margin-bottom: 15px;">
+                                <h4 class="cyber-heading-small">Verify Identities</h4>
+                                <p class="cyber-text">Always verify the identity of individuals requesting sensitive information or unusual actions, especially when the request comes through email or phone. Use established contact methods rather than those provided in the suspicious message.</p>
+                            </li>
+                            <li style="margin-bottom: 15px;">
+                                <h4 class="cyber-heading-small">Question the Unexpected</h4>
+                                <p class="cyber-text">Be skeptical of unexpected communications, especially those creating urgency or fear. Legitimate organizations rarely request sensitive information via email or make threats about account closures.</p>
+                            </li>
+                            <li style="margin-bottom: 15px;">
+                                <h4 class="cyber-heading-small">Check for Red Flags</h4>
+                                <p class="cyber-text">Look for warning signs like poor grammar, generic greetings, suspicious sender addresses, and URLs that don't match the purported organization. Hover over links before clicking to see the actual destination.</p>
+                            </li>
+                            <li style="margin-bottom: 15px;">
+                                <h4 class="cyber-heading-small">Implement Multi-Factor Authentication</h4>
+                                <p class="cyber-text">Use MFA wherever possible to add an additional layer of security beyond passwords, making it harder for attackers to gain access even if they obtain login credentials.</p>
+                            </li>
+                        </ol>
+                    </div>
+                    
+                    <div class="defense-image" style="flex: 1; padding: 20px; min-width: 300px;">
+                        <div class="cyber-image-container animate-on-scroll">
+                            <div class="cyber-image-frame" style="height: 600px;"></div>
+                            <img src="images/social-defense-implementation.jpg" style="height: 600px; width: 600px;" alt="Social Engineering Defense Implementation" class="cyber-image" onerror="this.src='https://via.placeholder.com/500x400/0a192f/64ffda?text=Social+Engineering+Defense'">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Security Awareness Training Section -->
+        <section class="cyber-section">
+            <div class="cyber-grid-overlay"></div>
+            <div class="cyber-container">
+                <h2 class="section-title cyber-heading animate-on-scroll">Creating Effective Security Awareness Programs</h2>
+                <div class="cyber-divider"><span></span></div>
+                
+                <div class="awareness-content" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; margin-top: 40px;">
+                    <div class="awareness-image" style="flex: 1; padding: 20px; min-width: 300px;">
+                        <div class="cyber-image-container animate-on-scroll">
+                            <div class="cyber-image-frame" style="height: 600px;"></div>
+                            <img src="images/security-awareness.jpg" style="height: 600px; width: 600px;" alt="Security Awareness Training" class="cyber-image" onerror="this.src='https://via.placeholder.com/500x400/0a192f/64ffda?text=Security+Awareness+Training'">
+                        </div>
+                    </div>
+                    
+                    <div class="awareness-text" style="flex: 1; padding: 20px; min-width: 300px;">
+                        <h3 class="cyber-heading">Building a Security Culture</h3>
+                        <p class="cyber-text">For organizations, developing a comprehensive security awareness program is crucial to defending against social engineering attacks. Effective programs include:</p>
+                        
+                        <ul class="cyber-list" style="list-style: none; padding-left: 0;">
+                            <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+                                <i class="fas fa-check-circle" style="color: var(--cyber-accent); margin-right: 10px; margin-top: 5px;"></i>
+                                <div>
+                                    <h4 class="cyber-heading-small">Regular Training Sessions</h4>
+                                    <p class="cyber-text">Conduct frequent, engaging training that includes real-world examples and interactive elements rather than dry, technical presentations.</p>
+                                </div>
+                            </li>
+                            <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+                                <i class="fas fa-check-circle" style="color: var(--cyber-accent); margin-right: 10px; margin-top: 5px;"></i>
+                                <div>
+                                    <h4 class="cyber-heading-small">Simulated Phishing Campaigns</h4>
+                                    <p class="cyber-text">Run controlled phishing simulations to test employee awareness and provide immediate feedback and education when users fall for the simulated attacks.</p>
+                                </div>
+                            </li>
+                            <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+                                <i class="fas fa-check-circle" style="color: var(--cyber-accent); margin-right: 10px; margin-top: 5px;"></i>
+                                <div>
+                                    <h4 class="cyber-heading-small">Clear Reporting Procedures</h4>
+                                    <p class="cyber-text">Establish simple processes for employees to report suspicious communications, and ensure they receive positive reinforcement for reporting.</p>
+                                </div>
+                            </li>
+                            <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+                                <i class="fas fa-check-circle" style="color: var(--cyber-accent); margin-right: 10px; margin-top: 5px;"></i>
+                                <div>
+                                    <h4 class="cyber-heading-small">Executive Support</h4>
+                                    <p class="cyber-text">Ensure leadership visibly supports and participates in security initiatives, demonstrating that security is a priority at all levels of the organization.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 40px;">
+                    <a href="lesson.html" class="cyber-btn">BACK TO LESSONS</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo cyber-logo">
+                <img src="images/logo.jpg" style="max-width: 50px;" alt="CyberFace Logo" class="footer-logo-img cyber-image">
+                <p class="cyber-text">CyberFace is your trusted source for cybersecurity knowledge and defense strategies.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="lesson.html">Lessons</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>Contact Info</h4>
+                 <p><i class="fas fa-phone nav-icon"></i> +1 234 567 890</p>
+                <p><i class="fas fa-envelope nav-icon"></i> info@cyberface.com</p>
+                <p><i class="fas fa-map-marker-alt nav-icon"></i> 123 Cyber Street, Security City</p>
+            </div>
+            
+            <div class="footer-newsletter">
+                <h4>Follow Us</h4>
+                <p>Stay connected with us on social media for daily tips and updates.</p>
+                <div class="cyber-social">
+                    <a href="#" class="cyber-social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="cyber-social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="cyber-social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="cyber-social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-developers">
+            <h4>CyberFace's Developers</h4>
+            <div class="developers-grid">
+                <div class="developer-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="developer-img-container">
+                        <img src="images/1.jpg" alt="Developer 1" class="developer-img">
+                    </div>
+                    <p class="developer-name">Team Coordinator</p>
+                </div>
+                <div class="developer-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="developer-img-container">
+                        <img src="images/2.jpg" alt="Developer 2" class="developer-img">
+                    </div>
+                    <p class="developer-name">Team Leader</p>
+                </div>
+                <div class="developer-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="developer-img-container">
+                        <img src="images/3.jpg" alt="Developer 3" class="developer-img">
+                    </div>
+                    <p class="developer-name">Team Editor</p>
+                </div>
+            </div>
+            <p class="more-info">For more information, <a href="team.html" class="click-here">click here</a>.</p>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 CyberFace. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- JavaScript -->
+<script src="js/script.js"></script>
+<script src="js/image-handlers.js"></script>
+<script src="js/enhanced-image-handlers.js"></script>
+<script src="js/advanced-image-handlers.js"></script>
+</body>
+</html>

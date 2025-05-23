@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberFace - Learn Defense</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/image-handlers.css">
+    <link rel="stylesheet" href="css/enhanced-image-handlers.css">
+    <link rel="stylesheet" href="css/advanced-image-handlers.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/enhanced-animations.css">
+    <link rel="stylesheet" href="css/cyber-theme.css">
+    <link rel="stylesheet" href="css/cyber-blog.css">
+    <link rel="stylesheet" href="css/blog-organization.css">
+    <link rel="stylesheet" href="css/featured-grid.css">
+    <link rel="stylesheet" href="css/cyber-forms.css">
+    <link rel="stylesheet" href="css/cyber-sections.css">
+    <link rel="stylesheet" href="css/cyber-interactive.css">
+    <link rel="stylesheet" href="css/cyber-contact.css">
+    <link rel="stylesheet" href="css/cyber-consistency.css">
+    <link rel="stylesheet" href="css/custom-overrides.css">
+    <link rel="stylesheet" href="css/game-button.css">
+    <link rel="stylesheet" href="css/contact-enhancements.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&family=JetBrains+Mono:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <!-- Cybersecurity Network Animation -->
+    <script src="js/cyber-network.js"></script>
+    <script src="js/constellation-animation.js"></script>
+</head>
+<body>
+    <!-- Grid Background -->
+    <div class="grid-background"></div>
+    <div class="scan-line"></div>
+    <div class="cyber-noise"></div>
+    
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.jpg" alt="CyberFace Logo" id="logo">
+            <h1>CyberFace <span class="subtitle">Learn Defense</span></h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home nav-icon"></i>HOME</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle nav-icon"></i>ABOUT</a></li>
+                <li><a href="lesson.html"><i class="fas fa-book nav-icon"></i>LESSON</a></li>
+                <li><a href="blog.html" class="active"><i class="fas fa-newspaper nav-icon"></i>BLOG</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope nav-icon"></i>CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="nav-right">
+            <a href="game.html" class="game-btn"><i class="fas fa-gamepad"></i> GAME<div class="circuit-overlay"></div></a>
+            <div class="menu-dropdown">
+                <button class="menu-btn"><i class="fas fa-bars"></i></button>
+                <div class="dropdown-content">
+                        <a href="profile.html">Profile</a>
+                        <a href="videos.html">Videos</a>
+                        <a href="login.html">Login</a>
+                     
+                        <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            const logoutLink = document.getElementById('logoutLink');
+                            logoutLink.addEventListener('click', function(e) {
+                                e.preventDefault();
+                                // Create modal
+                                const modal = document.createElement('div');
+                                modal.style.position = 'fixed';
+                                modal.style.top = 0;
+                                modal.style.left = 0;
+                                modal.style.width = '100vw';
+                                modal.style.height = '100vh';
+                                modal.style.background = 'rgba(0,0,0,0.5)';
+                                modal.style.display = 'flex';
+                                modal.style.alignItems = 'center';
+                                modal.style.justifyContent = 'center';
+                                modal.style.zIndex = 9999;
+
+                                const box = document.createElement('div');
+                                box.style.background = '#fff';
+                                box.style.padding = '30px 40px';
+                                box.style.borderRadius = '10px';
+                                box.style.boxShadow = '0 2px 16px rgba(0,0,0,0.2)';
+                                box.style.textAlign = 'center';
+
+                                const msg = document.createElement('div');
+                                msg.textContent = 'Are you sure you want to logout?';
+                                msg.style.fontWeight = 'bold';
+                                msg.style.color = 'black';
+                                msg.style.marginBottom = '20px';
+
+                                const yesBtn = document.createElement('button');
+                                yesBtn.textContent = 'Yes';
+                                yesBtn.style.margin = '0 10px';
+                                yesBtn.style.padding = '8px 20px';
+                                yesBtn.style.background = 'cyan';
+                                yesBtn.style.color = '#fff';
+                                yesBtn.style.border = 'none';
+                                yesBtn.style.borderRadius = '5px';
+                                yesBtn.style.cursor = 'pointer';
+
+                                const cancelBtn = document.createElement('button');
+                                cancelBtn.textContent = 'Cancel';
+                                cancelBtn.style.margin = '0 10px';
+                                cancelBtn.style.padding = '8px 20px';
+                                cancelBtn.style.background = 'red';
+                                cancelBtn.style.color = 'white';
+                                cancelBtn.style.border = 'none';
+                                cancelBtn.style.borderRadius = '5px';
+                                cancelBtn.style.cursor = 'pointer';
+
+                                box.appendChild(msg);
+                                box.appendChild(yesBtn);
+                                box.appendChild(cancelBtn);
+                                modal.appendChild(box);
+                                document.body.appendChild(modal);
+
+                                yesBtn.onclick = function() {
+                                    // Clear session/local storage (simulate logout)
+                                    sessionStorage.clear();
+                                    localStorage.clear();
+                                    // Redirect to dashboard.html
+                                    window.location.href = 'dashboard.html';
+                                };
+                                cancelBtn.onclick = function() {
+                                    document.body.removeChild(modal);
+                                };
+                            });
+                        });
+                        </script>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="cyber-main">
+        <section class="hero-section">
+            <div class="cyber-grid-overlay"></div>
+            <div class="hero-content" style="text-align: center; max-width: 800px; margin: 0 auto; position: relative; z-index: 1;">
+                <h2 style="font-family: 'Orbitron', sans-serif; color: var(--cyber-accent); margin-bottom: 20px;">Cybersecurity Insights</h2>
+                <div class="cyber-divider" style="margin: 20px auto;"><span></span></div>
+                <p class="cyber-text" style="margin-bottom: 25px;">Stay informed with the latest trends, threats, and best practices in the world of cybersecurity</p>
+                <div class="search-container" style="display: flex; max-width: 600px; margin: 0 auto;">
+                    <form action="search.html" method="GET" style="display: flex; width: 100%;">
+                        <input type="text" name="query" placeholder="Search for cybersecurity topics..." class="cyber-search" style="flex: 1; padding: 12px 15px; border-radius: 4px 0 0 4px; border: 2px solid var(--cyber-accent); background: rgba(10, 25, 47, 0.8); color: var(--cyber-text); font-family: 'Rajdhani', sans-serif;">
+                        <input type="hidden" name="source" value="blog">
+                        <button type="submit" class="cyber-btn search-btn" style="border-radius: 0 4px 4px 0; padding: 0 20px; background: var(--cyber-accent); color: var(--cyber-dark); font-weight: 600;">SEARCH <i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-articles cyber-section">
+            <div class="cyber-container">
+                <h2 class="section-title cyber-heading animate-on-scroll">Articles</h2>
+                <div class="cyber-divider"><span></span></div>
+                
+                <div class="article-grid featured-grid">
+                    <!-- First row of articles -->
+                
+                    <div class="article-card cyber-card slide-in-right animate-on-scroll">
+                        <div class="article-image-container">
+                            <img src="images/mobile-security.jpg" style="height: 500px; width: 520px;" alt="Mobile Security" class="article-image" onerror="this.src='https://via.placeholder.com/400x250/0a192f/64ffda?text=Mobile+Security'">
+                            <div class="article-category">Mobile</div>
+                        </div>
+                        <div class="article-content">
+                            <h3 class="cyber-heading">Mobile Security</h3>
+                            <div class="article-meta">
+                                <span><i class="far fa-calendar-alt"></i> May 10, 2023</span>
+                                <span><i class="far fa-user"></i> Jessica Lee</span>
+                            </div>
+                            <p class="cyber-text">Securing smartphones and tablets against emerging mobile threats in the modern digital landscape.</p>
+                            <a href="articles/mobile-security.html" class="cyber-btn-small">READ MORE</a>
+                        </div>
+                    </div>
+                    <div class="article-card cyber-card slide-in-left animate-on-scroll">
+                        <div class="article-image-container">
+                            <img src="images/cloud-security.jpg" style="height: 500px; width: 520px;" alt="Cloud Security" class="article-image" onerror="this.src='https://via.placeholder.com/400x250/0a192f/64ffda?text=Cloud+Security'">
+                            <div class="article-category">Cloud</div>
+                        </div>
+                        <div class="article-content">
+                            <h3 class="cyber-heading">Cloud Security</h3>
+                            <div class="article-meta">
+                                <span><i class="far fa-calendar-alt"></i> May 5, 2023</span>
+                                <span><i class="far fa-user"></i> Robert Zhang</span>
+                            </div>
+                            <p class="cyber-text">Best practices for securing cloud environments and services against sophisticated attacks.</p>
+                            <a href="articles/cloud-security.html" class="cyber-btn-small">READ MORE</a>
+                        </div>
+                    </div>
+                    <div class="article-card cyber-card fade-in animate-on-scroll">
+                        <div class="article-image-container">
+                            <img src="images/secure-coding.jpg" style="height: 500px; width: 520px;" alt="Secure Coding" class="article-image" onerror="this.src='https://via.placeholder.com/400x250/0a192f/64ffda?text=Secure+Coding'">
+                            <div class="article-category">Development</div>
+                        </div>
+                        <div class="article-content">
+                            <h3 class="cyber-heading">Secure Coding</h3>
+                            <div class="article-meta">
+                                <span><i class="far fa-calendar-alt"></i> April 28, 2023</span>
+                                <span><i class="far fa-user"></i> Thomas Reed</span>
+                            </div>
+                            <p class="cyber-text">Developing applications with security built-in from the ground up to prevent vulnerabilities.</p>
+                            <a href="articles/secure-coding.html" class="cyber-btn-small">READ MORE</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Third row of articles -->
+                    <div class="article-card cyber-card slide-in-right animate-on-scroll">
+                        <div class="article-image-container">
+                            <img src="images/encryption.jpg" style="height: 500px; width: 520px;" alt="Encryption" class="article-image" onerror="this.src='https://via.placeholder.com/400x250/0a192f/64ffda?text=Encryption'">
+                            <div class="article-category">Encryption</div>
+                        </div>
+                        <div class="article-content">
+                            <h3 class="cyber-heading">Modern Encryption</h3>
+                            <div class="article-meta">
+                                <span><i class="far fa-calendar-alt"></i> April 22, 2023</span>
+                                <span><i class="far fa-user"></i> Olivia Martinez</span>
+                            </div>
+                            <p class="cyber-text">Understanding modern encryption technologies and their applications in securing sensitive data.</p>
+                            <a href="articles/modern-encryption.html" class="cyber-btn-small">READ MORE</a>
+                        </div>
+                    </div>
+                    <div class="article-card cyber-card slide-in-left animate-on-scroll">
+                        <div class="article-image-container">
+                            <img src="images/social-engineering.jpg" style="height: 500px; width: 520px;" alt="Social Engineering" class="article-image" onerror="this.src='https://via.placeholder.com/400x250/0a192f/64ffda?text=Social+Engineering'">
+                            <div class="article-category">Human Factor</div>
+                        </div>
+                        <div class="article-content">
+                            <h3 class="cyber-heading">Social Engineering</h3>
+                            <div class="article-meta">
+                                <span><i class="far fa-calendar-alt"></i> April 15, 2023</span>
+                                <span><i class="far fa-user"></i> Nathan Black</span>
+                            </div>
+                            <p class="cyber-text">Recognizing and defending against psychological manipulation tactics used by cybercriminals.</p>
+                            <a href="articles/social-engineering.html" class="cyber-btn-small">READ MORE</a>
+                        </div>
+                    </div>
+                    <div class="article-card cyber-card fade-in animate-on-scroll">
+                        <div class="article-image-container">
+                            <img src="images/ai-security.jpg" style="height: 500px; width: 520px;" alt="AI Security" class="article-image" onerror="this.src='https://via.placeholder.com/400x250/0a192f/64ffda?text=AI+Security'">
+                            <div class="article-category">AI</div>
+                        </div>
+                        <div class="article-content">
+                            <h3 class="cyber-heading">AI Security</h3>
+                            <div class="article-meta">
+                                <span><i class="far fa-calendar-alt"></i> April 8, 2023</span>
+                                <span><i class="far fa-user"></i> Sophia Kim</span>
+                            </div>
+                            <p class="cyber-text">Exploring the intersection of artificial intelligence and cybersecurity in the modern threat landscape.</p>
+                            <a href="articles/ai-security.html" class="cyber-btn-small">READ MORE</a>
+                        </div>
+                    </div>
+                    <div class="article-card cyber-card slide-in-right animate-on-scroll">
+                        <div class="article-image-container">
+                            <img src="images/compliance.jpg" style="height: 500px; width: 520px;" alt="Compliance & Regulations" class="article-image" onerror="this.src='https://via.placeholder.com/400x250/0a192f/64ffda?text=Compliance+Regulations'">
+                            <div class="article-category">Regulations</div>
+                        </div>
+                        <div class="article-content">
+                            <h3 class="cyber-heading">Compliance & Regulations</h3>
+                            <div class="article-meta">
+                                <span><i class="far fa-calendar-alt"></i> April 1, 2023</span>
+                                <span><i class="far fa-user"></i> Lisa Morgan</span>
+                            </div>
+                            <p class="cyber-text">Navigating the complex landscape of cybersecurity laws and standards for organizational compliance.</p>
+                            <a href="articles/compliance-regulations.html" class="cyber-btn-small">READ MORE</a>
+                        </div>
+                    </div>
+                    <div class="article-card cyber-card slide-in-left animate-on-scroll">
+                        <div class="article-image-container">
+                            <img src="images/identity-management.jpg" style="height: 500px; width: 520px;" alt="Identity Management" class="article-image" onerror="this.src='https://via.placeholder.com/400x250/0a192f/64ffda?text=Identity+Management'">
+                            <div class="article-category">Identity</div>
+                        </div>
+                        <div class="article-content">
+                            <h3 class="cyber-heading">Identity Management</h3>
+                            <div class="article-meta">
+                                <span><i class="far fa-calendar-alt"></i> March 25, 2023</span>
+                                <span><i class="far fa-user"></i> James Wilson</span>
+                            </div>
+                            <p class="cyber-text">Solutions for secure authentication and identity verification in the digital age.</p>
+                            <a href="articles/identity-management.html" class="cyber-btn-small">READ MORE</a>
+                        </div>
+                    </div>
+                    <div class="article-card cyber-card fade-in animate-on-scroll">
+                        <div class="article-image-container">
+                            <img src="images/endpoint-security.jpg" style="height: 500px; width: 520px;" alt="Endpoint Security" class="article-image" onerror="this.src='https://via.placeholder.com/400x250/0a192f/64ffda?text=Endpoint+Security'">
+                            <div class="article-category">Endpoints</div>
+                        </div>
+                        <div class="article-content">
+                            <h3 class="cyber-heading">Endpoint Security</h3>
+                            <div class="article-meta">
+                                <span><i class="far fa-calendar-alt"></i> March 18, 2023</span>
+                                <span><i class="far fa-user"></i> Ryan Cooper</span>
+                            </div>
+                            <p class="cyber-text">Protecting devices that connect to your network from security threats and vulnerabilities.</p>
+                            <a href="articles/endpoint-security.html" class="cyber-btn-small">READ MORE</a>
+                        </div>
+                    </div>
+                    <div class="article-card cyber-card slide-in-right animate-on-scroll">
+                        <div class="article-image-container">
+                            <img src="images/security-training.jpg" style="height: 500px; width: 520px;" alt="Security Training" class="article-image" onerror="this.src='https://via.placeholder.com/400x250/0a192f/64ffda?text=Security+Training'">
+                            <div class="article-category">Training</div>
+                        </div>
+                        <div class="article-content">
+                            <h3 class="cyber-heading">Security Training</h3>
+                            <div class="article-meta">
+                                <span><i class="far fa-calendar-alt"></i> March 10, 2023</span>
+                                <span><i class="far fa-user"></i> Amanda Hughes</span>
+                            </div>
+                            <p class="cyber-text">Resources for cybersecurity education and professional development in a rapidly evolving field.</p>
+                            <a href="articles/security-training.html" class="cyber-btn-small">READ MORE</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+
+
+    </main>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo cyber-logo">
+                <img src="images/logo.jpg" style="max-width: 50px;" alt="CyberFace Logo" class="footer-logo-img cyber-image">
+                <p class="cyber-text">CyberFace is your trusted source for cybersecurity knowledge and defense strategies.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="lesson.html">Lessons</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>Contact Info</h4>
+                 <p><i class="fas fa-phone nav-icon"></i> +1 234 567 890</p>
+                <p><i class="fas fa-envelope nav-icon"></i> info@cyberface.com</p>
+                <p><i class="fas fa-map-marker-alt nav-icon"></i> 123 Cyber Street, Security City</p>
+            </div>
+            
+            <div class="footer-newsletter">
+                <h4>Follow Us</h4>
+                <p>Stay connected with us on social media for daily tips and updates.</p>
+                <div class="cyber-social">
+                    <a href="#" class="cyber-social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="cyber-social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="cyber-social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="cyber-social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-developers">
+            <h4>CyberFace's Developers</h4>
+            <div class="developers-grid">
+                <div class="developer-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="developer-img-container">
+                        <img src="images/1.jpg" alt="Developer 1" class="developer-img">
+                    </div>
+                    <p class="developer-name">Team Coordinator</p>
+                </div>
+                <div class="developer-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="developer-img-container">
+                        <img src="images/2.jpg" alt="Developer 2" class="developer-img">
+                    </div>
+                    <p class="developer-name">Team Leader</p>
+                </div>
+                <div class="developer-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="developer-img-container">
+                        <img src="images/3.jpg" alt="Developer 3" class="developer-img">
+                    </div>
+                    <p class="developer-name">Team Editor</p>
+                </div>
+            </div>
+            <p class="more-info">For more information, <a href="team.html" class="click-here">click here</a>.</p>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 CyberFace. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- JavaScript -->
+<script src="js/script.js"></script>
+<script src="js/image-handlers.js"></script>
+<script src="js/enhanced-image-handlers.js"></script>
+<script src="js/advanced-image-handlers.js"></script>
+</body>
+</html>

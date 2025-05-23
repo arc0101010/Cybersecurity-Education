@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberFace - Learn Defense</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/image-handlers.css">
+    <link rel="stylesheet" href="css/enhanced-image-handlers.css">
+    <link rel="stylesheet" href="css/advanced-image-handlers.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/enhanced-animations.css">
+    <link rel="stylesheet" href="css/cyber-theme.css">
+    <link rel="stylesheet" href="css/cyber-blog.css">
+    <link rel="stylesheet" href="css/blog-organization.css">
+    <link rel="stylesheet" href="css/featured-grid.css">
+    <link rel="stylesheet" href="css/cyber-forms.css">
+    <link rel="stylesheet" href="css/cyber-sections.css">
+    <link rel="stylesheet" href="css/cyber-interactive.css">
+    <link rel="stylesheet" href="css/cyber-contact.css">
+    <link rel="stylesheet" href="css/cyber-consistency.css">
+    <link rel="stylesheet" href="css/custom-overrides.css">
+    <link rel="stylesheet" href="css/game-button.css">
+    <link rel="stylesheet" href="css/contact-enhancements.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&family=JetBrains+Mono:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <!-- Cybersecurity Network Animation -->
+    <script src="js/cyber-network.js"></script>
+    <script src="js/constellation-animation.js"></script>
+</head>
+<body>
+    <!-- Grid Background -->
+    <div class="grid-background"></div>
+    <div class="scan-line"></div>
+    <div class="cyber-noise"></div>
+    
+   <header>
+        <div class="logo-container">
+            <img src="images/logo.jpg" alt="CyberFace Logo" id="logo">
+            <h1>CyberFace <span class="subtitle">Learn Defense</span></h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home nav-icon"></i>HOME</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle nav-icon"></i>ABOUT</a></li>
+                <li><a href="lesson.html" class="active"><i class="fas fa-book nav-icon"></i>LESSON</a></li>
+                <li><a href="blog.html"><i class="fas fa-newspaper nav-icon"></i>BLOG</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope nav-icon"></i>CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="nav-right">
+            <a href="game.html" class="game-btn"><i class="fas fa-gamepad"></i> GAME<div class="circuit-overlay"></div></a>
+            <div class="menu-dropdown">
+                <button class="menu-btn"><i class="fas fa-bars"></i></button>
+                <div class="dropdown-content">
+                        <a href="profile.html">Profile</a>
+                        <a href="videos.html">Videos</a>
+                         <a href="#" id="logoutLink">Logout</a>
+                        <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            const logoutLink = document.getElementById('logoutLink');
+                            logoutLink.addEventListener('click', function(e) {
+                                e.preventDefault();
+                                // Create modal
+                                const modal = document.createElement('div');
+                                modal.style.position = 'fixed';
+                                modal.style.top = 0;
+                                modal.style.left = 0;
+                                modal.style.width = '100vw';
+                                modal.style.height = '100vh';
+                                modal.style.background = 'rgba(0,0,0,0.5)';
+                                modal.style.display = 'flex';
+                                modal.style.alignItems = 'center';
+                                modal.style.justifyContent = 'center';
+                                modal.style.zIndex = 9999;
+
+                                const box = document.createElement('div');
+                                box.style.background = '#fff';
+                                box.style.padding = '30px 40px';
+                                box.style.borderRadius = '10px';
+                                box.style.boxShadow = '0 2px 16px rgba(0,0,0,0.2)';
+                                box.style.textAlign = 'center';
+
+                                const msg = document.createElement('div');
+                                msg.textContent = 'Are you sure you want to logout?';
+                                msg.style.fontWeight = 'bold';
+                                msg.style.color = 'black';
+                                msg.style.marginBottom = '20px';
+
+                                const yesBtn = document.createElement('button');
+                                yesBtn.textContent = 'Yes';
+                                yesBtn.style.margin = '0 10px';
+                                yesBtn.style.padding = '8px 20px';
+                                yesBtn.style.background = 'cyan';
+                                yesBtn.style.color = '#fff';
+                                yesBtn.style.border = 'none';
+                                yesBtn.style.borderRadius = '5px';
+                                yesBtn.style.cursor = 'pointer';
+
+                                const cancelBtn = document.createElement('button');
+                                cancelBtn.textContent = 'Cancel';
+                                cancelBtn.style.margin = '0 10px';
+                                cancelBtn.style.padding = '8px 20px';
+                                cancelBtn.style.background = 'red';
+                                cancelBtn.style.color = 'white';
+                                cancelBtn.style.border = 'none';
+                                cancelBtn.style.borderRadius = '5px';
+                                cancelBtn.style.cursor = 'pointer';
+
+                                box.appendChild(msg);
+                                box.appendChild(yesBtn);
+                                box.appendChild(cancelBtn);
+                                modal.appendChild(box);
+                                document.body.appendChild(modal);
+
+                                yesBtn.onclick = function() {
+                                    // Clear session/local storage (simulate logout)
+                                    sessionStorage.clear();
+                                    localStorage.clear();
+                                    // Redirect to dashboard.html
+                                    window.location.href = 'dashboard.html';
+                                };
+                                cancelBtn.onclick = function() {
+                                    document.body.removeChild(modal);
+                                };
+                            });
+                        });
+                        </script>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="cyber-main">
+        <section class="hero-section lesson-hero">
+            <div class="cyber-grid-overlay"></div>
+            <!-- Removed hero-parallax div to prevent animation issues -->
+            <div class="hero-content lesson-hero-content fade-in" style="text-align: center; max-width: 800px; margin: 0 auto; position: relative; z-index: 1;">
+                <h2 style="font-family: 'Orbitron', sans-serif; color: var(--cyber-accent); margin-bottom: 20px;">CYBERSECURITY LESSONS</h2>
+                <div class="cyber-divider" style="margin: 20px auto;"><span></span></div>
+                <p class="tagalog cyber-text" style="margin-bottom: 25px;">Step into the world of cybersecurity and explore the crucial role of Defensive Guardians in protecting digital landscapes. From understanding the deceptive tactics of social engineering to identifying and mitigating vulnerabilities through rigorous assessments, this journey unveils the key elements of cyber defense. Discover real-world incidents, learn about evolving cyber threats, and explore strategies used by professionals to safeguard sensitive information. Whether you’re an aspiring security expert or simply curious about the digital battlefield, join us in unraveling the art of cyber defense and staying one step ahead of attackers.
+
+</p>
+                <!-- Search bar removed as requested -->
+            </div>
+        </section>
+
+        <!-- Network Security Section -->
+        <section class="cyber-section">
+            <div class="cyber-grid-overlay"></div>
+            <div class="cyber-container">
+                <div class="about-content" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;">
+                    <div class="network-image" style="flex: 1; padding: 20px; max-height: 450px; min-width: 300px;">
+                        <div class="cyber-image-container animate-on-scroll">
+                            <div class="cyber-image-frame"></div>
+                            <img src="images/network-security.jpg" style="max-height: 400px; width: 420px;" alt="Network Security Fundamentals" class="cyber-image" onerror="this.src='https://via.placeholder.com/500x400/0a192f/64ffda?text=Network+Security'">
+                        </div>
+                    </div>
+                    <div class="network-content" style="flex: 1; padding: 20px; min-width: 300px;">
+                        <h2 class="cyber-heading animate-on-scroll">Network Security Fundamentals</h2>
+                        <div class="cyber-divider"><span></span></div>
+                        <p class="cyber-text">Network security forms the backbone of organizational cybersecurity strategy. This comprehensive module covers essential concepts including firewall configuration, intrusion detection systems, VPN implementation, and secure network architecture. Learn how to identify network vulnerabilities through practical scanning techniques and implement effective countermeasures to protect critical infrastructure.</p>
+                        <ul class="lesson-topics">
+                            <li><i class="fas fa-angle-right"></i> Firewall deployment and configuration</li>
+                            <li><i class="fas fa-angle-right"></i> Network traffic analysis and monitoring</li>
+                            <li><i class="fas fa-angle-right"></i> Secure wireless network implementation</li>
+                            <li><i class="fas fa-angle-right"></i> Network segmentation best practices</li>
+                        </ul>
+                        <div style="margin-top: 30px;">
+                            <a href="network_security.html" class="cyber-btn">START LEARNING</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Threat Intelligence Section -->
+        <section class="cyber-section">
+            <div class="cyber-container">
+                <div class="about-content" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;">
+                    <div class="threat-content" style="flex: 1; padding: 20px; min-width: 300px;">
+                        <h2 class="cyber-heading animate-on-scroll">Social Engineering Defense</h2>
+                        <div class="cyber-divider"><span></span></div>
+                        <p class="cyber-text">Social engineering attacks target the human element of security, often bypassing technical controls through psychological manipulation. This module explores the psychology behind these attacks and provides practical strategies for recognizing and countering manipulation techniques. Learn to identify various attack vectors including phishing, pretexting, baiting, and tailgating.</p>
+                        <ul class="lesson-topics">
+                            <li><i class="fas fa-angle-right"></i> Recognizing phishing and spear-phishing attempts</li>
+                            <li><i class="fas fa-angle-right"></i> Building organizational security awareness</li>
+                            <li><i class="fas fa-angle-right"></i> Implementing verification protocols</li>
+                            <li><i class="fas fa-angle-right"></i> Creating effective security training programs</li>
+                        </ul>
+                        <div style="margin-top: 30px;">
+                            <a href="social_engineering.html" class="cyber-btn">START LEARNING</a>
+                        </div>
+                    </div>
+                    <div class="threat-image" style="flex: 1; padding: 20px; max-height: 450px; min-width: 300px;">
+                        <div class="cyber-image-container animate-on-scroll">
+                            <div class="cyber-image-frame"></div>
+                            <img src="images/social-engineering.jpg" style="max-height: 400px; width: 420px;" alt="Social Engineering Defense" class="cyber-image" onerror="this.src='https://via.placeholder.com/500x400/0a192f/64ffda?text=Social+Engineering+Defense'">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Data Protection Section -->
+        <section class="cyber-section">
+            <div class="cyber-grid-overlay"></div>
+            <div class="cyber-container">
+                <div class="about-content" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;">
+                    <div class="data-image" style="flex: 1; padding: 20px; max-height: 450px; min-width: 300px;">
+                        <div class="cyber-image-container animate-on-scroll">
+                            <div class="cyber-image-frame"></div>
+                            <img src="images/data-encryption.jpg" style="max-height: 400px; width: 420px;" alt="Data Encryption and Privacy" class="cyber-image" onerror="this.src='https://via.placeholder.com/500x400/0a192f/64ffda?text=Data+Encryption+and+Privacy'">
+                        </div>
+                    </div>
+                    <div class="data-content" style="flex: 1; padding: 20px; min-width: 300px;">
+                        <h2 class="cyber-heading animate-on-scroll">Data Encryption and Privacy</h2>
+                        <div class="cyber-divider"><span></span></div>
+                        <p class="cyber-text">Data protection is essential in today's digital landscape where information breaches can have devastating consequences. This module covers encryption fundamentals, privacy regulations, and data protection frameworks. Learn practical implementation of encryption technologies, secure data handling practices, and compliance requirements for various industries.</p>
+                        <ul class="lesson-topics">
+                            <li><i class="fas fa-angle-right"></i> Symmetric and asymmetric encryption methods</li>
+                            <li><i class="fas fa-angle-right"></i> Implementing end-to-end encryption</li>
+                            <li><i class="fas fa-angle-right"></i> Data classification and handling procedures</li>
+                            <li><i class="fas fa-angle-right"></i> Privacy regulations (GDPR, CCPA, HIPAA) compliance</li>
+                        </ul>
+                        <div style="margin-top: 30px;">
+                            <a href="data_encryption.html" class="cyber-btn">START LEARNING</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Incident Response Section -->
+        <section class="cyber-section">
+            <div class="cyber-container">
+                <div class="about-content" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;">
+                    <div class="incident-content" style="flex: 1; padding: 20px; min-width: 300px;">
+                        <h2 class="cyber-heading animate-on-scroll">Cyber Incident Response Planning</h2>
+                        <div class="cyber-divider"><span></span></div>
+                        <p class="cyber-text">When security incidents occur, a well-prepared response can mean the difference between minor disruption and catastrophic damage. This module teaches the development and implementation of effective incident response plans. Learn systematic approaches to detecting, containing, eradicating, and recovering from security breaches while minimizing impact.</p>
+                        <ul class="lesson-topics">
+                            <li><i class="fas fa-angle-right"></i> Building incident response teams and procedures</li>
+                            <li><i class="fas fa-angle-right"></i> Digital forensics and evidence collection</li>
+                            <li><i class="fas fa-angle-right"></i> Breach notification requirements</li>
+                            <li><i class="fas fa-angle-right"></i> Post-incident analysis and improvement</li>
+                        </ul>
+                        <div style="margin-top: 30px;">
+                            <a href="incident_response.html" class="cyber-btn">START LEARNING</a>
+                        </div>
+                    </div>
+                    <div class="incident-image" style="flex: 1; padding: 20px; max-height: 450px; max-width: 450px;">
+                        <div class="cyber-image-container animate-on-scroll">
+                            <div class="cyber-image-frame"></div>
+                            <img src="images/incident-response.jpg" style="max-height: 400px; width: 410px;" alt="Incident Response" class="cyber-image" onerror="this.src='https://via.placeholder.com/500x400/0a192f/64ffda?text=Incident+Response'">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+<script>
+    // Animation and interactive elements initialization can go here
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize any animations or interactive elements
+        // This replaces the previous search functionality
+    });
+</script>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo cyber-logo">
+                <img src="images/logo.jpg" style="max-width: 50px;" alt="CyberFace Logo" class="footer-logo-img cyber-image">
+                <p class="cyber-text">CyberFace is your trusted source for cybersecurity knowledge and defense strategies.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="lesson.html">Lessons</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>Contact Info</h4>
+                 <p><i class="fas fa-phone nav-icon"></i> +1 234 567 890</p>
+                <p><i class="fas fa-envelope nav-icon"></i> info@cyberface.com</p>
+                <p><i class="fas fa-map-marker-alt nav-icon"></i> 123 Cyber Street, Security City</p>
+            </div>
+            
+            <div class="footer-newsletter">
+                <h4>Follow Us</h4>
+                <p>Stay connected with us on social media for daily tips and updates.</p>
+                <div class="cyber-social">
+                    <a href="#" class="cyber-social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="cyber-social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="cyber-social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="cyber-social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-developers">
+            <h4>CyberFace's Developers</h4>
+            <div class="developers-grid">
+                <div class="developer-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="developer-img-container">
+                        <img src="images/1.jpg" alt="Developer 1" class="developer-img">
+                    </div>
+                    <p class="developer-name">Team Coordinator</p>
+                </div>
+                <div class="developer-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="developer-img-container">
+                        <img src="images/2.jpg" alt="Developer 2" class="developer-img">
+                    </div>
+                    <p class="developer-name">Team Leader</p>
+                </div>
+                <div class="developer-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="developer-img-container">
+                        <img src="images/3.jpg" alt="Developer 3" class="developer-img">
+                    </div>
+                    <p class="developer-name">Team Editor</p>
+                </div>
+            </div>
+            <p class="more-info">For more information, <a href="team.html" class="click-here">click here</a>.</p>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 CyberFace. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- JavaScript -->
+<script src="js/script.js"></script>
+<script src="js/image-handlers.js"></script>
+<script src="js/enhanced-image-handlers.js"></script>
+<script src="js/advanced-image-handlers.js"></script>
+</body>
+</html>
