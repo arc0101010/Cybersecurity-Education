@@ -1,0 +1,184 @@
+/* Image Handlers and Animation CSS for CyberFace Website */
+
+/* Common Image Styling */
+.cyber-image {
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(12, 255, 12, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 100%;
+    height: auto;
+}
+
+.cyber-image:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(12, 255, 12, 0.5);
+}
+
+/* Logo Styling */
+#logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    filter: drop-shadow(0 0 5px rgba(12, 255, 12, 0.7));
+    animation: pulse 2s infinite alternate;
+}
+
+/* Navigation Icons */
+.nav-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    vertical-align: middle;
+    filter: brightness(0) invert(1);
+    transition: filter 0.3s ease;
+}
+
+.nav-links a:hover .nav-icon {
+    filter: brightness(0) invert(1) sepia(100%) saturate(1000%) hue-rotate(90deg);
+}
+
+/* Hero Section Background */
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+/* Feature Icons */
+.feature-icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 15px;
+    filter: invert(80%) sepia(51%) saturate(1000%) hue-rotate(100deg) brightness(100%) contrast(101%);
+}
+
+/* Developer Profile Images */
+.developer-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid var(--secondary-color);
+    box-shadow: 0 0 10px rgba(12, 255, 12, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.developer-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(12, 255, 12, 0.7);
+}
+
+/* Blog Post Images */
+.blog-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+/* Contact Page Icons */
+.contact-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    filter: invert(80%) sepia(51%) saturate(1000%) hue-rotate(100deg) brightness(100%) contrast(101%);
+}
+
+/* Footer Logo */
+.footer-logo-img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 0 5px rgba(12, 255, 12, 0.5));
+}
+
+/* Social Media Icons */
+.social-icons a {
+    display: inline-block;
+    margin-right: 15px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-5px);
+}
+
+/* Animations */
+@keyframes pulse {
+    from {
+        filter: drop-shadow(0 0 5px rgba(12, 255, 12, 0.3));
+    }
+    to {
+        filter: drop-shadow(0 0 10px rgba(12, 255, 12, 0.7));
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Image Handling */
+@media (max-width: 768px) {
+    #logo {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .developer-img {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .blog-image {
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    #logo {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .developer-img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .feature-icon {
+        width: 48px;
+        height: 48px;
+    }
+}

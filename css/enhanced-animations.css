@@ -1,0 +1,267 @@
+/* Enhanced Animations for CyberFace Website */
+
+/* Pulse Background Animation */
+.hero-section::before {
+    animation: pulseBackground 15s infinite alternate;
+}
+
+@keyframes pulseBackground {
+    0% { opacity: 0.15; filter: blur(3px); }
+    100% { opacity: 0.25; filter: blur(1px); }
+}
+
+/* Glitch Text Effect */
+.glitch-container {
+    position: relative;
+    display: inline-block;
+}
+
+.glitch-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.glitch-layer.layer1 {
+    left: -2px;
+    color: rgba(255, 0, 0, 0.7);
+    animation: glitch-anim-1 3s infinite linear alternate-reverse;
+}
+
+.glitch-layer.layer2 {
+    left: 2px;
+    color: rgba(0, 255, 255, 0.7);
+    animation: glitch-anim-2 2s infinite linear alternate-reverse;
+}
+
+.glitch-layer.layer3 {
+    left: 0;
+    color: rgba(0, 255, 140, 0.7);
+    animation: glitch-anim-3 2.5s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim-1 {
+    0% { opacity: 0; transform: translate(0); }
+    20% { opacity: 0.3; }
+    30% { opacity: 0; }
+    70% { opacity: 0; }
+    80% { opacity: 0.3; transform: translate(-2px, 2px); }
+    100% { opacity: 0; }
+}
+
+@keyframes glitch-anim-2 {
+    0% { opacity: 0; transform: translate(0); }
+    30% { opacity: 0; }
+    40% { opacity: 0.3; }
+    60% { opacity: 0.3; transform: translate(2px, -2px); }
+    70% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+@keyframes glitch-anim-3 {
+    0% { opacity: 0; transform: translate(0); }
+    10% { opacity: 0.3; }
+    20% { opacity: 0; }
+    80% { opacity: 0; }
+    90% { opacity: 0.3; transform: translate(1px, 1px); }
+    100% { opacity: 0; }
+}
+
+/* Enhanced Scroll Animations */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate-on-scroll.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Feature Card Hover Effects */
+.feature-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 255, 140, 0.5);
+}
+
+.feature-icon-container {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgba(0, 255, 140, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover .feature-icon-container {
+    border-color: var(--cyber-accent);
+    box-shadow: 0 0 15px rgba(0, 255, 140, 0.5);
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Stats Card Animation */
+.stat-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 255, 140, 0.5);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--cyber-accent);
+    margin: 10px 0;
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 0 0 10px rgba(0, 255, 140, 0.5);
+}
+
+/* Terminal Cursor Blink */
+.cursor-blink {
+    position: relative;
+}
+
+.cursor-blink::after {
+    content: '|';
+    position: absolute;
+    right: -10px;
+    color: var(--cyber-accent);
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Testimonial Card Hover Effects */
+.testimonial-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 255, 140, 0.5);
+}
+
+.testimonial-quote {
+    font-size: 2rem;
+    color: var(--cyber-accent);
+    opacity: 0.5;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.testimonial-card:hover .testimonial-quote {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+/* Blog Post Hover Effects */
+.blog-post {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 255, 140, 0.5);
+}
+
+/* Feature Link Animation */
+.feature-link {
+    color: var(--cyber-accent);
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.feature-link i {
+    transition: transform 0.3s ease;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.feature-link:hover {
+    color: #fff;
+    transform: translateX(5px);
+}
+
+.feature-link:hover i {
+    transform: translateX(3px);
+}
+
+/* Cyber Button Hover Effect */
+.cyber-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.cyber-btn::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 255, 140, 0.2), transparent);
+    transition: top 0.3s ease;
+}
+
+.cyber-btn:hover::before {
+    top: 0;
+}
+
+/* Scan Line Animation */
+.scan-line {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, transparent, var(--cyber-accent), transparent);
+    opacity: 0.5;
+    z-index: 9999;
+    pointer-events: none;
+    animation: scanLine 8s linear infinite;
+}
+
+@keyframes scanLine {
+    0% { top: -5px; }
+    100% { top: 100vh; }
+}
+
+/* Cyber Noise Effect */
+.cyber-noise {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.5 0"/></filter><rect width="100%" height="100%" filter="url(%23noiseFilter)"/></svg>');
+    pointer-events: none;
+    opacity: 0.035;
+    z-index: 9998;
+    animation: noiseAnimation 0.5s infinite alternate;
+}
+
+@keyframes noiseAnimation {
+    0% { opacity: 0.03; }
+    100% { opacity: 0.04; }
+}

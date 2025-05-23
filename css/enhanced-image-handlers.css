@@ -1,0 +1,272 @@
+/* Enhanced Image Handlers for CyberFace Website */
+
+/* Hero Section Background Images */
+.hero-section {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--cyber-darker);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/cyber-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2;
+    z-index: 0;
+    filter: blur(2px);
+}
+
+/* Parallax Effect for Hero Sections - Disabled */
+.hero-parallax {
+    /* Disabled transform to prevent animation issues */
+    /* transform: translateZ(-1px) scale(1.5); */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+/* Enhanced Image Containers */
+.cyber-image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 255, 140, 0.3);
+}
+
+.cyber-image-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid var(--cyber-accent);
+    box-shadow: 0 0 15px rgba(0, 255, 140, 0.5);
+    z-index: 2;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.cyber-image-container:hover .cyber-image-frame {
+    opacity: 1;
+}
+
+/* Team Member Images */
+.member-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    overflow: hidden;
+    border: 2px solid var(--cyber-accent);
+    box-shadow: 0 0 15px rgba(0, 255, 140, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 255, 140, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.member-image i {
+    font-size: 48px;
+    color: var(--cyber-accent);
+}
+
+.team-member:hover .member-image {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 255, 140, 0.7);
+}
+
+/* Blog Post Images */
+.post-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+    height: 200px;
+}
+
+.post-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.post-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 50%, rgba(12, 14, 22, 0.8) 100%);
+    z-index: 1;
+}
+
+.blog-post:hover .post-image img {
+    transform: scale(1.1);
+}
+
+.post-category {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: var(--cyber-accent);
+    color: var(--cyber-darker);
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    z-index: 2;
+    box-shadow: 0 0 10px rgba(0, 255, 140, 0.5);
+}
+
+/* Feature Card Icons with Animation */
+.feature-icon {
+    font-size: 48px;
+    color: var(--cyber-accent);
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    animation: pulse 2s infinite alternate;
+}
+
+.feature-card:hover .feature-icon {
+    transform: scale(1.2);
+    color: #fff;
+    text-shadow: 0 0 15px var(--cyber-accent);
+}
+
+/* Contact Form Terminal Effect */
+.terminal-form {
+    background-color: var(--cyber-darker);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 255, 140, 0.3);
+    font-family: var(--font-code);
+    margin-bottom: 30px;
+}
+
+.terminal-header {
+    background-color: #1a1a1a;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--cyber-accent);
+}
+
+.terminal-controls {
+    display: flex;
+    gap: 8px;
+    margin-right: 15px;
+}
+
+.control-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.control-dot.red { background-color: #ff5f56; }
+.control-dot.yellow { background-color: #ffbd2e; }
+.control-dot.green { background-color: #27c93f; }
+
+.terminal-title {
+    color: var(--cyber-text-dim);
+    font-size: 0.9rem;
+}
+
+.terminal-body {
+    padding: 20px;
+}
+
+.terminal-line {
+    margin-bottom: 10px;
+    color: var(--cyber-text);
+    font-size: 0.9rem;
+}
+
+.terminal-line.success {
+    color: var(--cyber-accent);
+}
+
+.prompt-symbol {
+    color: var(--cyber-accent);
+    margin-right: 5px;
+}
+
+/* Lesson Card Images */
+.lesson-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgba(0, 255, 140, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.lesson-icon i {
+    font-size: 36px;
+    color: var(--cyber-accent);
+}
+
+.lesson-card:hover .lesson-icon {
+    border-color: var(--cyber-accent);
+    box-shadow: 0 0 15px rgba(0, 255, 140, 0.5);
+    transform: scale(1.05);
+}
+
+/* About Page Image Enhancements */
+.about-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px rgba(0, 255, 140, 0.3);
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+.about-image:hover img {
+    transform: scale(1.05);
+}
+
+/* Cyber Grid Overlay for Sections */
+.cyber-grid-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(var(--cyber-grid) 1px, transparent 1px),
+                      linear-gradient(90deg, var(--cyber-grid) 1px, transparent 1px);
+    background-size: 30px 30px;
+    z-index: 1;
+    pointer-events: none;
+}

@@ -1,0 +1,246 @@
+/* Cyber Forms CSS - Consistent styling for all pages */
+
+/* Form Container Styling */
+.form-container {
+    background-color: var(--cyber-darker);
+    border: 1px solid var(--cyber-accent);
+    border-radius: 5px;
+    padding: 30px;
+    max-width: 600px;
+    margin: 40px auto;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 255, 140, 0.1);
+}
+
+.form-container::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, var(--cyber-accent), var(--cyber-accent-alt));
+    z-index: -1;
+    border-radius: 7px;
+    opacity: 0.3;
+}
+
+.form-container h2 {
+    color: var(--cyber-accent);
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(0, 255, 140, 0.5);
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--cyber-text);
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: rgba(12, 14, 22, 0.7);
+    border: 1px solid var(--cyber-text-dim);
+    border-radius: 4px;
+    color: var(--cyber-text);
+    font-family: 'Rajdhani', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--cyber-accent);
+    box-shadow: 0 0 0 2px rgba(0, 255, 140, 0.2);
+}
+
+/* Form Button Styling */
+.form-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: var(--cyber-accent);
+    color: var(--cyber-dark);
+    border: none;
+    border-radius: 4px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.form-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: all 0.5s ease;
+}
+
+.form-btn:hover {
+    background-color: var(--cyber-accent-alt);
+    box-shadow: 0 0 15px rgba(0, 132, 255, 0.5);
+}
+
+.form-btn:hover::before {
+    left: 100%;
+}
+
+/* Form Footer Styling */
+.form-footer {
+    margin-top: 25px;
+    text-align: center;
+    color: var(--cyber-text-dim);
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.form-footer a {
+    color: var(--cyber-accent);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.form-footer a:hover {
+    color: var(--cyber-accent-alt);
+    text-shadow: 0 0 8px rgba(0, 132, 255, 0.7);
+}
+
+/* Alert Messages */
+.alert {
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    font-family: 'Rajdhani', sans-serif;
+    position: relative;
+}
+
+.alert-error {
+    background-color: rgba(255, 45, 85, 0.1);
+    border-left: 4px solid var(--cyber-danger);
+    color: #ff6b8b;
+}
+
+.alert-success {
+    background-color: rgba(0, 255, 140, 0.1);
+    border-left: 4px solid var(--cyber-accent);
+    color: var(--cyber-accent);
+}
+
+/* Hero Section for Form Pages */
+.login-hero, .register-hero, .contact-hero {
+    padding: 60px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 20px;
+        margin: 30px 15px;
+    }
+    
+    .form-container h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Cyber-themed Checkbox and Radio Buttons */
+input[type="checkbox"], input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(12, 14, 22, 0.7);
+    border: 1px solid var(--cyber-text-dim);
+    position: relative;
+    cursor: pointer;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+input[type="checkbox"] {
+    border-radius: 3px;
+}
+
+input[type="radio"] {
+    border-radius: 50%;
+}
+
+input[type="checkbox"]:checked, input[type="radio"]:checked {
+    background-color: var(--cyber-accent);
+    border-color: var(--cyber-accent);
+}
+
+input[type="checkbox"]:checked::before {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--cyber-dark);
+    font-size: 12px;
+}
+
+input[type="radio"]:checked::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: var(--cyber-dark);
+    border-radius: 50%;
+}
+
+/* File Input Styling */
+input[type="file"] {
+    display: none;
+}
+
+.file-upload-label {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: rgba(12, 14, 22, 0.7);
+    border: 1px solid var(--cyber-text-dim);
+    border-radius: 4px;
+    color: var(--cyber-text);
+    font-family: 'Rajdhani', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.file-upload-label:hover {
+    border-color: var(--cyber-accent);
+    color: var(--cyber-accent);
+}
+
+.file-name-display {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: var(--cyber-text-dim);
+}

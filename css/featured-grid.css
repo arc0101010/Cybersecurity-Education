@@ -1,0 +1,14 @@
+/* Featured Grid - 2 Column Layout */
+.featured-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2-column layout */
+    gap: 30px;
+    margin: 30px 0;
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+    .featured-grid {
+        grid-template-columns: 1fr; /* Single column on mobile */
+    }
+}

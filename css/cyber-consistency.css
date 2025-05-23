@@ -1,0 +1,192 @@
+/* Cyber Consistency CSS - Ensuring visual consistency across all pages */
+
+/* Global Consistency */
+body {
+    background-color: var(--cyber-dark);
+    color: var(--cyber-text);
+    font-family: var(--font-main);
+    line-height: 1.6;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Consistent Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--cyber-accent);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+p {
+    font-family: 'Rajdhani', sans-serif;
+    margin-bottom: 15px;
+}
+
+/* Consistent Links */
+a {
+    color: var(--cyber-accent);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+a:hover {
+    color: var(--cyber-accent-alt);
+    text-shadow: 0 0 8px rgba(0, 132, 255, 0.7);
+}
+
+/* Consistent Lists */
+ul, ol {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+/* Consistent Code Blocks */
+code, pre {
+    font-family: var(--font-code);
+    background-color: rgba(12, 14, 22, 0.7);
+    border: 1px solid var(--cyber-text-dim);
+    border-radius: 4px;
+}
+
+code {
+    padding: 2px 5px;
+    font-size: 0.9em;
+}
+
+pre {
+    padding: 15px;
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+pre code {
+    border: none;
+    background: none;
+    padding: 0;
+}
+
+/* Consistent Images */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Consistent Blockquotes */
+blockquote {
+    border-left: 3px solid var(--cyber-accent);
+    padding: 15px 20px;
+    margin: 20px 0;
+    background-color: rgba(0, 255, 140, 0.05);
+    font-style: italic;
+}
+
+/* Consistent Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+th {
+    background-color: rgba(0, 255, 140, 0.1);
+    color: var(--cyber-accent);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 12px 15px;
+    border-bottom: 2px solid var(--cyber-accent);
+    text-align: left;
+}
+
+td {
+    padding: 12px 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--cyber-text);
+}
+
+tr:hover {
+    background-color: rgba(0, 255, 140, 0.05);
+}
+
+/* Consistent Form Elements */
+input, select, textarea, button {
+    font-family: 'Rajdhani', sans-serif;
+}
+
+/* Consistent Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--cyber-darker);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--cyber-accent);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--cyber-accent-alt);
+}
+
+/* Consistent Selection */
+::selection {
+    background-color: var(--cyber-accent);
+    color: var(--cyber-dark);
+}
+
+/* Consistent Focus Outline */
+:focus {
+    outline: 2px solid var(--cyber-accent);
+    outline-offset: 2px;
+}
+
+/* Consistent Animations */
+.fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Consistent Responsive Design */
+@media (max-width: 992px) {
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.8rem; }
+    h3 { font-size: 1.5rem; }
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.3rem; }
+    
+    .cyber-container {
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 { font-size: 1.6rem; }
+    h2 { font-size: 1.4rem; }
+    h3 { font-size: 1.2rem; }
+    
+    .cyber-section {
+        padding: 40px 10px;
+    }
+}

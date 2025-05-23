@@ -1,0 +1,50 @@
+/* Custom overrides to remove animations and fix duplicate text issues */
+
+/* Remove glitch animation from hero section text */
+.hero-content h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    color: var(--cyber-accent);
+    text-shadow: 0 0 10px var(--cyber-accent);
+    position: relative;
+    animation: none !important; /* Disable any animations */
+    text-transform: none;
+}
+
+/* Center and style hero content properly */
+.hero-content {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    text-align: center !important;
+    max-width: 800px !important;
+    margin: 0 auto !important;
+    padding: 2rem;
+}
+
+/* Disable parallax effects on hero section */
+.hero-parallax {
+    display: none;
+}
+
+/* Ensure text doesn't duplicate through animation */
+.glitch-container,
+.glitch-layer {
+    display: none !important;
+}
+
+/* Override any animation on the hero section */
+.hero-section * {
+    animation: none !important;
+    animation-duration: 0s !important;
+}
+
+/* Fix divider positioning */
+.hero-content .cyber-divider {
+    margin: 20px auto !important;
+}
+
+/* Disable any JavaScript-based text animations */
+.cyber-glitch-text {
+    animation: none !important;
+}

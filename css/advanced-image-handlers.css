@@ -1,0 +1,417 @@
+/* Advanced Image Handlers for CyberFace Website */
+
+/* Enhanced Hero Section Background Images */
+.hero-section {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--cyber-darker);
+    perspective: 1000px;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/cyber-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2;
+    z-index: 0;
+    filter: blur(2px);
+    animation: pulseBackground 15s infinite alternate;
+}
+
+@keyframes pulseBackground {
+    0% { opacity: 0.15; filter: blur(3px); transform: scale(1.05); }
+    100% { opacity: 0.25; filter: blur(1px); transform: scale(1); }
+}
+
+/* 3D Parallax Effect for Hero Sections */
+.hero-parallax {
+    transform-style: preserve-3d;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+/* Advanced Image Containers with Holographic Effect */
+.cyber-image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 255, 140, 0.3);
+    transition: all 0.5s ease;
+    transform-style: preserve-3d;
+}
+
+.cyber-image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent, rgba(0, 255, 140, 0.1), transparent);
+    z-index: 3;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.cyber-image-container:hover::before {
+    opacity: 1;
+    animation: holographicSweep 2s infinite alternate;
+}
+
+@keyframes holographicSweep {
+    0% { background-position: -100% 0; }
+    100% { background-position: 200% 0; }
+}
+
+.cyber-image-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid var(--cyber-accent);
+    box-shadow: 0 0 15px rgba(0, 255, 140, 0.5);
+    z-index: 2;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.cyber-image-container:hover .cyber-image-frame {
+    opacity: 1;
+    animation: framePulse 2s infinite alternate;
+}
+
+@keyframes framePulse {
+    0% { box-shadow: 0 0 15px rgba(0, 255, 140, 0.5); }
+    100% { box-shadow: 0 0 25px rgba(0, 255, 140, 0.8); }
+}
+
+/* Interactive Team Member Images */
+.member-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    overflow: hidden;
+    border: 2px solid var(--cyber-accent);
+    box-shadow: 0 0 15px rgba(0, 255, 140, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 255, 140, 0.1);
+    transition: all 0.5s ease;
+    position: relative;
+}
+
+.member-image::after {
+    content: '';
+    position: absolute;
+    top: -150%;
+    left: -150%;
+    width: 400%;
+    height: 400%;
+    background: linear-gradient(45deg, transparent, rgba(0, 255, 140, 0.3), transparent);
+    transform: rotate(45deg);
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.team-member:hover .member-image::after {
+    opacity: 1;
+    animation: scanEffect 2s infinite;
+}
+
+@keyframes scanEffect {
+    0% { top: -150%; left: -150%; }
+    100% { top: 150%; left: 150%; }
+}
+
+.member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+.member-image i {
+    font-size: 48px;
+    color: var(--cyber-accent);
+}
+
+.team-member:hover .member-image {
+    transform: scale(1.05) rotate(5deg);
+    box-shadow: 0 0 25px rgba(0, 255, 140, 0.7);
+}
+
+/* Enhanced Blog Post Images */
+.post-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+    height: 200px;
+    transition: all 0.5s ease;
+}
+
+.post-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+.post-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7));
+    z-index: 1;
+    opacity: 0.5;
+    transition: opacity 0.5s ease;
+}
+
+.blog-post:hover .post-image img {
+    transform: scale(1.1);
+}
+
+.blog-post:hover .post-image::before {
+    opacity: 0.7;
+}
+
+.post-category {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: var(--cyber-accent);
+    color: var(--cyber-darker);
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    z-index: 2;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 0 10px rgba(0, 255, 140, 0.5);
+    transition: all 0.3s ease;
+}
+
+.blog-post:hover .post-category {
+    background-color: var(--cyber-darker);
+    color: var(--cyber-accent);
+    box-shadow: 0 0 15px rgba(0, 255, 140, 0.8);
+}
+
+/* Lesson Card Image Effects */
+.lesson-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgba(0, 255, 140, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    border: 2px solid transparent;
+    transition: all 0.5s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.lesson-icon i {
+    font-size: 36px;
+    color: var(--cyber-accent);
+    transition: all 0.5s ease;
+    z-index: 2;
+}
+
+.lesson-icon::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(0, 255, 140, 0.2), transparent);
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.lesson-card:hover .lesson-icon::before {
+    opacity: 1;
+    animation: pulseRadial 2s infinite alternate;
+}
+
+@keyframes pulseRadial {
+    0% { transform: scale(0.8); opacity: 0.3; }
+    100% { transform: scale(1.2); opacity: 0.7; }
+}
+
+.lesson-card:hover .lesson-icon {
+    border-color: var(--cyber-accent);
+    box-shadow: 0 0 20px rgba(0, 255, 140, 0.5);
+    transform: scale(1.1) rotate(10deg);
+}
+
+.lesson-card:hover .lesson-icon i {
+    transform: scale(1.2);
+    text-shadow: 0 0 10px rgba(0, 255, 140, 0.8);
+}
+
+/* Contact Form Image Effects */
+.contact-info .info-item i {
+    font-size: 24px;
+    color: var(--cyber-accent);
+    margin-right: 15px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.contact-info .info-item:hover i {
+    transform: scale(1.2) rotate(10deg);
+    text-shadow: 0 0 10px rgba(0, 255, 140, 0.8);
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(0, 255, 140, 0.1);
+    margin: 0 5px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.social-icons a i {
+    font-size: 18px;
+    color: var(--cyber-accent);
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.social-icons a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, var(--cyber-accent), transparent);
+    transform: scale(0);
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.social-icons a:hover::before {
+    transform: scale(2);
+    opacity: 0.3;
+}
+
+.social-icons a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 255, 140, 0.3);
+}
+
+.social-icons a:hover i {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Image Hover Zoom Effect */
+.zoom-on-hover {
+    transition: transform 0.5s ease;
+    overflow: hidden;
+}
+
+.zoom-on-hover img {
+    transition: transform 0.5s ease;
+}
+
+.zoom-on-hover:hover img {
+    transform: scale(1.1);
+}
+
+/* Glitch Effect for Images */
+.glitch-on-hover {
+    position: relative;
+    overflow: hidden;
+}
+
+.glitch-on-hover::before,
+.glitch-on-hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.glitch-on-hover::before {
+    left: 2px;
+    background-color: rgba(255, 0, 0, 0.2);
+    animation: none;
+}
+
+.glitch-on-hover::after {
+    left: -2px;
+    background-color: rgba(0, 255, 255, 0.2);
+    animation: none;
+}
+
+.glitch-on-hover:hover::before,
+.glitch-on-hover:hover::after {
+    opacity: 1;
+}
+
+.glitch-on-hover:hover::before {
+    animation: glitch-anim-1 0.3s infinite linear alternate-reverse;
+}
+
+.glitch-on-hover:hover::after {
+    animation: glitch-anim-2 0.3s infinite linear alternate-reverse;
+}
+
+/* Responsive Image Handling */
+@media (max-width: 768px) {
+    .cyber-image-container {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    .member-image {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .lesson-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .lesson-icon i {
+        font-size: 28px;
+    }
+}

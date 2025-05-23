@@ -1,0 +1,267 @@
+/* Cyber Sections CSS - Consistent styling for content sections across all pages */
+
+/* Main Content Area */
+.cyber-main {
+    min-height: calc(100vh - 200px);
+    padding-bottom: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Cyber Grid Overlay */
+.cyber-grid-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(var(--cyber-grid) 1px, transparent 1px),
+                      linear-gradient(90deg, var(--cyber-grid) 1px, transparent 1px);
+    background-size: 30px 30px;
+    z-index: 0;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/* Cyber Noise Effect */
+.cyber-noise {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/noise.png');
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Section Styling */
+.cyber-section {
+    padding: 60px 20px;
+    margin: 40px 0;
+    position: relative;
+}
+
+.cyber-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* Section Headings */
+.cyber-heading {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--cyber-accent);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(0, 255, 140, 0.3);
+}
+
+/* Cyber Divider */
+.cyber-divider {
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--cyber-accent), transparent);
+    margin: 25px 0;
+    position: relative;
+}
+
+.cyber-divider span {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--cyber-accent);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    box-shadow: 0 0 10px var(--cyber-accent);
+}
+
+/* Cyber Text */
+.cyber-text {
+    color: var(--cyber-text);
+    font-family: 'Rajdhani', sans-serif;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Cyber Cards */
+.cyber-card {
+    background-color: var(--cyber-darker);
+    border: 1px solid var(--cyber-accent);
+    border-radius: 5px;
+    padding: 25px;
+    margin-bottom: 30px;
+    position: relative;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.cyber-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, var(--cyber-accent), var(--cyber-accent-alt));
+    z-index: -1;
+    border-radius: 7px;
+    opacity: 0.2;
+}
+
+.cyber-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cyber-card:hover::before {
+    opacity: 0.3;
+}
+
+/* Cyber Buttons */
+.cyber-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: transparent;
+    color: var(--cyber-accent);
+    border: 2px solid var(--cyber-accent);
+    border-radius: 4px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.cyber-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 140, 0.2), transparent);
+    transition: all 0.5s ease;
+}
+
+.cyber-btn:hover {
+    background-color: var(--cyber-accent);
+    color: var(--cyber-dark);
+    box-shadow: 0 0 15px rgba(0, 255, 140, 0.5);
+}
+
+.cyber-btn:hover::before {
+    left: 100%;
+}
+
+.cyber-btn-small {
+    padding: 8px 15px;
+    font-size: 0.8rem;
+}
+
+/* Hero Sections */
+.hero-section {
+    padding: 100px 20px;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--cyber-darker);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Fade In Animation */
+.fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .cyber-section {
+        padding: 40px 15px;
+        margin: 30px 0;
+    }
+    
+    .hero-section {
+        padding: 60px 15px;
+    }
+    
+    .cyber-heading {
+        font-size: 1.5rem;
+    }
+    
+    .cyber-btn {
+        padding: 10px 20px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Interactive Elements */
+.cyber-input {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: rgba(12, 14, 22, 0.7);
+    border: 1px solid var(--cyber-text-dim);
+    border-radius: 4px;
+    color: var(--cyber-text);
+    font-family: 'Rajdhani', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.cyber-input:focus {
+    outline: none;
+    border-color: var(--cyber-accent);
+    box-shadow: 0 0 0 2px rgba(0, 255, 140, 0.2);
+}
+
+/* Cyber Icons */
+.cyber-icon {
+    color: var(--cyber-accent);
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+/* Cyber Tables */
+.cyber-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.cyber-table th {
+    background-color: rgba(0, 255, 140, 0.1);
+    color: var(--cyber-accent);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 12px 15px;
+    border-bottom: 2px solid var(--cyber-accent);
+    text-align: left;
+}
+
+.cyber-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--cyber-text);
+}
+
+.cyber-table tr:hover {
+    background-color: rgba(0, 255, 140, 0.05);
+}

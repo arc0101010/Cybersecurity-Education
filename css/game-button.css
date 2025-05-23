@@ -1,0 +1,147 @@
+/* Game Button - Eye-catching Blue Theme */
+
+.game-btn {
+    position: relative;
+    background: linear-gradient(135deg, #0055ff, #00c3ff);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border: 2px solid #0084ff;
+    box-shadow: 0 0 15px rgba(0, 132, 255, 0.5);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    z-index: 1;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+/* Glowing effect */
+.game-btn::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #0055ff, #00c3ff, #0055ff);
+    z-index: -1;
+    background-size: 400%;
+    animation: glowing-border 3s linear infinite;
+    border-radius: 5px;
+    opacity: 0.7;
+    filter: blur(3px);
+}
+
+/* Hover effects */
+.game-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 0 25px rgba(0, 132, 255, 0.9);
+    color: #ffffff;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+}
+
+.game-btn:hover i {
+    animation: controller-vibrate 0.3s ease infinite alternate;
+}
+
+/* Active state */
+.game-btn.active {
+    background: linear-gradient(135deg, #003db8, #0084ff);
+    box-shadow: 0 0 20px rgba(0, 132, 255, 1), inset 0 0 10px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+/* Icon styling */
+.game-btn i {
+    font-size: 1.2em;
+    transition: all 0.3s ease;
+    color: #ffffff;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.7);
+}
+
+/* Animations */
+@keyframes glowing-border {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+@keyframes controller-vibrate {
+    0% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(5deg);
+    }
+}
+
+/* Pulse effect */
+.game-btn::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 132, 255, 0.4);
+    border-radius: 5px;
+    display: block;
+    z-index: -1;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+}
+
+/* Digital circuit effect */
+.game-btn .circuit-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/circuit-pattern.svg');
+    background-size: cover;
+    opacity: 0.1;
+    mix-blend-mode: overlay;
+    z-index: -1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .game-btn {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+}
+
+/* Focus state for accessibility */
+.game-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 132, 255, 0.5), 0 0 20px rgba(0, 132, 255, 0.8);
+}

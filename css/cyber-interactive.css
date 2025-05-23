@@ -1,0 +1,267 @@
+/* Cyber Interactive Elements CSS - Consistent styling for interactive elements across all pages */
+
+/* Navigation Styling */
+.nav-links li a {
+    position: relative;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 1px;
+    padding: 8px 15px;
+    transition: all 0.3s ease;
+}
+
+.nav-links li a::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 15px;
+    right: 15px;
+    height: 2px;
+    background-color: var(--cyber-accent);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.nav-links li a:hover::before,
+.nav-links li a.active::before {
+    transform: scaleX(1);
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+    color: var(--cyber-accent);
+    text-shadow: 0 0 8px rgba(0, 255, 140, 0.5);
+}
+
+.nav-icon {
+    margin-right: 8px;
+    font-size: 0.9rem;
+    color: var(--cyber-accent);
+}
+
+/* Dropdown Menu Styling */
+.menu-dropdown {
+    position: relative;
+}
+
+.menu-btn {
+    background-color: transparent;
+    color: var(--cyber-text);
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.menu-btn:hover {
+    color: var(--cyber-accent);
+}
+
+.dropdown-content {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: var(--cyber-darker);
+    min-width: 180px;
+    border: 1px solid var(--cyber-accent);
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.dropdown-content.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 12px 15px;
+    color: var(--cyber-text);
+    font-family: 'Rajdhani', sans-serif;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(0, 255, 140, 0.1);
+    color: var(--cyber-accent);
+}
+
+/* Pagination Styling */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+    flex-wrap: wrap;
+}
+
+.pagination a,
+.pagination span {
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 0 5px 10px;
+    border: 1px solid var(--cyber-text-dim);
+    color: var(--cyber-text);
+    font-family: 'Rajdhani', sans-serif;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.pagination a:hover,
+.pagination span.current {
+    background-color: var(--cyber-accent);
+    color: var(--cyber-dark);
+    border-color: var(--cyber-accent);
+    box-shadow: 0 0 10px rgba(0, 255, 140, 0.5);
+}
+
+/* Search Bar Styling */
+.cyber-search {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: rgba(12, 14, 22, 0.7);
+    border: 2px solid var(--cyber-accent);
+    border-radius: 4px;
+    color: var(--cyber-text);
+    font-family: 'Rajdhani', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.cyber-search:focus {
+    outline: none;
+    box-shadow: 0 0 15px rgba(0, 255, 140, 0.3);
+}
+
+.search-btn {
+    background-color: var(--cyber-accent);
+    color: var(--cyber-dark);
+    border: none;
+    padding: 12px 20px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.search-btn:hover {
+    background-color: var(--cyber-accent-alt);
+    box-shadow: 0 0 15px rgba(0, 132, 255, 0.5);
+}
+
+/* Tooltips */
+.cyber-tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.cyber-tooltip .tooltip-text {
+    visibility: hidden;
+    width: 200px;
+    background-color: var(--cyber-darker);
+    color: var(--cyber-text);
+    text-align: center;
+    border-radius: 4px;
+    padding: 8px 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.9rem;
+    border: 1px solid var(--cyber-accent);
+    box-shadow: 0 0 10px rgba(0, 255, 140, 0.3);
+}
+
+.cyber-tooltip .tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--cyber-accent) transparent transparent transparent;
+}
+
+.cyber-tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Progress Bars */
+.cyber-progress {
+    width: 100%;
+    height: 20px;
+    background-color: rgba(12, 14, 22, 0.7);
+    border-radius: 10px;
+    margin: 15px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.cyber-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--cyber-accent), var(--cyber-accent-alt));
+    border-radius: 10px;
+    transition: width 0.5s ease;
+    position: relative;
+}
+
+.cyber-progress-bar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    animation: progressShine 2s infinite linear;
+}
+
+@keyframes progressShine {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.cyber-progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--cyber-text);
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .menu-dropdown {
+        display: block;
+    }
+    
+    .pagination a,
+    .pagination span {
+        padding: 6px 12px;
+        margin: 0 3px 8px;
+    }
+}
