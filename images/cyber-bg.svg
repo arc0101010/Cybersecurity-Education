@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <!-- Dark background -->
+  <rect width="1200" height="800" fill="#0a192f"/>
+  
+  <!-- Grid pattern -->
+  <defs>
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#0c7b0c" stroke-width="0.5" opacity="0.3"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="800" fill="url(#grid)"/>
+  
+  <!-- Digital circuit elements -->
+  <g opacity="0.6">
+    <!-- Horizontal lines -->
+    <path d="M 0 200 L 1200 200" stroke="#00ff00" stroke-width="1" opacity="0.2"/>
+    <path d="M 0 400 L 1200 400" stroke="#00ff00" stroke-width="1" opacity="0.2"/>
+    <path d="M 0 600 L 1200 600" stroke="#00ff00" stroke-width="1" opacity="0.2"/>
+    
+    <!-- Vertical lines -->
+    <path d="M 300 0 L 300 800" stroke="#00ff00" stroke-width="1" opacity="0.2"/>
+    <path d="M 600 0 L 600 800" stroke="#00ff00" stroke-width="1" opacity="0.2"/>
+    <path d="M 900 0 L 900 800" stroke="#00ff00" stroke-width="1" opacity="0.2"/>
+    
+    <!-- Circuit paths -->
+    <path d="M 0 100 L 400 100 L 400 500 L 800 500 L 800 800" fill="none" stroke="#00ff00" stroke-width="2" opacity="0.3"/>
+    <path d="M 1200 300 L 700 300 L 700 700 L 200 700 L 200 0" fill="none" stroke="#00ff00" stroke-width="2" opacity="0.3"/>
+    
+    <!-- Nodes -->
+    <circle cx="400" cy="100" r="5" fill="#00ff00" opacity="0.7"/>
+    <circle cx="400" cy="500" r="5" fill="#00ff00" opacity="0.7"/>
+    <circle cx="800" cy="500" r="5" fill="#00ff00" opacity="0.7"/>
+    <circle cx="700" cy="300" r="5" fill="#00ff00" opacity="0.7"/>
+    <circle cx="700" cy="700" r="5" fill="#00ff00" opacity="0.7"/>
+    <circle cx="200" cy="700" r="5" fill="#00ff00" opacity="0.7"/>
+  </g>
+  
+  <!-- Binary code in background -->
+  <g font-family="monospace" font-size="10" fill="#00ff00" opacity="0.15">
+    <text x="50" y="50">01001010 01101111 01101001 01101110</text>
+    <text x="850" y="100">01010100 01101000 01100101</text>
+    <text x="150" y="150">01000011 01111001 01100010 01100101 01110010</text>
+    <text x="750" y="200">01010010 01100101 01110110 01101111 01101100 01110101 01110100 01101001 01101111 01101110</text>
+    <text x="250" y="250">01010011 01100101 01100011 01110101 01110010 01100101</text>
+    <text x="650" y="300">01011001 01101111 01110101 01110010</text>
+    <text x="350" y="350">01000110 01110101 01110100 01110101 01110010 01100101</text>
+    <text x="550" y="400">01001110 01101111 01110111</text>
+  </g>
+  
+  <!-- Shield icon -->
+  <g transform="translate(600, 400) scale(0.8)">
+    <path d="M 0,-100 L 80,-30 L 50,90 L 0,50 L -50,90 L -80,-30 Z" fill="none" stroke="#00ff00" stroke-width="3" opacity="0.5"/>
+    <path d="M 0,-70 L 50,-20 L 30,60 L 0,30 L -30,60 L -50,-20 Z" fill="none" stroke="#00ff00" stroke-width="2" opacity="0.5"/>
+    <circle cx="0" cy="0" r="15" fill="none" stroke="#00ff00" stroke-width="2" opacity="0.5"/>
+  </g>
+</svg>

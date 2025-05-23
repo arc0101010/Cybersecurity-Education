@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000">
+  <!-- Grid background -->
+  <defs>
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#0c7b0c" stroke-width="0.5" opacity="0.3"/>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="#0a192f"/>
+  <rect width="100%" height="100%" fill="url(#grid)"/>
+  
+  <!-- Digital circuit lines -->
+  <path d="M 0 200 L 400 200 L 400 600 L 800 600 L 800 1000" fill="none" stroke="#00ff00" stroke-width="1" opacity="0.2"/>
+  <path d="M 0 400 L 200 400 L 200 800 L 600 800 L 600 1000" fill="none" stroke="#00ff00" stroke-width="1" opacity="0.2"/>
+  <path d="M 0 600 L 600 600 L 600 200 L 1000 200" fill="none" stroke="#00ff00" stroke-width="1" opacity="0.2"/>
+  
+  <!-- Digital nodes -->
+  <circle cx="200" cy="400" r="5" fill="#00ff00" opacity="0.5"/>
+  <circle cx="400" cy="200" r="5" fill="#00ff00" opacity="0.5"/>
+  <circle cx="400" cy="600" r="5" fill="#00ff00" opacity="0.5"/>
+  <circle cx="600" cy="200" r="5" fill="#00ff00" opacity="0.5"/>
+  <circle cx="600" cy="600" r="5" fill="#00ff00" opacity="0.5"/>
+  <circle cx="600" cy="800" r="5" fill="#00ff00" opacity="0.5"/>
+  <circle cx="800" cy="600" r="5" fill="#00ff00" opacity="0.5"/>
+</svg>

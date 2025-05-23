@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="50" viewBox="0 0 200 50">
+  <!-- Facebook -->
+  <g transform="translate(25, 25)">
+    <circle cx="0" cy="0" r="20" fill="none" stroke="#00ff00" stroke-width="1.5"/>
+    <path d="M 5,-9 L 5,9 M -5,-9 L 5,-9 M -5,0 L 5,0" stroke="#00ff00" stroke-width="1.5" fill="none"/>
+  </g>
+  
+  <!-- Twitter/X -->
+  <g transform="translate(75, 25)">
+    <circle cx="0" cy="0" r="20" fill="none" stroke="#00ff00" stroke-width="1.5"/>
+    <path d="M -8,-8 L 8,8 M -8,8 L 8,-8" stroke="#00ff00" stroke-width="1.5" fill="none"/>
+  </g>
+  
+  <!-- LinkedIn -->
+  <g transform="translate(125, 25)">
+    <circle cx="0" cy="0" r="20" fill="none" stroke="#00ff00" stroke-width="1.5"/>
+    <rect x="-8" y="-8" width="6" height="6" stroke="#00ff00" stroke-width="1.5" fill="none"/>
+    <rect x="-8" y="2" width="16" height="6" stroke="#00ff00" stroke-width="1.5" fill="none"/>
+  </g>
+  
+  <!-- Instagram -->
+  <g transform="translate(175, 25)">
+    <circle cx="0" cy="0" r="20" fill="none" stroke="#00ff00" stroke-width="1.5"/>
+    <rect x="-8" y="-8" width="16" height="16" rx="4" ry="4" stroke="#00ff00" stroke-width="1.5" fill="none"/>
+    <circle cx="0" cy="0" r="4" stroke="#00ff00" stroke-width="1.5" fill="none"/>
+    <circle cx="7" cy="-7" r="1" stroke="#00ff00" stroke-width="1" fill="#00ff00"/>
+  </g>
+</svg>

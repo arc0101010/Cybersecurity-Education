@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="300" viewBox="0 0 500 300">
+  <!-- Dark Background -->
+  <rect width="500" height="300" fill="#1c1c1c"/>
+  
+  <!-- Grid Lines -->
+  <g stroke="#333333" stroke-width="1">
+    <line x1="0" y1="50" x2="500" y2="50"/>
+    <line x1="0" y1="100" x2="500" y2="100"/>
+    <line x1="0" y1="150" x2="500" y2="150"/>
+    <line x1="0" y1="200" x2="500" y2="200"/>
+    <line x1="0" y1="250" x2="500" y2="250"/>
+    
+    <line x1="50" y1="0" x2="50" y2="300"/>
+    <line x1="100" y1="0" x2="100" y2="300"/>
+    <line x1="150" y1="0" x2="150" y2="300"/>
+    <line x1="200" y1="0" x2="200" y2="300"/>
+    <line x1="250" y1="0" x2="250" y2="300"/>
+    <line x1="300" y1="0" x2="300" y2="300"/>
+    <line x1="350" y1="0" x2="350" y2="300"/>
+    <line x1="400" y1="0" x2="400" y2="300"/>
+    <line x1="450" y1="0" x2="450" y2="300"/>
+  </g>
+  
+  <!-- Shield Icon -->
+  <path d="M250 40 L350 70 L350 150 C350 200 300 240 250 250 C200 240 150 200 150 150 L150 70 Z" fill="#232323" stroke="#cc0000" stroke-width="3"/>
+  
+  <!-- Keyboard -->
+  <rect x="200" y="120" width="100" height="60" rx="5" fill="#333333" stroke="#cc0000" stroke-width="2"/>
+  
+  <!-- Keyboard Keys -->
+  <rect x="210" y="130" width="15" height="15" rx="2" fill="#444444" stroke="#555555" stroke-width="1"/>
+  <rect x="230" y="130" width="15" height="15" rx="2" fill="#444444" stroke="#555555" stroke-width="1"/>
+  <rect x="250" y="130" width="15" height="15" rx="2" fill="#444444" stroke="#555555" stroke-width="1"/>
+  <rect x="270" y="130" width="15" height="15" rx="2" fill="#444444" stroke="#555555" stroke-width="1"/>
+  
+  <rect x="215" y="150" width="15" height="15" rx="2" fill="#444444" stroke="#555555" stroke-width="1"/>
+  <rect x="235" y="150" width="15" height="15" rx="2" fill="#444444" stroke="#555555" stroke-width="1"/>
+  <rect x="255" y="150" width="15" height="15" rx="2" fill="#444444" stroke="#555555" stroke-width="1"/>
+  <rect x="275" y="150" width="15" height="15" rx="2" fill="#444444" stroke="#555555" stroke-width="1"/>
+  
+  <!-- Binary Code -->
+  <text x="100" y="90" font-family="monospace" font-size="12" fill="#cc0000">01001100 01000101 01000001 01010010 01001110</text>
+  <text x="120" y="210" font-family="monospace" font-size="12" fill="#cc0000">01010100 01011001 01010000 01001001 01001110 01000111</text>
+  
+  <!-- Red Accent Lines -->
+  <line x1="50" y1="50" x2="450" y2="50" stroke="#cc0000" stroke-width="2"/>
+  <line x1="50" y1="250" x2="450" y2="250" stroke="#cc0000" stroke-width="2"/>
+  
+  <!-- Glitch Effect -->
+  <g fill="#cc0000" opacity="0.5">
+    <rect x="100" y="120" width="50" height="5"/>
+    <rect x="350" y="180" width="70" height="5"/>
+    <rect x="200" y="220" width="30" height="5"/>
+  </g>
+</svg>
